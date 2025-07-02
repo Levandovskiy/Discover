@@ -16,6 +16,13 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+[class*="__container"] {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .wrapper {
   display: flex;
   min-height: 100%;
@@ -24,11 +31,5 @@ body {
 }
 
 .main {
-  flex: 1;
-}
-
-[class*="__container"] {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 15px;
+  flex: 1 1 auto;
 }
