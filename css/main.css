@@ -89,13 +89,10 @@ h6 {
 
 /*--------------------*/
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  padding: 16px 32px;
 }
 .header__logo {
-  font-size: 1.8rem;
+  font-size: 28.8px;
   font-weight: 600;
 }
 .header__logo-green {
@@ -112,7 +109,7 @@ h6 {
 }
 .header__search-input {
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   outline: none;
   width: 200px;
   background: transparent;
@@ -121,30 +118,30 @@ h6 {
   background: #18c79c;
   color: #fff;
   border: none;
-  padding: 0 1rem;
+  padding: 0 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .header__actions {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
 }
 .header__actions .header__cart,
 .header__actions .header__login {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  gap: 8px;
+  padding: 9.6px 19.2px;
   border-radius: 30px;
   border: 1px solid #18c79c;
   background: transparent;
   color: #18c79c;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 14.4px;
 }
 .header__actions .header__login {
   background: #18c79c;
@@ -162,9 +159,13 @@ body {
 }
 
 [class*=__container] {
-  max-width: 1200px;
+  max-width: 1270px;
   margin: 0 auto;
-  padding: 0 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
 }
 
 .wrapper {
