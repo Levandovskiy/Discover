@@ -153,6 +153,23 @@ h6 {
 .header__actions .header__login:hover {
   transform: translateY(-2px);
 }
+.header .header__navbar {
+  background: #1cc89b;
+  margin-top: 55px;
+  padding: 20px 0;
+}
+.header .header__navbar .header__navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  margin: 0;
+  padding: 0;
+}
+.header .header__navbar .header__navbar-menu li {
+  color: white;
+  font-weight: bold;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
