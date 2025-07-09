@@ -1,5 +1,21 @@
 .header {
-  padding: 16px 32px;
+  padding: 16px 0px;
+
+  &__all {
+    margin: 0 auto;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
   &__logo {
     font-size: 28.8px;
@@ -19,6 +35,10 @@
     background: #f8f8f8;
     border-radius: 30px;
     overflow: hidden;
+
+    @media (max-width: 850px) {
+      margin: 20px 0px;
+    }
 
     &-input {
       border: none;
@@ -44,6 +64,10 @@
   &__actions {
     display: flex;
     gap: 16px;
+
+    @media (max-width: 429px) {
+      flex-direction: column;
+    }
 
     .header__cart,
     .header__login {
@@ -78,6 +102,10 @@
     margin-top: 55px;
     padding: 20px 0;
 
+    @media (max-width: 429px) {
+      margin-top: 20px;
+    }
+
     .header__navbar-menu {
       list-style: none;
       display: flex;
@@ -85,6 +113,10 @@
       gap: 75px;
       margin: 0;
       padding: 0;
+
+      @media (max-width: 450px) {
+        gap: 30px;
+      }
 
       li {
         color: white;
