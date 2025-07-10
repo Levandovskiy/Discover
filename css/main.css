@@ -108,6 +108,7 @@ h6 {
 .header__logo {
   font-size: 28.8px;
   font-weight: 600;
+  font-style: italic;
 }
 .header__logo-green {
   color: #18c79c;
