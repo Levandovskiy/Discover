@@ -205,6 +205,15 @@ h6 {
   color: white;
   font-weight: bold;
 }
+.header .header__navbar .header__navbar-menu li a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.header .header__navbar .header__navbar-menu li:hover {
+  text-decoration: underline;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
