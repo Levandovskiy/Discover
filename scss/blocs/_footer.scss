@@ -1,0 +1,151 @@
+.footer {
+	margin: 0 auto;
+	width: 1068px;
+	&__prev {
+		width: 1068px;
+		position: relative;
+		text-align: right;
+		// margin: 0 auto;
+		// margin-right: 0;
+
+		&-text {
+			color: #111;
+			font-size: 22px;
+			font-weight: 400;
+			font-style: normal;
+			font-family: "DM Sans", sans-serif;
+			text-align: left;
+		}
+		&-btn {
+			width: 175px;
+			height: 50px;
+			box-sizing: border-box;
+			align-items: center;
+			text-align: center;
+			background-color: #10b981;
+			margin-left: 40px;
+			color: #fff;
+			font-size: 17px;
+			font-family: "DM Sans",sans-serif;
+			font-weight: 700;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		margin-top: 40px;
+		width: 979px;
+		&-subscr {
+			&_descr {
+				color: #111;
+				font-size: 22px;
+				text-align: left;
+			}
+			&_input {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: end;
+				margin-top: 30px;
+				width: 289px;
+				// height: 139px;
+				&__mail {
+					color: #111;
+					font-size: 15px;
+					margin-top: 0;
+					text-align: left;
+					font-family: "DM Sans",sans-serif;
+					font-weight: 400;
+					border-bottom: 1px solid #111;
+					width: 289px;
+					height: 50px;
+				}
+				&__btn {
+					width: 50px;
+					height: 50px;
+					background-color: #10b981;
+					margin: 20px 0 0 -50px;
+					border-radius: 8px 8px 0 0;
+				}
+			}
+		}
+		&-services {
+			span {
+				color: #10b981;
+				font-size: 17px;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
+			ul>li {
+				color: #111;
+				font-size: 15px;
+				margin-top: 20px;
+				text-align: left;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
+		}
+		&-about {
+			span {
+				color: #10b981;
+				font-size: 17px;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
+			ul>li {
+				color: #111;
+				font-size: 15px;
+				margin-top: 20px;
+				text-align: left;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
+		}
+		&-help {
+			span {
+				color: #10b981;
+				font-size: 17px;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
+			ul>li {
+				color: #111;
+				font-size: 15px;
+				margin-top: 20px;
+				text-align: left;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
+		}
+	}
+	&__terms {
+		display: flex;
+		justify-content: start;
+		margin: 70px auto 129px;
+		&-conditions {
+			color: #111;
+			font-size: 15px;
+			text-align: left;
+			font-family: "DM Sans",sans-serif;
+			font-weight: 400;
+		}
+		&-privacy {
+			color: #111;
+			font-size: 15px;
+			text-align: left;
+			font-family: "DM Sans",sans-serif;
+			font-weight: 400;
+			margin-left: 39px;
+		}
+		&-social {
+			position: relative;
+			width: 182px;
+			height: 22px;
+			margin-left: 614px;
+			img {
+				margin-left: 40px;
+			}
+		}
+	}
+}
