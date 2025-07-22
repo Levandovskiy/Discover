@@ -111,7 +111,7 @@ h6 {
   font-style: italic;
 }
 .header__logo-green {
-  color: #18c79c;
+  color: #10b981;
 }
 .header__logo-black {
   color: #000;
@@ -135,7 +135,7 @@ h6 {
   background: transparent;
 }
 .header__search-btn {
-  background: #18c79c;
+  background: #10b981;
   color: #fff;
   border: none;
   padding: 0 16px;
@@ -161,15 +161,15 @@ h6 {
   gap: 8px;
   padding: 9.6px 19.2px;
   border-radius: 30px;
-  border: 1px solid #18c79c;
+  border: 1px solid #10b981;
   background: transparent;
-  color: #18c79c;
+  color: #10b981;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 14.4px;
 }
 .header__actions .header__login {
-  background: #18c79c;
+  background: #10b981;
   color: #fff;
   border: none;
   box-shadow: 0 4px 15px rgba(24, 199, 156, 0.3);
@@ -179,7 +179,7 @@ h6 {
   transform: translateY(-2px);
 }
 .header .header__navbar {
-  background: #18c79c;
+  background: #10b981;
   margin-top: 55px;
   padding: 20px 0;
 }
@@ -373,4 +373,4 @@ body {
 
 .main {
   flex: 1 1 auto;
-}/*# sourceMappingURL=main.css.map */
+}
