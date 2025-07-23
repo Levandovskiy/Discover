@@ -1,12 +1,21 @@
 .footer {
 	margin: 0 auto;
 	width: 1068px;
+
+	// @media(max-width: 1200) {
+	// 	width: 992px;
+	// }
+
 	&__prev {
 		width: 1068px;
 		position: relative;
 		text-align: right;
 		// margin: 0 auto;
 		// margin-right: 0;
+
+		// @media(max-width: 1200) {
+		// 	width: 992px;
+		// }
 
 		&-text {
 			color: #111;
