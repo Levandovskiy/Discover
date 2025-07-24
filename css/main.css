@@ -215,6 +215,18 @@ h6 {
   text-decoration: underline;
 }
 
+.main__our-latest-title h1 {
+  color: #2b2626;
+  font-size: 64px;
+  font-style: normal;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .footer {
   margin: 0 auto;
   width: 1068px;
