@@ -1,7 +1,11 @@
 .main {
   &__our-latest {
     &-title {
+      margin-top: 125px;
+      max-width: 550px;
       h1 {
+        margin-bottom: 30px;
+
         color: #2b2626;
         font-size: 64px;
         font-style: normal;
@@ -13,6 +17,55 @@
         letter-spacing: 0;
         text-transform: none;
       }
+
+      p {
+        color: #2b2626;
+        font-size: 21px;
+        font-style: normal;
+        margin-top: 0;
+        text-align: left;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        line-height: 35px;
+        margin-bottom: 0;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    height: auto;
+    margin: 50px 0 100px 0;
+    display: block;
+    max-width: 263px;
+    height: 70px;
+    box-shadow: 0 25px 50px 0 rgba(132, 94, 194, 0.15);
+    border-radius: 10px 10px 10px 10px;
+    background-color: #10b981;
+    color: #fff;
+
+    font-size: 21px;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0;
+    text-transform: none;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #059669;
+    }
+  }
+
+  &__img-latest {
+    display: flex;
+
+    p {
+      margin-left: 10px;
     }
   }
 }
