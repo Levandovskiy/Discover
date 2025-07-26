@@ -226,6 +226,10 @@ h6 {
   transform: scale(1.05);
 }
 
+.main__our-latest {
+  display: flex;
+  justify-content: space-around;
+}
 .main__our-latest-title {
   margin-top: 125px;
   max-width: 550px;
@@ -283,6 +287,9 @@ h6 {
 }
 .main__img-latest p {
   margin-left: 10px;
+}
+.main__readBest-all {
+  display: flex;
 }
 
 .footer {
