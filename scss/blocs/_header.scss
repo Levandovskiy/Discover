@@ -140,6 +140,10 @@
           letter-spacing: 0;
 
           transition: font-size 0.3s ease;
+
+          @media (max-width: 550px) {
+            font-size: 15px;
+          }
         }
 
         &:hover {

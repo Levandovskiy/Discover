@@ -3,9 +3,17 @@
     display: flex;
     justify-content: space-around;
 
+    @media (max-width: 1000px) {
+      display: block;
+    }
+
     &-title {
       margin-top: 125px;
       max-width: 550px;
+
+      @media (max-width: 1000px) {
+        margin: 50px auto;
+      }
       h1 {
         margin-bottom: 30px;
 
@@ -19,6 +27,14 @@
         line-height: normal;
         letter-spacing: 0;
         text-transform: none;
+
+        @media (max-width: 1000px) {
+          font-size: 50px;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 40px;
+        }
       }
 
       p {
@@ -33,6 +49,15 @@
         margin-bottom: 0;
         letter-spacing: 0;
         text-transform: none;
+
+        @media (max-width: 1000px) {
+          font-size: 21px;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 15px;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -62,10 +87,22 @@
     &:hover {
       background-color: #059669;
     }
+
+    @media (max-width: 1000px) {
+      margin: 50px auto;
+    }
+
+    @media (max-width: 500px) {
+      margin: 50px auto;
+      font-size: 20px;
+      font-weight: 500;
+      max-width: 163px;
+      height: 50px;
+    }
   }
 
   &__img-latest {
-    display: flex;
+    display: inline;
 
     p {
       margin-left: 10px;
@@ -78,11 +115,21 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 400px) {
+      display: inline;
+      margin: 0 auto;
+    }
+
     &-all {
       display: flex;
       align-items: center;
       gap: 40px;
       flex-wrap: wrap;
+
+      @media (max-width: 400px) {
+        display: inline;
+        margin: 0 auto;
+      }
     }
 
     &-video {
@@ -95,12 +142,19 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
+
+        @media (max-width: 400px) {
+          margin: 0px auto;
+        }
       }
 
       span {
         font-size: 14px;
         color: #2b2626;
         font-family: "Montserrat", sans-serif;
+        @media (max-width: 400px) {
+          margin: 20px auto;
+        }
       }
     }
 
@@ -111,6 +165,10 @@
       padding: 40px 20px;
       border-radius: 200px;
       width: 250px;
+
+      @media (max-width: 400px) {
+        margin: 0 auto;
+      }
 
       h2 {
         font-size: 20px;
