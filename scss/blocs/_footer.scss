@@ -193,3 +193,75 @@
 		}
 	}
 }
+
+
+@media (max-width: 991px) {
+    .footer {
+        max-width: 768px;
+
+        &__prev {
+            margin: 0 auto;
+            text-align: center;
+
+            &-text {
+                font-size: 16px;
+            }
+
+            &-btn {
+                font-weight: 500;
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+
+            &-subscr {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+                gap: 50px;
+
+                &_descr {
+                    flex-direction: row;
+                    gap: 8px;
+                    font-size: 18px;
+                }
+
+                &_input {
+                    margin: 0;
+
+                    &__mail {
+                        border: 1px solid #979797;
+                        padding-left: 10px;
+                    }
+
+                    &__btn {
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            &-links {
+                margin: 40px auto 0;
+                gap: 170px;
+
+                &_services, &_about, &_help {
+
+
+                    span {
+                        font-size: 15px;
+                    }
+
+                    ul > li {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        &__terms {
+            justify-content: space-around;
+        }
+    }
+}
