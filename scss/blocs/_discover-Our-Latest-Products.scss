@@ -17,7 +17,7 @@
       h1 {
         margin-bottom: 30px;
 
-        color: #2b2626;
+        color: $discoverText;
         font-size: 64px;
         font-style: normal;
 
@@ -38,7 +38,7 @@
       }
 
       p {
-        color: #2b2626;
+        color: $discoverText;
         font-size: 21px;
         font-style: normal;
         margin-top: 0;
@@ -71,8 +71,8 @@
     height: 70px;
     box-shadow: 0 25px 50px 0 rgba(132, 94, 194, 0.15);
     border-radius: 10px 10px 10px 10px;
-    background-color: #10b981;
-    color: #fff;
+    background-color: $discover-Background-Color;
+    color: $discover-Color;
 
     font-size: 21px;
     font-style: normal;
@@ -85,7 +85,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #059669;
+      background-color: $discover-Background-Color-Hover;
     }
 
     @media (max-width: 1000px) {
@@ -150,7 +150,7 @@
 
       span {
         font-size: 14px;
-        color: #2b2626;
+        color: $discoverText;
         font-family: "Montserrat", sans-serif;
         @media (max-width: 400px) {
           margin: 20px auto;
@@ -161,7 +161,7 @@
     &-item {
       position: relative;
       text-align: center;
-      background-color: #e8fff2;
+      background-color: $discover-Background-Color-item;
       padding: 40px 20px;
       border-radius: 200px;
       width: 250px;
@@ -175,7 +175,7 @@
         font-weight: 600;
         font-family: "Montserrat", sans-serif;
         margin: 20px 0;
-        color: #2b2626;
+        color: $discoverText;
       }
     }
 
@@ -188,7 +188,7 @@
     &-price {
       font-size: 24px;
       font-weight: bold;
-      color: #2b2626;
+      color: $discoverText;
       margin-top: 20px;
     }
   }
