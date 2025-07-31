@@ -2,20 +2,9 @@
 	margin: 0 auto;
 	width: 1068px;
 
-	// @media(max-width: 1200) {
-	// 	width: 992px;
-	// }
-
 	&__prev {
-		width: 1068px;
 		position: relative;
 		text-align: right;
-		// margin: 0 auto;
-		// margin-right: 0;
-
-		// @media(max-width: 1200) {
-		// 	width: 992px;
-		// }
 
 		&-text {
 			color: #111;
@@ -24,6 +13,7 @@
 			font-style: normal;
 			font-family: "DM Sans", sans-serif;
 			text-align: left;
+
 		}
 		&-btn {
 			width: 175px;
@@ -45,20 +35,32 @@
 		align-items: start;
 		margin-top: 40px;
 		width: 979px;
+
 		&-subscr {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: start;
+			justify-content: start;
+
 			&_descr {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: start;
 				color: #111;
 				font-size: 22px;
-				text-align: left;
+				line-height: 26px;
 			}
+
 			&_input {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: end;
 				margin-top: 30px;
-				width: 289px;
-				// height: 139px;
+				height: 50px;
+
 				&__mail {
 					color: #111;
 					font-size: 15px;
@@ -66,94 +68,127 @@
 					text-align: left;
 					font-family: "DM Sans",sans-serif;
 					font-weight: 400;
-					border-bottom: 1px solid #111;
+					border-bottom: 1px solid #979797;
+					opacity: 50%;
 					width: 289px;
 					height: 50px;
+					text-transform: none;
 				}
+
 				&__btn {
 					width: 50px;
 					height: 50px;
 					background-color: #10b981;
 					margin: 20px 0 0 -50px;
 					border-radius: 8px 8px 0 0;
+					z-index: 1;
 				}
 			}
 		}
-		&-services {
-			span {
-				color: #10b981;
-				font-size: 17px;
-				font-family: "DM Sans",sans-serif;
-				font-weight: 400;
-			}
-			ul>li {
-				color: #111;
-				font-size: 15px;
-				margin-top: 20px;
-				text-align: left;
-				font-family: "DM Sans",sans-serif;
-				font-weight: 400;
-			}
-		}
-		&-about {
-			span {
-				color: #10b981;
-				font-size: 17px;
-				font-family: "DM Sans",sans-serif;
-				font-weight: 400;
-			}
-			ul>li {
-				color: #111;
-				font-size: 15px;
-				margin-top: 20px;
-				text-align: left;
-				font-family: "DM Sans",sans-serif;
-				font-weight: 400;
-			}
-		}
-		&-help {
-			span {
-				color: #10b981;
-				font-size: 17px;
-				font-family: "DM Sans",sans-serif;
-				font-weight: 400;
-			}
-			ul>li {
-				color: #111;
-				font-size: 15px;
-				margin-top: 20px;
-				text-align: left;
-				font-family: "DM Sans",sans-serif;
-				font-weight: 400;
+		&-links {
+			display: flex;
+			flex-direction: row;
+			gap: 170px;
+
+			&_services, &_about, &_help {
+
+				span {
+					color: #10b981;
+					font-size: 17px;
+					font-family: "DM Sans",sans-serif;
+					font-weight: 400;
+				}
+
+				ul>li {
+					color: #111;
+					font-size: 15px;
+					margin-top: 20px;
+					text-align: left;
+					font-family: "DM Sans",sans-serif;
+					font-weight: 400;
+				}
 			}
 		}
 	}
+
 	&__terms {
 		display: flex;
-		justify-content: start;
+		justify-content: space-between;
+		align-items: center;
 		margin: 70px auto 129px;
-		&-conditions {
-			color: #111;
-			font-size: 15px;
-			text-align: left;
-			font-family: "DM Sans",sans-serif;
-			font-weight: 400;
+
+		&-wrapper {
+			display: flex;
+			flex-direction: row;
+			gap: 39px;
+
+			&_conditions, &_privacy {
+				color: #111;
+				font-size: 15px;
+				text-align: left;
+				font-family: "DM Sans",sans-serif;
+				font-weight: 400;
+			}
 		}
-		&-privacy {
-			color: #111;
-			font-size: 15px;
-			text-align: left;
-			font-family: "DM Sans",sans-serif;
-			font-weight: 400;
-			margin-left: 39px;
-		}
+
 		&-social {
-			position: relative;
-			width: 182px;
-			height: 22px;
-			margin-left: 614px;
-			img {
-				margin-left: 40px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			gap: 40px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.footer {
+		padding: 16px 32px;
+		width: 992px;
+
+		&__prev {
+
+			&-text {
+				font-size: 18px;
+			}
+			&-btn {
+				font-size: 14px;
+			}
+		}
+		&__list {
+			width: auto;
+
+			&-subscr {
+
+				&_descr {
+					font-size: 22px;
+				}
+
+				&_input {
+
+					&__mail {
+						width: 250px;
+					}
+				}
+			}
+
+			&-links {
+				gap: 130px;
+			}
+		}
+
+		&__terms {
+
+			&-wrapper {
+				gap: 30px;
+
+				&_conditions {
+					font-size: 14px;
+				}
+			}
+
+			&-social {
+				gap: 30px;
 			}
 		}
 	}
