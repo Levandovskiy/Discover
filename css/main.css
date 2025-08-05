@@ -433,6 +433,82 @@ h6 {
   right: 5px;
 }
 
+.main__new-launches_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 130px auto;
+  height: 765px;
+  width: 1440px;
+}
+.main__new-launches_wrapper__title {
+  color: #2b2626;
+  font-size: 44px;
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.main__new-launches_wrapper__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  background-color: #845EC2;
+  max-width: 1440px;
+}
+.main__new-launches_wrapper__card-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 62px;
+}
+.main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background-color: #10b981;
+}
+.main__new-launches_wrapper__card-slider_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 83px;
+  height: 466px;
+}
+.main__new-launches_wrapper__card-slider_content__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+  width: 522px;
+}
+.main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
+  box-sizing: border-box;
+  max-width: 238px;
+}
+.main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
+  position: relative;
+  border-radius: 136px;
+}
+.main__new-launches_wrapper__card-slider_content__img .first img {
+  top: -20px;
+}
+.main__new-launches_wrapper__card-slider_content__img .second img {
+  bottom: -20px;
+}
+
 .footer {
   margin: 0 auto;
   width: 1068px;
@@ -764,4 +840,4 @@ body {
 
 .main {
   flex: 1 1 auto;
-}
+}/*# sourceMappingURL=main.css.map */
