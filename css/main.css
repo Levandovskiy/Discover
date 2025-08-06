@@ -605,10 +605,13 @@ h6 {
 
 @media (max-width: 1200px) {
   .main__new-launches_wrapper {
+    height: 566px;
     width: 992px;
+    margin: 100px auto;
   }
   .main__new-launches_wrapper__card {
-    max-width: 992px;
+    max-width: 1199px;
+    width: 100vw;
     margin-top: 50px;
   }
   .main__new-launches_wrapper__card-slider {
@@ -653,6 +656,76 @@ h6 {
     height: 50px;
     width: 210px;
     font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  .main__new-launches_wrapper {
+    margin: 80px auto;
+    max-width: 768px;
+    height: 85vh;
+  }
+  .main__new-launches_wrapper__title {
+    font-size: 36px;
+  }
+  .main__new-launches_wrapper__card {
+    margin-top: 40px;
+    max-width: 991px;
+    width: 100vw;
+    height: 800vh;
+  }
+  .main__new-launches_wrapper__card-slider {
+    display: inline-block;
+    position: absolute;
+  }
+  .main__new-launches_wrapper__card-slider_lbtn, .main__new-launches_wrapper__card-slider_rbtn {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+  }
+  .main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
+    width: 65px;
+    height: 65px;
+  }
+  .main__new-launches_wrapper__card-slider_lbtn {
+    top: 160px;
+  }
+  .main__new-launches_wrapper__card-slider_rbtn {
+    top: 160px;
+    right: 32px;
+  }
+  .main__new-launches_wrapper__card-slider_content {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+  }
+  .main__new-launches_wrapper__card-slider_content__img {
+    gap: 50px;
+    width: 450px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
+    max-width: 238px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
+    width: 200px;
+    top: 0;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr {
+    max-width: 740px;
+    align-items: center;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-header {
+    font-size: 28px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+    width: 35px;
+    height: 35px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-btns {
+    gap: 50px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+    width: 250px;
+    height: 60px;
   }
 }
 .footer {
