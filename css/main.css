@@ -446,10 +446,8 @@ h6 {
   color: #2b2626;
   font-size: 44px;
   font-style: normal;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: 0;
   text-transform: none;
 }
 .main__new-launches_wrapper__card {
@@ -477,6 +475,10 @@ h6 {
   width: 48px;
   height: 48px;
   background-color: #10b981;
+}
+.main__new-launches_wrapper__card-slider_lbtn button:hover, .main__new-launches_wrapper__card-slider_rbtn button:hover {
+  background-color: #059669;
+  transition: 0.3s ease 0.1s;
 }
 .main__new-launches_wrapper__card-slider_content {
   display: flex;
@@ -518,32 +520,31 @@ h6 {
   color: #fff;
   font-size: 60px;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: normal;
   margin-bottom: 29px;
-  letter-spacing: 0;
   text-transform: none;
 }
 .main__new-launches_wrapper__card-slider_content__descr-text {
   color: #fff;
   font-size: 21px;
   text-align: left;
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   line-height: 35px;
   margin-bottom: 24px;
-  letter-spacing: 0;
+}
+.main__new-launches_wrapper__card-slider_content__descr-text a {
+  text-decoration: underline;
   text-transform: none;
+}
+.main__new-launches_wrapper__card-slider_content__descr-text a:hover {
+  color: #fff;
 }
 .main__new-launches_wrapper__card-slider_content__descr-price {
   color: #fff;
   font-size: 31px;
-  font-style: normal;
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   line-height: 35px;
-  letter-spacing: 0;
   text-transform: none;
   margin-bottom: 50px;
 }
@@ -586,12 +587,8 @@ h6 {
 .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
   color: #fff;
   font-size: 21px;
-  font-style: normal;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: 0;
-  text-transform: none;
   width: 303px;
   height: 70px;
   display: block;
@@ -606,6 +603,58 @@ h6 {
   background-color: #10b981;
 }
 
+@media (max-width: 1200px) {
+  .main__new-launches_wrapper {
+    width: 992px;
+  }
+  .main__new-launches_wrapper__card {
+    max-width: 992px;
+    margin-top: 50px;
+  }
+  .main__new-launches_wrapper__card-slider {
+    max-width: 992px;
+    padding: 16px 32px;
+  }
+  .main__new-launches_wrapper__card-slider_content {
+    gap: 40px;
+    height: 430px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img {
+    gap: 30px;
+    width: 330px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
+    max-width: 150px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
+    width: 150px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-header {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-price {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-color {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+    width: 30px;
+    height: 30px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+    height: 50px;
+    width: 210px;
+    font-size: 14px;
+  }
+}
 .footer {
   margin: 0 auto;
   width: 1068px;
