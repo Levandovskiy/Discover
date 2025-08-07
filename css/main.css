@@ -795,6 +795,87 @@ h6 {
     height: 50px;
   }
 }
+@media (max-width: 575px) {
+  .main__new-launches_wrapper {
+    width: 320px;
+    height: 640px;
+    max-width: 575px;
+    margin: 40px auto;
+  }
+  .main__new-launches_wrapper__title {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .main__new-launches_wrapper__card {
+    margin-top: 20px;
+    padding: 20px;
+    height: 590px;
+  }
+  .main__new-launches_wrapper__card-slider {
+    width: 280px;
+    max-width: 575px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .main__new-launches_wrapper__card-slider_lbtn, .main__new-launches_wrapper__card-slider_rbtn {
+    width: 30px;
+    height: 30px;
+    top: 66px;
+  }
+  .main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
+    width: 30px;
+    height: 30px;
+  }
+  .main__new-launches_wrapper__card-slider_rbtn {
+    right: 0;
+  }
+  .main__new-launches_wrapper__card-slider_content {
+    width: 280px;
+    max-width: 575px;
+    height: 530px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img {
+    width: 200px;
+    gap: 10px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
+    max-width: 95px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
+    top: -20px;
+    max-width: 95px;
+  }
+  .main__new-launches_wrapper__card-slider_content__img .second img {
+    top: 20px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr {
+    width: 280px;
+    max-width: 575px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-header {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-text {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-price {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-btns {
+    height: 40px;
+    gap: 20px;
+  }
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+    width: 130px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}
 .footer {
   margin: 0 auto;
   width: 1068px;
