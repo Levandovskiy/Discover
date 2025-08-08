@@ -456,3 +456,107 @@
 		}
 	}
 }
+
+@media (max-width: 575px) {
+	.main__new-launches_wrapper {
+		width: 320px;
+		height: 640px;
+		max-width:  575px;
+		margin: 40px auto;
+
+		&__title {
+			font-size: 26px;
+			font-weight: 500;
+		}
+
+		&__card {
+			margin-top: 20px;
+			padding: 20px;
+			height: 590px;
+
+			&-slider {
+				width: 280px;
+				max-width: 575px;
+				margin: 0 auto;
+				margin-top: 20px;
+				padding: 0;
+
+				&_lbtn, &_rbtn {
+					width: 30px;
+					height: 30px;
+					top: 66px;
+
+					button {
+						width: 30px;
+						height: 30px;
+					}
+				}
+
+				&_rbtn {
+					right: 0;
+				}
+
+				&_content {
+					width: 280px;
+					max-width: 575px;
+					height: 530px;
+
+					&__img {
+						width: 200px;
+						gap: 10px;
+
+						.first, .second {
+							max-width: 95px;
+
+							img {
+								top: -20px;
+								max-width: 95px;
+							}
+						}
+
+						.second {
+
+							img {
+								top: 20px;
+							}
+						}
+					}
+
+					&__descr {
+						width: 280px;
+						max-width: 575px;
+
+						&-header {
+							font-size: 16px;
+							margin-bottom: 8px;
+
+						}
+
+						&-text {
+							font-size: 12px;
+							margin-bottom: 10px;
+						}
+
+						&-price {
+							font-size: 16px;
+							line-height: 28px;
+						}
+
+						&-btns {
+							height: 40px;
+							gap: 20px;
+
+							.add, .more {
+								width: 130px;
+								height: 40px;
+								font-size: 13px;
+								font-weight: 500;
+							}
+						}
+
+					}
+				}
+			}
+		}
+	}
+}
