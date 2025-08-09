@@ -453,6 +453,27 @@ h6 {
     padding: 20px 0 20px 0;
   }
 }
+@media (max-width: 540px) {
+  .main__our-featured {
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .main__our-featured {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 370px) {
+  .main__our-featured {
+    text-align: center;
+  }
+}
 .main__our-description {
   width: 100%;
   max-width: 623px;
@@ -475,6 +496,16 @@ h6 {
   width: 500px;
   padding-bottom: 40px;
 }
+@media (max-width: 540px) {
+  .main__our-description-img0 {
+    width: 450px;
+  }
+}
+@media (max-width: 370px) {
+  .main__our-description-img0 {
+    width: 250px;
+  }
+}
 .main__our-description-img1 {
   margin-right: 20px;
   width: 180px;
@@ -483,6 +514,16 @@ h6 {
 @media (max-width: 1330px) {
   .main__our-description-img1 {
     width: 150px;
+  }
+}
+@media (max-width: 1330px) {
+  .main__our-description-img1 {
+    width: 100px;
+  }
+}
+@media (max-width: 370px) {
+  .main__our-description-img1 {
+    margin-left: 2px;
   }
 }
 .main__our-description-img2 {
@@ -496,6 +537,11 @@ h6 {
     width: 150px;
   }
 }
+@media (max-width: 1330px) {
+  .main__our-description-img2 {
+    width: 100px;
+  }
+}
 .main__our-description-img3 {
   margin-right: 20px;
   width: 180px;
@@ -504,6 +550,11 @@ h6 {
 @media (max-width: 1330px) {
   .main__our-description-img3 {
     width: 150px;
+  }
+}
+@media (max-width: 1330px) {
+  .main__our-description-img3 {
+    width: 100px;
   }
 }
 .main__our-product {
@@ -535,6 +586,12 @@ h6 {
     text-transform: none;
   }
 }
+@media (max-width: 540px) {
+  .main__our-product h2 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
 .main__our-product p {
   color: #fff;
   font-size: 21px;
@@ -551,6 +608,12 @@ h6 {
 @media (max-width: 1200px) {
   .main__our-product p {
     font-size: 17px;
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  .main__our-product p {
+    font-size: 13px;
     text-align: center;
   }
 }
@@ -591,6 +654,13 @@ h6 {
     max-width: 180px;
     height: 50px;
     font-size: 17px;
+  }
+}
+@media (max-width: 540px) {
+  .main__our-product-button-item {
+    max-width: 120px;
+    height: 40px;
+    font-size: 13px;
   }
 }
 
