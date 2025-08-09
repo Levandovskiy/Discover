@@ -16,6 +16,9 @@
 //TODO Імпотрую  OUR FEATURED PRODUCTS
 @import "./blocs/our-featured-products";
 
+//TODO Імпортуємо trending Earphones
+@import "./blocs/trending-Earphones";
+
 //TODO Імпортую NEW LAUNCHES
 @import "./blocs/new-Launches";
 
@@ -27,7 +30,7 @@ body {
 }
 
 [class*="__container"] {
-  max-width: 1270px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
