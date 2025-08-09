@@ -8,13 +8,22 @@
     width: 100%;
     height: 550px;
     margin: 0;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 0 20px 0;
+    }
   }
 
   &__our-description {
     width: 100%;
     max-width: 623px;
     box-sizing: border-box;
-    flex-direction: column;
+    text-align: center;
 
     p {
       text-align: center;
@@ -37,19 +46,31 @@
 
   &__our-description-img1 {
     margin-right: 20px;
-    width: 150px;
+    width: 180px;
     gap: 20px;
+
+    @media (max-width: 1330px) {
+      width: 150px;
+    }
   }
   &__our-description-img2 {
     margin-right: 20px;
-    width: 150px;
+    width: 180px;
     gap: 20px;
     margin-top: -50px;
+
+    @media (max-width: 1330px) {
+      width: 150px;
+    }
   }
   &__our-description-img3 {
     margin-right: 20px;
-    width: 150px;
+    width: 180px;
     gap: 20px;
+
+    @media (max-width: 1330px) {
+      width: 150px;
+    }
   }
 
   &__our-product {
@@ -66,6 +87,21 @@
       margin-bottom: 0;
       letter-spacing: 0;
       text-transform: none;
+
+      @media (max-width: 1200px) {
+        color: #fff;
+        font-size: 35px;
+        font-style: normal;
+
+        margin-top: 20px;
+
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        line-height: normal;
+
+        text-transform: none;
+      }
     }
     p {
       color: #fff;
@@ -79,12 +115,21 @@
       margin-bottom: 0;
       letter-spacing: 0;
       text-transform: none;
+
+      @media (max-width: 1200px) {
+        font-size: 17px;
+        text-align: center;
+      }
     }
   }
 
   &__our-product-button {
     display: flex;
-    gap: 50px;
+    gap: 30px;
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+    }
   }
   &__our-product-button-item {
     width: 100%;
@@ -110,6 +155,12 @@
 
     &:hover {
       background-color: $discover-Background-Color-Hover;
+    }
+
+    @media (max-width: 1200px) {
+      max-width: 180px;
+      height: 50px;
+      font-size: 17px;
     }
   }
 }

@@ -443,11 +443,21 @@ h6 {
   height: 550px;
   margin: 0;
 }
+@media (max-width: 1200px) {
+  .main__our-featured {
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+  }
+}
 .main__our-description {
   width: 100%;
   max-width: 623px;
   box-sizing: border-box;
-  flex-direction: column;
+  text-align: center;
 }
 .main__our-description p {
   text-align: center;
@@ -467,19 +477,34 @@ h6 {
 }
 .main__our-description-img1 {
   margin-right: 20px;
-  width: 150px;
+  width: 180px;
   gap: 20px;
+}
+@media (max-width: 1330px) {
+  .main__our-description-img1 {
+    width: 150px;
+  }
 }
 .main__our-description-img2 {
   margin-right: 20px;
-  width: 150px;
+  width: 180px;
   gap: 20px;
   margin-top: -50px;
 }
+@media (max-width: 1330px) {
+  .main__our-description-img2 {
+    width: 150px;
+  }
+}
 .main__our-description-img3 {
   margin-right: 20px;
-  width: 150px;
+  width: 180px;
   gap: 20px;
+}
+@media (max-width: 1330px) {
+  .main__our-description-img3 {
+    width: 150px;
+  }
 }
 .main__our-product {
   max-width: 560px;
@@ -497,6 +522,19 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
+@media (max-width: 1200px) {
+  .main__our-product h2 {
+    color: #fff;
+    font-size: 35px;
+    font-style: normal;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: none;
+  }
+}
 .main__our-product p {
   color: #fff;
   font-size: 21px;
@@ -510,9 +548,20 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
+@media (max-width: 1200px) {
+  .main__our-product p {
+    font-size: 17px;
+    text-align: center;
+  }
+}
 .main__our-product-button {
   display: flex;
-  gap: 50px;
+  gap: 30px;
+}
+@media (max-width: 1200px) {
+  .main__our-product-button {
+    justify-content: center;
+  }
 }
 .main__our-product-button-item {
   width: 100%;
@@ -536,6 +585,13 @@ h6 {
 }
 .main__our-product-button-item:hover {
   background-color: #059669;
+}
+@media (max-width: 1200px) {
+  .main__our-product-button-item {
+    max-width: 180px;
+    height: 50px;
+    font-size: 17px;
+  }
 }
 
 .main__new-launches_wrapper {
@@ -1299,7 +1355,7 @@ body {
 }
 
 [class*=__container] {
-  max-width: 1270px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
