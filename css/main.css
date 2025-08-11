@@ -504,17 +504,40 @@ h6 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   width: 361px;
   height: 438px;
   border-radius: 15px;
   padding: 18px 21px;
 }
-.main__trending-wrapper_slider__cards .first .card-img, .main__trending-wrapper_slider__cards .second .card-img, .main__trending-wrapper_slider__cards .third .card-img {
-  max-width: 250px;
-  height: 250px;
+.main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  background-color: #10B981;
+  border-radius: 50%;
+  padding: 20px;
+  text-align: center;
+  right: 19px;
+}
+.main__trending-wrapper_slider__cards .first .card-img, .main__trending-wrapper_slider__cards .second .card-img, .main__trending-wrapper_slider__cards .third .card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250px;
+  height: 250px;
 }
 .main__trending-wrapper_slider__cards .first .card-img img, .main__trending-wrapper_slider__cards .second .card-img img, .main__trending-wrapper_slider__cards .third .card-img img {
   margin: 0 auto;
@@ -604,13 +627,20 @@ h6 {
 .main__trending-wrapper_slider__cards #second .card {
   background-color: #E8F9FF;
 }
+.main__trending-wrapper_slider__cards #second .card-save {
+  display: none;
+}
 .main__trending-wrapper_slider__cards #third .card {
   background-color: #D3FBFB;
+}
+.main__trending-wrapper_slider__cards #third .card-save {
+  background-color: #08BDBE;
 }
 .main__trending-wrapper_slider__button {
   position: absolute;
   right: -64px;
   bottom: 283px;
+  background-color: #fff;
 }
 
 .main__new-launches_wrapper {
