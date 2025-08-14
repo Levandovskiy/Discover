@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #845ec2;
+    background-color: $featured-background-color;
     padding: 0 85px 0 85px;
     width: 100%;
     height: 550px;
@@ -45,7 +45,7 @@
 
     p {
       text-align: center;
-      color: #fff;
+      color: $featuredText;
       font-size: 31px;
       font-style: normal;
       font-family: "Montserrat", sans-serif;
@@ -115,7 +115,7 @@
   &__our-product {
     max-width: 560px;
     h2 {
-      color: #fff;
+      color: $featuredText;
       font-size: 44px;
       font-style: normal;
       margin-top: 0;
@@ -128,7 +128,7 @@
       text-transform: none;
 
       @media (max-width: 1200px) {
-        color: #fff;
+        color: $featuredText;
         font-size: 35px;
         font-style: normal;
 
@@ -148,7 +148,7 @@
       }
     }
     p {
-      color: #fff;
+      color: $featuredText;
       font-size: 21px;
       font-style: normal;
       margin-top: 0;
