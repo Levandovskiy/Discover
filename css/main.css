@@ -679,7 +679,6 @@ h6 {
   color: #2b2626;
   font-size: 44px;
   font-style: normal;
-  margin-top: 0 auto;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -1000,6 +999,124 @@ h6 {
   .main__trending-wrapper_slider__button {
     width: 50px;
     height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .main__trending {
+    width: 576px;
+    height: 575px;
+    margin: 80px auto;
+  }
+  .main__trending-wrapper {
+    padding: 0 20px;
+  }
+  .main__trending-wrapper_title {
+    font-size: 32px;
+  }
+  .main__trending-wrapper_category {
+    margin-top: 25px;
+  }
+  .main__trending-wrapper_category__aerbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .main__trending-wrapper_category__aerbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
+    width: 100px;
+    height: 50px;
+  }
+  .main__trending-wrapper_slider {
+    margin-top: 30px;
+  }
+  .main__trending-wrapper_slider__cards {
+    width: 506px;
+    justify-content: space-between;
+  }
+  .main__trending-wrapper_slider__cards .first .card, .main__trending-wrapper_slider__cards .second .card, .main__trending-wrapper_slider__cards .third .card {
+    width: 240px;
+    height: 330px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-img, .main__trending-wrapper_slider__cards .second .card-img, .main__trending-wrapper_slider__cards .third .card-img {
+    width: 130px;
+    height: 130px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-img img, .main__trending-wrapper_slider__cards .second .card-img img, .main__trending-wrapper_slider__cards .third .card-img img {
+    width: 130px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr, .main__trending-wrapper_slider__cards .second .card-descr, .main__trending-wrapper_slider__cards .third .card-descr {
+    width: 210px;
+    height: 120px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr_header, .main__trending-wrapper_slider__cards .second .card-descr_header, .main__trending-wrapper_slider__cards .third .card-descr_header {
+    font-size: 16px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr_price, .main__trending-wrapper_slider__cards .second .card-descr_price, .main__trending-wrapper_slider__cards .third .card-descr_price {
+    font-size: 18px;
+  }
+  .main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
+    width: 240px;
+    height: 50px;
+    margin-top: 22px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .main__trending-wrapper_slider__button {
+    width: 30px;
+    height: 30px;
+    right: -30px;
+  }
+  .main__trending-wrapper_slider__button svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .main__trending {
+    width: 320px;
+    height: 534px;
+    margin: 40px auto;
+  }
+  .main__trending-wrapper_title {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .main__trending-wrapper_category {
+    gap: 10px;
+  }
+  .main__trending-wrapper_category__aerbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .main__trending-wrapper_category__aerbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
+    width: 75px;
+    height: 40px;
+  }
+  .main__trending-wrapper_slider__cards {
+    width: 240px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 11px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr_header, .main__trending-wrapper_slider__cards .second .card-descr_header, .main__trending-wrapper_slider__cards .third .card-descr_header {
+    font-size: 15px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars, .main__trending-wrapper_slider__cards .second .card-descr_rating__stars, .main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
+    width: 72px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars img, .main__trending-wrapper_slider__cards .second .card-descr_rating__stars img, .main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
+    width: 13px;
+  }
+  .main__trending-wrapper_slider__cards .first .card-descr_price, .main__trending-wrapper_slider__cards .second .card-descr_price, .main__trending-wrapper_slider__cards .third .card-descr_price {
+    font-size: 16px;
+  }
+  .main__trending-wrapper_slider__cards .second {
+    display: none;
   }
 }
 .main__new-launches_wrapper {

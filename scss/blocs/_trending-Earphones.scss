@@ -4,7 +4,6 @@
 	width: 100%;
 
 	&-wrapper {
-		// width: 830px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -14,7 +13,6 @@
 			color: #2b2626;
 			font-size: 44px;
 			font-style: normal;
-			margin-top: 0 auto;
 			text-align: center;
 			font-family: "Montserrat",sans-serif;
 			font-weight: 600;
@@ -111,16 +109,13 @@
 							align-items: center;
 							max-width: 250px;
 							height: 250px;
-							// position: relative;
 
 							img {
 								margin: 0 auto;
-								// text-align: center;
 							}
 
 						}
 						&-descr {
-							// margin-top: 30px;
 							display: flex;
 							flex-direction: column;
 							align-items: start;
@@ -161,7 +156,6 @@
 
 									img {
 										width: 100%;
-										// height: 17px;
 									}
 								}
 								&__review {
@@ -191,7 +185,6 @@
 					button {
 						width: 361px;
 						height: 70px;
-						// background-color: #10B981;
 						background-color: #10B981;
 						text-align: center;
 						color: #fff;
@@ -408,6 +401,177 @@
 				&__button {
 					width: 50px;
 					height: 50px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.main__trending {
+		width: 576px;
+		height: 575px;
+		margin: 80px auto;
+
+		&-wrapper {
+			padding: 0 20px;
+
+			&_title {
+				font-size: 32px;
+			}
+
+			&_category {
+				margin-top: 25px;
+
+				&__aerbuds, &__wireless, &__wired {
+					font-size: 16px;
+					font-weight: 500;
+
+					&.active {
+						width: 100px;
+						height: 50px;
+					}
+				}
+			}
+
+			&_slider {
+				margin-top: 30px;
+
+				&__cards {
+					width: 506px;
+					justify-content: space-between;
+
+					.first, .second, .third {
+
+						.card {
+							width: 240px;
+							height: 330px;
+
+							&-save {
+								font-size: 12px;
+								padding: 10px;
+							}
+
+							&-img {
+								width: 130px;
+								height: 130px;
+
+								img {
+									width: 130px;
+								}
+							}
+
+							&-descr {
+								width: 210px;
+								height: 120px;
+
+								&_header {
+									font-size: 16px;
+								}
+
+								&_price {
+									font-size: 18px;
+								}
+
+							}
+						}
+
+						button {
+							width: 240px;
+							height: 50px;
+							margin-top: 22px;
+							font-size: 15px;
+							font-weight: 500;
+						}
+					}
+				}
+
+				&__button {
+					width: 30px;
+					height: 30px;
+					right: -30px;
+
+					svg {
+						width: 30px;
+						height: 30px;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.main__trending {
+		width: 320px;
+		height: 534px;
+		margin: 40px auto;
+
+		&-wrapper {
+
+			&_title {
+				font-size: 26px;
+				font-weight: 500;
+			}
+
+			&_category {
+				gap: 10px;
+
+				&__aerbuds, &__wireless, &__wired {
+					font-size: 14px;
+					font-weight: 400;
+
+					&.active {
+						width: 75px;
+						height: 40px;
+					}
+				}
+			}
+
+			&_slider {
+
+				&__cards {
+					width: 240px;
+
+					.first, .second, .third {
+
+						.card {
+
+							&-save {
+								width: 50px;
+								height: 50px;
+								padding: 5px;
+								font-size: 11px;
+							}
+
+							&-descr {
+
+								&_header {
+									font-size: 15px;
+								}
+
+								&_rating {
+
+									&__stars {
+										width: 72px;
+
+										img {
+											width: 13px;
+										}
+									}
+								}
+
+								&_price {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+
+					.second {
+						display: none;
+					}
 				}
 			}
 		}
