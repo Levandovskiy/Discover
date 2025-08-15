@@ -198,6 +198,11 @@
 						box-shadow: 0 25px 50px 0 rgba(255,255,255,.1);
 						border-radius: 10px 10px 10px 10px;
 						margin-top: 29px;
+						transition: background-color 0.3s ease;
+
+						&:hover {
+							background-color: #059669;
+						}
 					}
 				}
 
@@ -232,6 +237,19 @@
 				right: -64px;
 				bottom: 283px;
 				background-color: #fff;
+				transition: background-color 0.3s ease;
+
+				&:hover {
+					background-color: #059669;
+
+					svg {
+						transition: background-color 0.6s ease;
+
+						path {
+							fill: #fff;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -493,11 +511,89 @@
 					width: 30px;
 					height: 30px;
 					right: -30px;
+					bottom: 210px;
 
 					svg {
 						width: 30px;
 						height: 30px;
 
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 575px) {
+	.main__sellers {
+		width: 320px;
+		height: 534px;
+		margin: 40px auto;
+
+		&-wrapper {
+
+			&_title {
+				font-size: 26px;
+				font-weight: 500;
+			}
+
+			&_category {
+				gap: 10px;
+
+				&__picks, &__watches {
+					font-size: 14px;
+					font-weight: 400;
+
+					&.active {
+						width: 75px;
+						height: 40px;
+					}
+				}
+			}
+
+			&_slider {
+
+				&__cards {
+					width: 240px;
+
+					.first, .second, .third {
+
+						.card {
+
+							&-save {
+								width: 50px;
+								height: 50px;
+								padding: 5px;
+								font-size: 11px;
+							}
+
+							&-descr {
+
+								&_header {
+									font-size: 15px;
+								}
+
+								&_rating {
+
+									&__stars {
+										width: 72px;
+
+										img {
+											width: 13px;
+										}
+									}
+								}
+
+								&_price {
+									font-size: 16px;
+								}
+							}
+						}
+					}
+
+					.second {
+						display: none;
 					}
 				}
 			}
