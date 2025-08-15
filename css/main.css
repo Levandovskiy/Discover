@@ -619,6 +619,10 @@ h6 {
   box-shadow: 0 25px 50px 0 rgba(255, 255, 255, 0.1);
   border-radius: 10px 10px 10px 10px;
   margin-top: 29px;
+  transition: background-color 0.3s ease;
+}
+.main__trending-wrapper_slider__cards .first button:hover, .main__trending-wrapper_slider__cards .second button:hover, .main__trending-wrapper_slider__cards .third button:hover {
+  background-color: #059669;
 }
 .main__trending-wrapper_slider__cards #first .card {
   background-color: #E0EFFF;
@@ -640,6 +644,16 @@ h6 {
   right: -64px;
   bottom: 283px;
   background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+.main__trending-wrapper_slider__button:hover {
+  background-color: #059669;
+}
+.main__trending-wrapper_slider__button:hover svg {
+  transition: background-color 0.6s ease;
+}
+.main__trending-wrapper_slider__button:hover svg path {
+  fill: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -768,6 +782,7 @@ h6 {
   .main__trending-wrapper_slider__button {
     width: 50px;
     height: 50px;
+    bottom: 250px;
   }
 }
 @media (max-width: 767px) {
@@ -836,6 +851,7 @@ h6 {
     width: 30px;
     height: 30px;
     right: -30px;
+    bottom: 210px;
   }
   .main__trending-wrapper_slider__button svg {
     width: 30px;
