@@ -1001,6 +1001,78 @@ h6 {
     height: 50px;
   }
 }
+@media (max-width: 767px) {
+  .main__sellers {
+    width: 576px;
+    height: 575px;
+    margin: 80px auto;
+  }
+  .main__sellers-wrapper {
+    padding: 0 20px;
+  }
+  .main__sellers-wrapper_title {
+    font-size: 32px;
+  }
+  .main__sellers-wrapper_category {
+    margin-top: 25px;
+  }
+  .main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
+    width: 100px;
+    height: 50px;
+  }
+  .main__sellers-wrapper_slider {
+    margin-top: 30px;
+  }
+  .main__sellers-wrapper_slider__cards {
+    width: 506px;
+    justify-content: space-between;
+  }
+  .main__sellers-wrapper_slider__cards .first .card, .main__sellers-wrapper_slider__cards .second .card, .main__sellers-wrapper_slider__cards .third .card {
+    width: 240px;
+    height: 330px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-img, .main__sellers-wrapper_slider__cards .second .card-img, .main__sellers-wrapper_slider__cards .third .card-img {
+    width: 130px;
+    height: 130px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-img img, .main__sellers-wrapper_slider__cards .second .card-img img, .main__sellers-wrapper_slider__cards .third .card-img img {
+    width: 130px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-descr, .main__sellers-wrapper_slider__cards .second .card-descr, .main__sellers-wrapper_slider__cards .third .card-descr {
+    width: 210px;
+    height: 120px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-descr_header, .main__sellers-wrapper_slider__cards .second .card-descr_header, .main__sellers-wrapper_slider__cards .third .card-descr_header {
+    font-size: 16px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-descr_price, .main__sellers-wrapper_slider__cards .second .card-descr_price, .main__sellers-wrapper_slider__cards .third .card-descr_price {
+    font-size: 18px;
+  }
+  .main__sellers-wrapper_slider__cards .first button, .main__sellers-wrapper_slider__cards .second button, .main__sellers-wrapper_slider__cards .third button {
+    width: 240px;
+    height: 50px;
+    margin-top: 22px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .main__sellers-wrapper_slider__button {
+    width: 30px;
+    height: 30px;
+    right: -30px;
+  }
+  .main__sellers-wrapper_slider__button svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 .main__trending {
   margin: 130px auto;
   height: 830px;
