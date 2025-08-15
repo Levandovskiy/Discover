@@ -2205,7 +2205,7 @@ h6 {
   border-radius: 10px 10px 10px 10px;
   background-color: #10b981;
   color: #fff;
-  font-size: 28px;
+  font-size: 28 px;
   font-style: normal;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -2236,4 +2236,4 @@ body {
 
 .main {
   flex: 1 1 auto;
-}/*# sourceMappingURL=main.css.map */
+}
