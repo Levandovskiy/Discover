@@ -951,6 +951,56 @@ h6 {
     height: 50px;
   }
 }
+@media (max-width: 991px) {
+  .main__sellers {
+    width: 768px;
+    height: 670px;
+    margin: 80px auto;
+  }
+  .main__sellers-wrapper_title {
+    font-size: 36px;
+  }
+  .main__sellers-wrapper_category {
+    margin-top: 35px;
+  }
+  .main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
+    font-size: 18px;
+  }
+  .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
+    width: 110px;
+    height: 55px;
+  }
+  .main__sellers-wrapper_slider {
+    margin-top: 50px;
+  }
+  .main__sellers-wrapper_slider__cards {
+    width: 698px;
+    justify-content: space-evenly;
+    gap: 25px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card, .main__sellers-wrapper_slider__cards .second .card, .main__sellers-wrapper_slider__cards .third .card {
+    width: 280px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+  }
+  .main__sellers-wrapper_slider__cards .first .card-descr, .main__sellers-wrapper_slider__cards .second .card-descr, .main__sellers-wrapper_slider__cards .third .card-descr {
+    width: 250px;
+  }
+  .main__sellers-wrapper_slider__cards .first button, .main__sellers-wrapper_slider__cards .second button, .main__sellers-wrapper_slider__cards .third button {
+    width: 280px;
+    height: 60px;
+  }
+  .main__sellers-wrapper_slider__cards .third {
+    display: none;
+  }
+  .main__sellers-wrapper_slider__button {
+    width: 50px;
+    height: 50px;
+  }
+}
 .main__trending {
   margin: 130px auto;
   height: 830px;
