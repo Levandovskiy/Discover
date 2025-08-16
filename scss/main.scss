@@ -16,6 +16,9 @@
 //TODO Імпотрую  OUR FEATURED PRODUCTS
 @import "./blocs/our-featured-products";
 
+//TODO Імпортую TOP SELLERS
+@import "./blocs/top-Sellers";
+
 //TODO Імпортуємо trending Earphones
 @import "./blocs/trending-Earphones";
 
@@ -24,6 +27,9 @@
 
 // Імпортую FOTTER
 @import "./blocs/footer";
+
+//? Імпортую 404
+@import "./blocs/404";
 
 body {
   font-family: "Montserrat", sans-serif;
