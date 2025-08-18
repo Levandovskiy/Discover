@@ -674,6 +674,8 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .main__sellers-wrapper_title {
   color: #2b2626;
@@ -706,12 +708,12 @@ h6 {
   text-transform: none;
 }
 .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
-  color: #fff;
   content: "";
+  color: #fff;
   width: 177px;
   height: 91px;
   border-radius: 100%;
-  background-color: #10B981;
+  background-color: #10b981;
 }
 .main__sellers-wrapper_slider {
   display: flex;
@@ -729,7 +731,7 @@ h6 {
   gap: 93px;
   width: 1270px;
 }
-.main__sellers-wrapper_slider__cards .first .card, .main__sellers-wrapper_slider__cards .second .card, .main__sellers-wrapper_slider__cards .third .card {
+.main__sellers-wrapper_slider__cards .items .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -740,7 +742,7 @@ h6 {
   border-radius: 15px;
   padding: 18px 21px;
 }
-.main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+.main__sellers-wrapper_slider__cards .items .card-save {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -756,23 +758,25 @@ h6 {
   line-height: normal;
   letter-spacing: 0;
   text-transform: none;
-  background-color: #10B981;
+  background-color: #10b981;
   border-radius: 50%;
   padding: 20px;
   text-align: center;
   right: 19px;
 }
-.main__sellers-wrapper_slider__cards .first .card-img, .main__sellers-wrapper_slider__cards .second .card-img, .main__sellers-wrapper_slider__cards .third .card-img {
+.main__sellers-wrapper_slider__cards .items .card-img {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 250px;
   height: 250px;
 }
-.main__sellers-wrapper_slider__cards .first .card-img img, .main__sellers-wrapper_slider__cards .second .card-img img, .main__sellers-wrapper_slider__cards .third .card-img img {
+.main__sellers-wrapper_slider__cards .items .card-img img {
+  max-width: 250px;
+  height: 250px;
   margin: 0 auto;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr, .main__sellers-wrapper_slider__cards .second .card-descr, .main__sellers-wrapper_slider__cards .third .card-descr {
+.main__sellers-wrapper_slider__cards .items .card-descr {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -783,7 +787,7 @@ h6 {
   background-color: #fff;
   padding: 30px 50px;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr_header, .main__sellers-wrapper_slider__cards .second .card-descr_header, .main__sellers-wrapper_slider__cards .third .card-descr_header {
+.main__sellers-wrapper_slider__cards .items .card-descr_header {
   color: #2b2626;
   font-size: 21px;
   font-style: normal;
@@ -796,14 +800,14 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr_rating, .main__sellers-wrapper_slider__cards .second .card-descr_rating, .main__sellers-wrapper_slider__cards .third .card-descr_rating {
+.main__sellers-wrapper_slider__cards .items .card-descr_rating {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   gap: 13px;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr_rating__stars, .main__sellers-wrapper_slider__cards .second .card-descr_rating__stars, .main__sellers-wrapper_slider__cards .third .card-descr_rating__stars {
+.main__sellers-wrapper_slider__cards .items .card-descr_rating__stars {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -811,10 +815,10 @@ h6 {
   gap: 2px;
   width: 93px;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr_rating__stars img, .main__sellers-wrapper_slider__cards .second .card-descr_rating__stars img, .main__sellers-wrapper_slider__cards .third .card-descr_rating__stars img {
+.main__sellers-wrapper_slider__cards .items .card-descr_rating__stars img {
   width: 100%;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr_rating__review, .main__sellers-wrapper_slider__cards .second .card-descr_rating__review, .main__sellers-wrapper_slider__cards .third .card-descr_rating__review {
+.main__sellers-wrapper_slider__cards .items .card-descr_rating__review {
   color: #888;
   font-size: 11px;
   font-style: normal;
@@ -824,7 +828,7 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__sellers-wrapper_slider__cards .first .card-descr_price, .main__sellers-wrapper_slider__cards .second .card-descr_price, .main__sellers-wrapper_slider__cards .third .card-descr_price {
+.main__sellers-wrapper_slider__cards .items .card-descr_price {
   color: #2b2626;
   font-size: 21px;
   font-style: normal;
@@ -834,10 +838,10 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__sellers-wrapper_slider__cards .first button, .main__sellers-wrapper_slider__cards .second button, .main__sellers-wrapper_slider__cards .third button {
+.main__sellers-wrapper_slider__cards .items button {
   width: 361px;
   height: 70px;
-  background-color: #10B981;
+  background-color: #10b981;
   text-align: center;
   color: #fff;
   font-size: 21px;
@@ -852,7 +856,7 @@ h6 {
   margin-top: 29px;
   transition: background-color 0.3s ease;
 }
-.main__sellers-wrapper_slider__cards .first button:hover, .main__sellers-wrapper_slider__cards .second button:hover, .main__sellers-wrapper_slider__cards .third button:hover {
+.main__sellers-wrapper_slider__cards .items button:hover {
   background-color: #059669;
 }
 .main__sellers-wrapper_slider__cards #first .card {
@@ -918,38 +922,38 @@ h6 {
     justify-content: start;
     gap: 50px;
   }
-  .main__sellers-wrapper_slider__cards .first .card, .main__sellers-wrapper_slider__cards .second .card, .main__sellers-wrapper_slider__cards .third .card {
+  .main__sellers-wrapper_slider__cards .items .card {
     width: 261px;
     height: 390px;
     padding: 15px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+  .main__sellers-wrapper_slider__cards .items .card-save {
     width: 70px;
     height: 70px;
     font-size: 16px;
     padding: 15px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-img, .main__sellers-wrapper_slider__cards .second .card-img, .main__sellers-wrapper_slider__cards .third .card-img {
+  .main__sellers-wrapper_slider__cards .items .card-img {
     width: 160px;
     height: 160px;
     margin-top: 30px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-img img, .main__sellers-wrapper_slider__cards .second .card-img img, .main__sellers-wrapper_slider__cards .third .card-img img {
+  .main__sellers-wrapper_slider__cards .items .card-img img {
     width: 160px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr, .main__sellers-wrapper_slider__cards .second .card-descr, .main__sellers-wrapper_slider__cards .third .card-descr {
+  .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 227px;
     height: 135px;
     padding: 14px 20px;
     justify-content: space-between;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_header, .main__sellers-wrapper_slider__cards .second .card-descr_header, .main__sellers-wrapper_slider__cards .third .card-descr_header {
+  .main__sellers-wrapper_slider__cards .items .card-descr_header {
     font-size: 18px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_price, .main__sellers-wrapper_slider__cards .second .card-descr_price, .main__sellers-wrapper_slider__cards .third .card-descr_price {
+  .main__sellers-wrapper_slider__cards .items .card-descr_price {
     font-size: 19px;
   }
-  .main__sellers-wrapper_slider__cards .first button, .main__sellers-wrapper_slider__cards .second button, .main__sellers-wrapper_slider__cards .third button {
+  .main__sellers-wrapper_slider__cards .items button {
     width: 261px;
     height: 50px;
     font-size: 18px;
@@ -992,22 +996,23 @@ h6 {
     justify-content: space-evenly;
     gap: 25px;
   }
-  .main__sellers-wrapper_slider__cards .first .card, .main__sellers-wrapper_slider__cards .second .card, .main__sellers-wrapper_slider__cards .third .card {
+  .main__sellers-wrapper_slider__cards .items .card {
+    flex: 0 0 50%;
     width: 280px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+  .main__sellers-wrapper_slider__cards .items .card-save {
     width: 60px;
     height: 60px;
     font-size: 14px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr, .main__sellers-wrapper_slider__cards .second .card-descr, .main__sellers-wrapper_slider__cards .third .card-descr {
+  .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 250px;
   }
-  .main__sellers-wrapper_slider__cards .first button, .main__sellers-wrapper_slider__cards .second button, .main__sellers-wrapper_slider__cards .third button {
+  .main__sellers-wrapper_slider__cards .items button {
     width: 280px;
     height: 60px;
   }
-  .main__sellers-wrapper_slider__cards .third {
+  .main__sellers-wrapper_slider__cards #third {
     display: none;
   }
   .main__sellers-wrapper_slider__button {
@@ -1045,32 +1050,32 @@ h6 {
     width: 506px;
     justify-content: space-between;
   }
-  .main__sellers-wrapper_slider__cards .first .card, .main__sellers-wrapper_slider__cards .second .card, .main__sellers-wrapper_slider__cards .third .card {
+  .main__sellers-wrapper_slider__cards .items .card {
     width: 240px;
     height: 330px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+  .main__sellers-wrapper_slider__cards .items .card-save {
     font-size: 12px;
     padding: 10px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-img, .main__sellers-wrapper_slider__cards .second .card-img, .main__sellers-wrapper_slider__cards .third .card-img {
+  .main__sellers-wrapper_slider__cards .items .card-img {
     width: 130px;
     height: 130px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-img img, .main__sellers-wrapper_slider__cards .second .card-img img, .main__sellers-wrapper_slider__cards .third .card-img img {
+  .main__sellers-wrapper_slider__cards .items .card-img img {
     width: 130px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr, .main__sellers-wrapper_slider__cards .second .card-descr, .main__sellers-wrapper_slider__cards .third .card-descr {
+  .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 210px;
     height: 120px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_header, .main__sellers-wrapper_slider__cards .second .card-descr_header, .main__sellers-wrapper_slider__cards .third .card-descr_header {
+  .main__sellers-wrapper_slider__cards .items .card-descr_header {
     font-size: 16px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_price, .main__sellers-wrapper_slider__cards .second .card-descr_price, .main__sellers-wrapper_slider__cards .third .card-descr_price {
+  .main__sellers-wrapper_slider__cards .items .card-descr_price {
     font-size: 18px;
   }
-  .main__sellers-wrapper_slider__cards .first button, .main__sellers-wrapper_slider__cards .second button, .main__sellers-wrapper_slider__cards .third button {
+  .main__sellers-wrapper_slider__cards .items button {
     width: 240px;
     height: 50px;
     margin-top: 22px;
@@ -1112,25 +1117,28 @@ h6 {
   .main__sellers-wrapper_slider__cards {
     width: 240px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-save, .main__sellers-wrapper_slider__cards .second .card-save, .main__sellers-wrapper_slider__cards .third .card-save {
+  .main__sellers-wrapper_slider__cards .items .card {
+    flex: 0 0 100%;
+  }
+  .main__sellers-wrapper_slider__cards .items .card-save {
     width: 50px;
     height: 50px;
     padding: 5px;
     font-size: 11px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_header, .main__sellers-wrapper_slider__cards .second .card-descr_header, .main__sellers-wrapper_slider__cards .third .card-descr_header {
+  .main__sellers-wrapper_slider__cards .items .card-descr_header {
     font-size: 15px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_rating__stars, .main__sellers-wrapper_slider__cards .second .card-descr_rating__stars, .main__sellers-wrapper_slider__cards .third .card-descr_rating__stars {
+  .main__sellers-wrapper_slider__cards .items .card-descr_rating__stars {
     width: 72px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_rating__stars img, .main__sellers-wrapper_slider__cards .second .card-descr_rating__stars img, .main__sellers-wrapper_slider__cards .third .card-descr_rating__stars img {
+  .main__sellers-wrapper_slider__cards .items .card-descr_rating__stars img {
     width: 13px;
   }
-  .main__sellers-wrapper_slider__cards .first .card-descr_price, .main__sellers-wrapper_slider__cards .second .card-descr_price, .main__sellers-wrapper_slider__cards .third .card-descr_price {
+  .main__sellers-wrapper_slider__cards .items .card-descr_price {
     font-size: 16px;
   }
-  .main__sellers-wrapper_slider__cards .second {
+  .main__sellers-wrapper_slider__cards #second {
     display: none;
   }
 }
@@ -1176,12 +1184,12 @@ h6 {
   text-transform: none;
 }
 .main__trending-wrapper_category__aerbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
-  color: #fff;
   content: "";
+  color: #fff;
   width: 177px;
   height: 91px;
   border-radius: 100%;
-  background-color: #10B981;
+  background-color: #10b981;
 }
 .main__trending-wrapper_slider {
   display: flex;
@@ -1226,7 +1234,7 @@ h6 {
   line-height: normal;
   letter-spacing: 0;
   text-transform: none;
-  background-color: #10B981;
+  background-color: #10b981;
   border-radius: 50%;
   padding: 20px;
   text-align: center;
@@ -1307,7 +1315,7 @@ h6 {
 .main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
   width: 361px;
   height: 70px;
-  background-color: #10B981;
+  background-color: #10b981;
   text-align: center;
   color: #fff;
   font-size: 21px;
@@ -1618,8 +1626,11 @@ h6 {
   color: #2b2626;
   font-size: 44px;
   font-style: normal;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: normal;
+  letter-spacing: 0;
   text-transform: none;
 }
 .main__new-launches_wrapper__card {

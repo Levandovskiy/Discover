@@ -15,3 +15,50 @@ $discover-Background-Color-item: #e8fff2;
 
 $featuredText: #fff;
 $featured-background-color: #845ec2;
+
+//TODO Top Sellers & Trending Earphones
+$mainColor: #10b981;;
+
+@mixin active {
+	content: '';
+	color: #fff;
+	width: 177px;
+	height: 91px;
+	border-radius: 100%;
+	background-color: $mainColor;
+}
+
+@mixin title {
+	color: #2b2626;
+	font-size: 44px;
+	font-style: normal;
+	text-align: center;
+	font-family: "Montserrat",sans-serif;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+@mixin addButton {
+	width: 361px;
+	height: 70px;
+	background-color: $mainColor;
+	text-align: center;
+	color: #fff;
+	font-size: 21px;
+	font-style: normal;
+	font-family: "Montserrat",sans-serif;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0;
+	text-transform: none;
+	box-shadow: 0 25px 50px 0 rgba(255,255,255,.1);
+	border-radius: 10px 10px 10px 10px;
+	margin-top: 29px;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: #059669;
+	}
+}
