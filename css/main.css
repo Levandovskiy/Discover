@@ -1207,7 +1207,9 @@ h6 {
   gap: 93px;
   width: 1270px;
 }
-.main__trending-wrapper_slider__cards .first .card, .main__trending-wrapper_slider__cards .second .card, .main__trending-wrapper_slider__cards .third .card {
+.main__trending-wrapper_slider__cards .first .card,
+.main__trending-wrapper_slider__cards .second .card,
+.main__trending-wrapper_slider__cards .third .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1218,7 +1220,9 @@ h6 {
   border-radius: 15px;
   padding: 18px 21px;
 }
-.main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+.main__trending-wrapper_slider__cards .first .card-save,
+.main__trending-wrapper_slider__cards .second .card-save,
+.main__trending-wrapper_slider__cards .third .card-save {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1240,17 +1244,23 @@ h6 {
   text-align: center;
   right: 19px;
 }
-.main__trending-wrapper_slider__cards .first .card-img, .main__trending-wrapper_slider__cards .second .card-img, .main__trending-wrapper_slider__cards .third .card-img {
+.main__trending-wrapper_slider__cards .first .card-img,
+.main__trending-wrapper_slider__cards .second .card-img,
+.main__trending-wrapper_slider__cards .third .card-img {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 250px;
   height: 250px;
 }
-.main__trending-wrapper_slider__cards .first .card-img img, .main__trending-wrapper_slider__cards .second .card-img img, .main__trending-wrapper_slider__cards .third .card-img img {
+.main__trending-wrapper_slider__cards .first .card-img img,
+.main__trending-wrapper_slider__cards .second .card-img img,
+.main__trending-wrapper_slider__cards .third .card-img img {
   margin: 0 auto;
 }
-.main__trending-wrapper_slider__cards .first .card-descr, .main__trending-wrapper_slider__cards .second .card-descr, .main__trending-wrapper_slider__cards .third .card-descr {
+.main__trending-wrapper_slider__cards .first .card-descr,
+.main__trending-wrapper_slider__cards .second .card-descr,
+.main__trending-wrapper_slider__cards .third .card-descr {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1261,7 +1271,9 @@ h6 {
   background-color: #fff;
   padding: 30px 50px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_header, .main__trending-wrapper_slider__cards .second .card-descr_header, .main__trending-wrapper_slider__cards .third .card-descr_header {
+.main__trending-wrapper_slider__cards .first .card-descr_header,
+.main__trending-wrapper_slider__cards .second .card-descr_header,
+.main__trending-wrapper_slider__cards .third .card-descr_header {
   color: #2b2626;
   font-size: 21px;
   font-style: normal;
@@ -1274,14 +1286,18 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating, .main__trending-wrapper_slider__cards .second .card-descr_rating, .main__trending-wrapper_slider__cards .third .card-descr_rating {
+.main__trending-wrapper_slider__cards .first .card-descr_rating,
+.main__trending-wrapper_slider__cards .second .card-descr_rating,
+.main__trending-wrapper_slider__cards .third .card-descr_rating {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   gap: 13px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating__stars, .main__trending-wrapper_slider__cards .second .card-descr_rating__stars, .main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
+.main__trending-wrapper_slider__cards .first .card-descr_rating__stars,
+.main__trending-wrapper_slider__cards .second .card-descr_rating__stars,
+.main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -1289,10 +1305,14 @@ h6 {
   gap: 2px;
   width: 93px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating__stars img, .main__trending-wrapper_slider__cards .second .card-descr_rating__stars img, .main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
+.main__trending-wrapper_slider__cards .first .card-descr_rating__stars img,
+.main__trending-wrapper_slider__cards .second .card-descr_rating__stars img,
+.main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
   width: 100%;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating__review, .main__trending-wrapper_slider__cards .second .card-descr_rating__review, .main__trending-wrapper_slider__cards .third .card-descr_rating__review {
+.main__trending-wrapper_slider__cards .first .card-descr_rating__review,
+.main__trending-wrapper_slider__cards .second .card-descr_rating__review,
+.main__trending-wrapper_slider__cards .third .card-descr_rating__review {
   color: #888;
   font-size: 11px;
   font-style: normal;
@@ -1302,7 +1322,9 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_price, .main__trending-wrapper_slider__cards .second .card-descr_price, .main__trending-wrapper_slider__cards .third .card-descr_price {
+.main__trending-wrapper_slider__cards .first .card-descr_price,
+.main__trending-wrapper_slider__cards .second .card-descr_price,
+.main__trending-wrapper_slider__cards .third .card-descr_price {
   color: #2b2626;
   font-size: 21px;
   font-style: normal;
@@ -1312,7 +1334,9 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
+.main__trending-wrapper_slider__cards .first button,
+.main__trending-wrapper_slider__cards .second button,
+.main__trending-wrapper_slider__cards .third button {
   width: 361px;
   height: 70px;
   background-color: #10b981;
@@ -1330,23 +1354,25 @@ h6 {
   margin-top: 29px;
   transition: background-color 0.3s ease;
 }
-.main__trending-wrapper_slider__cards .first button:hover, .main__trending-wrapper_slider__cards .second button:hover, .main__trending-wrapper_slider__cards .third button:hover {
+.main__trending-wrapper_slider__cards .first button:hover,
+.main__trending-wrapper_slider__cards .second button:hover,
+.main__trending-wrapper_slider__cards .third button:hover {
   background-color: #059669;
 }
 .main__trending-wrapper_slider__cards #first .card {
-  background-color: #E0EFFF;
+  background-color: #e0efff;
 }
 .main__trending-wrapper_slider__cards #second .card {
-  background-color: #E8F9FF;
+  background-color: #e8f9ff;
 }
 .main__trending-wrapper_slider__cards #second .card-save {
   display: none;
 }
 .main__trending-wrapper_slider__cards #third .card {
-  background-color: #D3FBFB;
+  background-color: #d3fbfb;
 }
 .main__trending-wrapper_slider__cards #third .card-save {
-  background-color: #08BDBE;
+  background-color: #08bdbe;
 }
 .main__trending-wrapper_slider__button {
   position: absolute;
@@ -1396,38 +1422,54 @@ h6 {
     justify-content: start;
     gap: 50px;
   }
-  .main__trending-wrapper_slider__cards .first .card, .main__trending-wrapper_slider__cards .second .card, .main__trending-wrapper_slider__cards .third .card {
+  .main__trending-wrapper_slider__cards .first .card,
+  .main__trending-wrapper_slider__cards .second .card,
+  .main__trending-wrapper_slider__cards .third .card {
     width: 261px;
     height: 390px;
     padding: 15px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .first .card-save,
+  .main__trending-wrapper_slider__cards .second .card-save,
+  .main__trending-wrapper_slider__cards .third .card-save {
     width: 70px;
     height: 70px;
     font-size: 16px;
     padding: 15px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img, .main__trending-wrapper_slider__cards .second .card-img, .main__trending-wrapper_slider__cards .third .card-img {
+  .main__trending-wrapper_slider__cards .first .card-img,
+  .main__trending-wrapper_slider__cards .second .card-img,
+  .main__trending-wrapper_slider__cards .third .card-img {
     width: 160px;
     height: 160px;
     margin-top: 30px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img img, .main__trending-wrapper_slider__cards .second .card-img img, .main__trending-wrapper_slider__cards .third .card-img img {
+  .main__trending-wrapper_slider__cards .first .card-img img,
+  .main__trending-wrapper_slider__cards .second .card-img img,
+  .main__trending-wrapper_slider__cards .third .card-img img {
     width: 160px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr, .main__trending-wrapper_slider__cards .second .card-descr, .main__trending-wrapper_slider__cards .third .card-descr {
+  .main__trending-wrapper_slider__cards .first .card-descr,
+  .main__trending-wrapper_slider__cards .second .card-descr,
+  .main__trending-wrapper_slider__cards .third .card-descr {
     width: 227px;
     height: 135px;
     padding: 14px 20px;
     justify-content: space-between;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_header, .main__trending-wrapper_slider__cards .second .card-descr_header, .main__trending-wrapper_slider__cards .third .card-descr_header {
+  .main__trending-wrapper_slider__cards .first .card-descr_header,
+  .main__trending-wrapper_slider__cards .second .card-descr_header,
+  .main__trending-wrapper_slider__cards .third .card-descr_header {
     font-size: 18px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_price, .main__trending-wrapper_slider__cards .second .card-descr_price, .main__trending-wrapper_slider__cards .third .card-descr_price {
+  .main__trending-wrapper_slider__cards .first .card-descr_price,
+  .main__trending-wrapper_slider__cards .second .card-descr_price,
+  .main__trending-wrapper_slider__cards .third .card-descr_price {
     font-size: 19px;
   }
-  .main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
+  .main__trending-wrapper_slider__cards .first button,
+  .main__trending-wrapper_slider__cards .second button,
+  .main__trending-wrapper_slider__cards .third button {
     width: 261px;
     height: 50px;
     font-size: 18px;
@@ -1470,18 +1512,26 @@ h6 {
     justify-content: space-evenly;
     gap: 25px;
   }
-  .main__trending-wrapper_slider__cards .first .card, .main__trending-wrapper_slider__cards .second .card, .main__trending-wrapper_slider__cards .third .card {
+  .main__trending-wrapper_slider__cards .first .card,
+  .main__trending-wrapper_slider__cards .second .card,
+  .main__trending-wrapper_slider__cards .third .card {
     width: 280px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .first .card-save,
+  .main__trending-wrapper_slider__cards .second .card-save,
+  .main__trending-wrapper_slider__cards .third .card-save {
     width: 60px;
     height: 60px;
     font-size: 14px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr, .main__trending-wrapper_slider__cards .second .card-descr, .main__trending-wrapper_slider__cards .third .card-descr {
+  .main__trending-wrapper_slider__cards .first .card-descr,
+  .main__trending-wrapper_slider__cards .second .card-descr,
+  .main__trending-wrapper_slider__cards .third .card-descr {
     width: 250px;
   }
-  .main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
+  .main__trending-wrapper_slider__cards .first button,
+  .main__trending-wrapper_slider__cards .second button,
+  .main__trending-wrapper_slider__cards .third button {
     width: 280px;
     height: 60px;
   }
@@ -1524,32 +1574,48 @@ h6 {
     width: 506px;
     justify-content: space-between;
   }
-  .main__trending-wrapper_slider__cards .first .card, .main__trending-wrapper_slider__cards .second .card, .main__trending-wrapper_slider__cards .third .card {
+  .main__trending-wrapper_slider__cards .first .card,
+  .main__trending-wrapper_slider__cards .second .card,
+  .main__trending-wrapper_slider__cards .third .card {
     width: 240px;
     height: 330px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .first .card-save,
+  .main__trending-wrapper_slider__cards .second .card-save,
+  .main__trending-wrapper_slider__cards .third .card-save {
     font-size: 12px;
     padding: 10px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img, .main__trending-wrapper_slider__cards .second .card-img, .main__trending-wrapper_slider__cards .third .card-img {
+  .main__trending-wrapper_slider__cards .first .card-img,
+  .main__trending-wrapper_slider__cards .second .card-img,
+  .main__trending-wrapper_slider__cards .third .card-img {
     width: 130px;
     height: 130px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img img, .main__trending-wrapper_slider__cards .second .card-img img, .main__trending-wrapper_slider__cards .third .card-img img {
+  .main__trending-wrapper_slider__cards .first .card-img img,
+  .main__trending-wrapper_slider__cards .second .card-img img,
+  .main__trending-wrapper_slider__cards .third .card-img img {
     width: 130px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr, .main__trending-wrapper_slider__cards .second .card-descr, .main__trending-wrapper_slider__cards .third .card-descr {
+  .main__trending-wrapper_slider__cards .first .card-descr,
+  .main__trending-wrapper_slider__cards .second .card-descr,
+  .main__trending-wrapper_slider__cards .third .card-descr {
     width: 210px;
     height: 120px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_header, .main__trending-wrapper_slider__cards .second .card-descr_header, .main__trending-wrapper_slider__cards .third .card-descr_header {
+  .main__trending-wrapper_slider__cards .first .card-descr_header,
+  .main__trending-wrapper_slider__cards .second .card-descr_header,
+  .main__trending-wrapper_slider__cards .third .card-descr_header {
     font-size: 16px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_price, .main__trending-wrapper_slider__cards .second .card-descr_price, .main__trending-wrapper_slider__cards .third .card-descr_price {
+  .main__trending-wrapper_slider__cards .first .card-descr_price,
+  .main__trending-wrapper_slider__cards .second .card-descr_price,
+  .main__trending-wrapper_slider__cards .third .card-descr_price {
     font-size: 18px;
   }
-  .main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
+  .main__trending-wrapper_slider__cards .first button,
+  .main__trending-wrapper_slider__cards .second button,
+  .main__trending-wrapper_slider__cards .third button {
     width: 240px;
     height: 50px;
     margin-top: 22px;
@@ -1591,22 +1657,32 @@ h6 {
   .main__trending-wrapper_slider__cards {
     width: 240px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save, .main__trending-wrapper_slider__cards .second .card-save, .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .first .card-save,
+  .main__trending-wrapper_slider__cards .second .card-save,
+  .main__trending-wrapper_slider__cards .third .card-save {
     width: 50px;
     height: 50px;
     padding: 5px;
     font-size: 11px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_header, .main__trending-wrapper_slider__cards .second .card-descr_header, .main__trending-wrapper_slider__cards .third .card-descr_header {
+  .main__trending-wrapper_slider__cards .first .card-descr_header,
+  .main__trending-wrapper_slider__cards .second .card-descr_header,
+  .main__trending-wrapper_slider__cards .third .card-descr_header {
     font-size: 15px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars, .main__trending-wrapper_slider__cards .second .card-descr_rating__stars, .main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
+  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars,
+  .main__trending-wrapper_slider__cards .second .card-descr_rating__stars,
+  .main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
     width: 72px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars img, .main__trending-wrapper_slider__cards .second .card-descr_rating__stars img, .main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
+  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars img,
+  .main__trending-wrapper_slider__cards .second .card-descr_rating__stars img,
+  .main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
     width: 13px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_price, .main__trending-wrapper_slider__cards .second .card-descr_price, .main__trending-wrapper_slider__cards .third .card-descr_price {
+  .main__trending-wrapper_slider__cards .first .card-descr_price,
+  .main__trending-wrapper_slider__cards .second .card-descr_price,
+  .main__trending-wrapper_slider__cards .third .card-descr_price {
     font-size: 16px;
   }
   .main__trending-wrapper_slider__cards .second {
