@@ -21,7 +21,7 @@
 			box-sizing: border-box;
 			align-items: center;
 			text-align: center;
-			background-color: #10b981;
+			background-color: $mainColor;
 			margin-left: 40px;
 			color: #fff;
 			font-size: 17px;
@@ -84,7 +84,7 @@
 				&__btn {
 					width: 50px;
 					height: 50px;
-					background-color: #10b981;
+					background-color: $mainColor;
 					margin: 20px 0 0 -50px;
 					border-radius: 8px 8px 0 0;
 					z-index: 1;
@@ -126,7 +126,7 @@
 						&:hover {
 							transform: translateX(8px);
 							text-decoration: underline;
-							color:#10b981;
+							color:$mainColor;
 						}
 					}
 
@@ -162,7 +162,7 @@
 					&:hover {
 						transform: translateY(-8px);
 						text-decoration: underline;
-						color:#10b981;
+						color: $mainColor;
 					}
 				}
 			}
@@ -182,7 +182,7 @@
 					& svg>path, svg>circle {
 						transform: rotate(360deg);
 						transition: 0.7s ease;
-						fill:#10b981;
+						fill: $mainColor;
 					}
 				}
 			}

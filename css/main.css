@@ -708,12 +708,12 @@ h6 {
   text-transform: none;
 }
 .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
-  color: #fff;
   content: "";
+  color: #fff;
   width: 177px;
   height: 91px;
   border-radius: 100%;
-  background-color: #10B981;
+  background-color: #10b981;
 }
 .main__sellers-wrapper_slider {
   display: flex;
@@ -758,7 +758,7 @@ h6 {
   line-height: normal;
   letter-spacing: 0;
   text-transform: none;
-  background-color: #10B981;
+  background-color: #10b981;
   border-radius: 50%;
   padding: 20px;
   text-align: center;
@@ -841,7 +841,7 @@ h6 {
 .main__sellers-wrapper_slider__cards .items button {
   width: 361px;
   height: 70px;
-  background-color: #10B981;
+  background-color: #10b981;
   text-align: center;
   color: #fff;
   font-size: 21px;
@@ -1184,12 +1184,12 @@ h6 {
   text-transform: none;
 }
 .main__trending-wrapper_category__aerbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
-  color: #fff;
   content: "";
+  color: #fff;
   width: 177px;
   height: 91px;
   border-radius: 100%;
-  background-color: #10B981;
+  background-color: #10b981;
 }
 .main__trending-wrapper_slider {
   display: flex;
@@ -1234,7 +1234,7 @@ h6 {
   line-height: normal;
   letter-spacing: 0;
   text-transform: none;
-  background-color: #10B981;
+  background-color: #10b981;
   border-radius: 50%;
   padding: 20px;
   text-align: center;
@@ -1315,7 +1315,7 @@ h6 {
 .main__trending-wrapper_slider__cards .first button, .main__trending-wrapper_slider__cards .second button, .main__trending-wrapper_slider__cards .third button {
   width: 361px;
   height: 70px;
-  background-color: #10B981;
+  background-color: #10b981;
   text-align: center;
   color: #fff;
   font-size: 21px;
@@ -1328,6 +1328,10 @@ h6 {
   box-shadow: 0 25px 50px 0 rgba(255, 255, 255, 0.1);
   border-radius: 10px 10px 10px 10px;
   margin-top: 29px;
+  transition: background-color 0.3s ease;
+}
+.main__trending-wrapper_slider__cards .first button:hover, .main__trending-wrapper_slider__cards .second button:hover, .main__trending-wrapper_slider__cards .third button:hover {
+  background-color: #059669;
 }
 .main__trending-wrapper_slider__cards #first .card {
   background-color: #E0EFFF;
@@ -1610,8 +1614,11 @@ h6 {
   color: #2b2626;
   font-size: 44px;
   font-style: normal;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: normal;
+  letter-spacing: 0;
   text-transform: none;
 }
 .main__new-launches_wrapper__card {
