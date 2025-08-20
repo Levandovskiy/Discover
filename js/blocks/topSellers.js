@@ -1,15 +1,19 @@
 'use strict';
 import productsData from "./db.js";
-// window.addEventListener( 'DOMContentLoaded', () => {
 
-// //
+const topSellersCards = document.querySelector('.main__sellers-wrapper_slider__cards'),
+	  items = document.querySelectorAll('.items'),
+	  discount = document.querySelector('.card-save'),
+	  title = document.querySelector('.card-descr_header'),
+	  rating = document.querySelector('.card-descr_rating__stars'),
+	  reviews = document.querySelector('.card-descr_rating__review'),
+	  price = document.querySelector('.card-descr_price');
 
-// } )
-renderCardSlider(productsData.topSellers, "#top-sellers");
-renderCardSlider(productsData.trendingEarphones, "#trending-earphones");
+renderCardSlider(productsData.topSellers, topSellersCards);
+// renderCardSlider(productsData.trendingEarphones, "#trending-earphones");
 
 products.forEach(product => {
-  const card = document.createElement("div");
+//   const card = document.createElement("div");
   card.classList.add("product-card", product.className);
 
   card.innerHTML = `
@@ -24,5 +28,5 @@ products.forEach(product => {
     ` : ""}
   `;
 
-  document.querySelector("#products").appendChild(card);
+//   document.querySelector("#products").appendChild(card);
 });
