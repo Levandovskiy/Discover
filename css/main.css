@@ -261,13 +261,13 @@ h6 {
   transition: border-color 0.3s ease;
 }
 .registration-form__input:focus {
-  border-color: #007bff;
+  border-color: #10b981;
   outline: none;
 }
 .registration-form__button {
   width: 100%;
   padding: 10px;
-  background: #007bff;
+  background: #10b981;
   color: white;
   font-size: 16px;
   border: none;
@@ -276,7 +276,7 @@ h6 {
   transition: background 0.3s ease;
 }
 .registration-form__button:hover {
-  background: #0056b3;
+  background: #059669;
 }
 
 /* Адаптивність */

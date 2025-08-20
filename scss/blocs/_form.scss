@@ -28,7 +28,7 @@
     transition: border-color 0.3s ease;
 
     &:focus {
-      border-color: #007bff;
+      border-color: #10b981;
       outline: none;
     }
   }
@@ -36,7 +36,7 @@
   &__button {
     width: 100%;
     padding: 10px;
-    background: #007bff;
+    background: #10b981;
     color: white;
     font-size: 16px;
     border: none;
@@ -45,7 +45,7 @@
     transition: background 0.3s ease;
 
     &:hover {
-      background: #0056b3;
+      background: #059669;
     }
   }
 }
