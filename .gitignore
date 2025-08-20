@@ -1,0 +1,37 @@
+# node_modules — каталог залежностей
+node_modules/
+
+# Файли логів
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Файли середовища
+.env
+.env.local
+.env.*.local
+
+# Каталоги та файли, що утворюються при збірці
+build/
+dist/
+
+# Системні файли
+.DS_Store
+Thumbs.db
+
+# Файли IDE
+.idea/
+.vscode/
+
+# Інші тимчасові файли
+*.log
+*.bak
+*.swp
+
+# Тестові файли
+coverage/
+
+# Файли конфігурацій, створені користувачем
+*.user
+*.suo
+*.userprefs
