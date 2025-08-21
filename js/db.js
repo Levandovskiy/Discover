@@ -7,7 +7,9 @@ const productsData = {
 		discount: "60%",
 		rating: 5,
 		reviews: 70,
-		img: "../img/main/topSellers/first.svg"
+		img: "../img/main/topSellers/first.svg",
+		bgColor: "#ECFEF4",
+		bgColorDiscount: "#10b981"
 	},
     {
 		id: 2,
@@ -16,7 +18,9 @@ const productsData = {
 		discount: null,
 		rating: 4,
 		reviews: 75,
-		img: "../img/main/topSellers/second.svg"
+		img: "../img/main/topSellers/second.svg",
+		bgColor: "#C9F2FF",
+		bgColorDiscount: null
 	},
     {
 		id: 3,
@@ -25,7 +29,9 @@ const productsData = {
 		discount: "40%",
 		rating: 5,
 		reviews: 60,
-		img: "../img/main/topSellers/third.svg"
+		img: "../img/main/topSellers/third.svg",
+		bgColor: "#E5D5FF",
+		bgColorDiscount: "#845EC2"
 	},
     {
 		id: 4,
@@ -34,7 +40,9 @@ const productsData = {
 		discount: "22%",
 		rating: 5,
 		reviews: 35,
-		img: "../img/main/topSellers/fourth.png"
+		img: "../img/main/topSellers/fourth.png",
+		bgColor: "#ffe6e6",
+		bgColorDiscount: "#ff9999"
 	},
     {
 		id: 5,
@@ -43,7 +51,9 @@ const productsData = {
 		discount: "10%",
 		rating: 4,
 		reviews: 43,
-		img: "../img/main/topSellers/fiveth.png"
+		img: "../img/main/topSellers/fiveth.png",
+		bgColor: "#e7f1da",
+		bgColorDiscount: "#8bbb44"
 	},
 
 

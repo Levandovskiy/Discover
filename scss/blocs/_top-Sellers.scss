@@ -140,13 +140,13 @@
 								&__stars {
 									display: flex;
 									flex-direction: row;
-									justify-content: space-evenly;
+									justify-content: flex-start;
 									align-items: center;
 									gap: 2px;
 									width: 93px;
 
 									img {
-										width: 100%;
+										width: 17px;
 									}
 								}
 								&__review {
@@ -178,30 +178,6 @@
 					}
 				}
 
-				#first {
-					.card {
-						background-color: #ECFEF4;
-					}
-				}
-				#second {
-					.card {
-						background-color: #C9F2FF;
-
-						&-save {
-							display: none;
-						}
-					}
-				}
-				#third {
-					.card {
-						background-color: #E5D5FF;
-
-						&-save {
-							background-color: #845EC2;
-						}
-					}
-				}
-
 			}
 
 			&__button {
@@ -210,6 +186,7 @@
 				bottom: 283px;
 				background-color: #fff;
 				transition: background-color 0.3s ease;
+				border-radius: 15px 15px 15px 15px;
 
 				&:hover {
 					background-color: #059669;
