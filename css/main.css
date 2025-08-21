@@ -870,13 +870,13 @@ h6 {
 .main__sellers-wrapper_slider__cards .items .card-descr_rating__stars {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   gap: 2px;
   width: 93px;
 }
 .main__sellers-wrapper_slider__cards .items .card-descr_rating__stars img {
-  width: 100%;
+  width: 17px;
 }
 .main__sellers-wrapper_slider__cards .items .card-descr_rating__review {
   color: #888;
@@ -919,27 +919,13 @@ h6 {
 .main__sellers-wrapper_slider__cards .items button:hover {
   background-color: #059669;
 }
-.main__sellers-wrapper_slider__cards #first .card {
-  background-color: #ECFEF4;
-}
-.main__sellers-wrapper_slider__cards #second .card {
-  background-color: #C9F2FF;
-}
-.main__sellers-wrapper_slider__cards #second .card-save {
-  display: none;
-}
-.main__sellers-wrapper_slider__cards #third .card {
-  background-color: #E5D5FF;
-}
-.main__sellers-wrapper_slider__cards #third .card-save {
-  background-color: #845EC2;
-}
 .main__sellers-wrapper_slider__button {
   position: absolute;
   right: -64px;
   bottom: 283px;
   background-color: #fff;
   transition: background-color 0.3s ease;
+  border-radius: 15px 15px 15px 15px;
 }
 .main__sellers-wrapper_slider__button:hover {
   background-color: #059669;
