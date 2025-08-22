@@ -10,6 +10,7 @@
 		align-items: center;
 		overflow: hidden;
 		box-sizing: border-box;
+		margin: 0 20px;
 
 		&_title {
 			@include title;
@@ -56,7 +57,13 @@
 				gap: 93px;
 				width: 1270px;
 
+				// overflow: hidden; // щоб зайві картки ховались
+				transition: transform 0.4s ease; // плавний рух
+
 				.items {
+					display: flex;
+					flex-direction: column;
+					flex:  0 calc(100% / 3);
 
 					.card {
 						display: flex;
@@ -100,8 +107,8 @@
 							height: 250px;
 
 							img {
-								max-width: 250px;
-								height: 250px;
+								max-width: 220px;
+								max-height: 220px;
 								margin: 0 auto;
 							}
 
@@ -363,9 +370,9 @@
 						}
 					}
 
-					#third {
-						display: none;
-					}
+					// #third {
+					// 	display: none;
+					// }
 				}
 
 				&__button {
@@ -543,9 +550,9 @@
 						}
 					}
 
-					#second {
-						display: none;
-					}
+					// #second {
+					// 	display: none;
+					// }
 				}
 			}
 		}

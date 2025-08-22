@@ -676,6 +676,7 @@ h6 {
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
+  margin: 0 20px;
 }
 .main__sellers-wrapper_title {
   color: #2b2626;
@@ -730,6 +731,12 @@ h6 {
   align-items: center;
   gap: 93px;
   width: 1270px;
+  transition: transform 0.4s ease;
+}
+.main__sellers-wrapper_slider__cards .items {
+  display: flex;
+  flex-direction: column;
+  flex: 0 33.3333333333%;
 }
 .main__sellers-wrapper_slider__cards .items .card {
   display: flex;
@@ -772,8 +779,8 @@ h6 {
   height: 250px;
 }
 .main__sellers-wrapper_slider__cards .items .card-img img {
-  max-width: 250px;
-  height: 250px;
+  max-width: 220px;
+  max-height: 220px;
   margin: 0 auto;
 }
 .main__sellers-wrapper_slider__cards .items .card-descr {
@@ -998,9 +1005,6 @@ h6 {
     width: 280px;
     height: 60px;
   }
-  .main__sellers-wrapper_slider__cards #third {
-    display: none;
-  }
   .main__sellers-wrapper_slider__button {
     width: 50px;
     height: 50px;
@@ -1123,9 +1127,6 @@ h6 {
   }
   .main__sellers-wrapper_slider__cards .items .card-descr_price {
     font-size: 16px;
-  }
-  .main__sellers-wrapper_slider__cards #second {
-    display: none;
   }
 }
 .main__trending {
