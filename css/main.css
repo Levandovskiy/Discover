@@ -892,6 +892,7 @@ h6 {
   }
   .main__sellers-wrapper {
     padding: 0 30px;
+    margin: 0 25px;
   }
   .main__sellers-wrapper_title {
     font-size: 44px;
@@ -986,8 +987,12 @@ h6 {
   }
   .main__sellers-wrapper_slider__cards {
     width: 698px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 25px;
+  }
+  .main__sellers-wrapper_slider__cards .items {
+    display: flex;
+    flex: 0 50%;
   }
   .main__sellers-wrapper_slider__cards .items .card {
     flex: 0 0 50%;
@@ -1018,6 +1023,7 @@ h6 {
   }
   .main__sellers-wrapper {
     padding: 0 20px;
+    margin: 0 15px;
   }
   .main__sellers-wrapper_title {
     font-size: 32px;
@@ -1106,6 +1112,9 @@ h6 {
   }
   .main__sellers-wrapper_slider__cards {
     width: 240px;
+  }
+  .main__sellers-wrapper_slider__cards .items {
+    flex: 0 100%;
   }
   .main__sellers-wrapper_slider__cards .items .card {
     flex: 0 0 100%;

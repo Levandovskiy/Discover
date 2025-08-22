@@ -6,18 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
 	const topSellersCards = document.querySelector('.main__sellers-wrapper_slider__cards');
 
 	productsData.topSellers.forEach(product => {
+
+		//Робота із відображенням рейтингу
 		let stars = "";
 		for (let i = 0; i < product.rating; i++) {
 			stars += `<img src="./img/main/trendingEarphones/star.jpg" alt="rating"/>`
 		};
 
+		//Робота із відображенням знижки
 		let discount = product.discount == null
 			? `<div class="card-save" style="display: none"></div>`
 			: `<div class="card-save" style="background-color: ${product.bgColorDiscount}">Save ${product.discount}</div>`;
 
+		//Виведення товарів із даними із БД
 		const items = document.createElement("div");
 		items.classList.add("items");
 
+		//Відмалювання елементів на сторінці
 		items.innerHTML = `
 			<div class="card" id=${product.id} style="background-color: ${product.bgColor}">
 				${discount}

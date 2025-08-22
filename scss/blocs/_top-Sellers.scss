@@ -220,6 +220,7 @@
 
 		&-wrapper {
 			padding: 0 30px;
+			margin: 0 25px;
 
 			&_title {
 				font-size: 44px;
@@ -344,10 +345,13 @@
 
 				&__cards {
 					width: 698px;
-					justify-content: space-evenly;
+					justify-content: space-between;
 					gap: 25px;
 
 					.items {
+						display: flex;
+						flex:  0 calc(100% / 2);
+						// overflow: hidden;
 
 						.card {
 							flex: 0 0 50%;
@@ -393,6 +397,7 @@
 
 		&-wrapper {
 			padding: 0 20px;
+			margin: 0 15px;
 
 			&_title {
 				font-size: 32px;
@@ -515,6 +520,7 @@
 					width: 240px;
 
 					.items {
+						flex:  0 100%;
 
 						.card {
 							flex: 0 0 100%;
