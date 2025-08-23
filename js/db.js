@@ -1,5 +1,7 @@
 const productsData = {
+
   topSellers: [
+
     {
 		id: 1,
 		title: "Boat Rockerz 333",
@@ -11,6 +13,7 @@ const productsData = {
 		bgColor: "#ECFEF4",
 		bgColorDiscount: "#10b981"
 	},
+
     {
 		id: 2,
 		title: "Boat kerz 234",
@@ -22,6 +25,7 @@ const productsData = {
 		bgColor: "#C9F2FF",
 		bgColorDiscount: null
 	},
+
     {
 		id: 3,
 		title: "Boat Rockerz 323",
@@ -33,6 +37,7 @@ const productsData = {
 		bgColor: "#E5D5FF",
 		bgColorDiscount: "#845EC2"
 	},
+
     {
 		id: 4,
 		title: "Boat Rockerz 600",
@@ -44,6 +49,7 @@ const productsData = {
 		bgColor: "#ffe6e6",
 		bgColorDiscount: "#ff9999"
 	},
+
     {
 		id: 5,
 		title: "Boat Rockerz 550",
@@ -55,10 +61,10 @@ const productsData = {
 		bgColor: "#e7f1da",
 		bgColorDiscount: "#8bbb44"
 	},
-
-
   ],
+
   trendingEarphones: [
+
     {
 		id: 10,
 		title: "Boat Rockerz 333",
@@ -68,6 +74,7 @@ const productsData = {
 		reviews: 70,
 		img: "../main/trendingEarphones/first.svg"
 	},
+
     {
 		id: 11,
 		title: "Boat kerz 234",
@@ -77,6 +84,7 @@ const productsData = {
 		reviews: 75,
 		img: "../main/trendingEarphones/second.svg"
 	},
+
     {
 		id: 12,
 		title: "Boat Rockerz 323",
@@ -86,6 +94,7 @@ const productsData = {
 		reviews: 51,
 		img: "../main/trendingEarphones/third.svg"
 	},
+
     {
 		id: 13,
 		title: "Boat Rockerz 550",
@@ -95,6 +104,7 @@ const productsData = {
 		reviews: 43,
 		img: "../img/main/trendingEarphones/fiveth.png"
 	},
+
     {
 		id: 14,
 		title: "Boat Rockerz 600",
@@ -104,6 +114,7 @@ const productsData = {
 		reviews: 35,
 		img: "../img/main/trendingEarphonesff/fourth.png"
 	},
+
     {
 		id: 15,
 		title: "JBL Tune FLE",
@@ -113,6 +124,7 @@ const productsData = {
 		reviews: 19,
 		img: "../main/trendingEarphones/sexth.svg"
 	},
+
     {
 		id: 16,
 		title: "Proove Blitz TWS with ANC",
@@ -122,6 +134,7 @@ const productsData = {
 		reviews: 82,
 		img: "../main/trendingEarphones/seventh.svg"
 	},
+
     {
 		id: 17,
 		title: "1MORE Fit SE S30",
@@ -131,6 +144,7 @@ const productsData = {
 		reviews: 53,
 		img: "../main/trendingEarphones/eigth.svg"
 	},
+
     {
 		id: 18,
 		title: "Borofone BW67",
@@ -140,6 +154,10 @@ const productsData = {
 		reviews: 53,
 		img: "../main/trendingEarphones/nineth.svg"
 	},
+
   ]
+
 };
+
+
 export default productsData;

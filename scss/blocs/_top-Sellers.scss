@@ -10,6 +10,7 @@
 		align-items: center;
 		overflow: hidden;
 		box-sizing: border-box;
+		margin: 0 20px;
 
 		&_title {
 			@include title;
@@ -50,13 +51,22 @@
 
 			&__cards {
 				display: flex;
+				flex-wrap: nowrap;
 				flex-direction: row;
-				justify-content: space-between;
+				// justify-content: space-between;
 				align-items: center;
+				// transition: transform 0.5s ease;
+  				will-change: transform;
 				gap: 93px;
 				width: 1270px;
 
+				// overflow: hidden; // щоб зайві картки ховались
+				transition: transform 0.4s ease; // плавний рух
+
 				.items {
+					display: flex;
+					flex-direction: column;
+					// flex:  0 calc(100% / 3);
 
 					.card {
 						display: flex;
@@ -100,8 +110,8 @@
 							height: 250px;
 
 							img {
-								max-width: 250px;
-								height: 250px;
+								max-width: 220px;
+								max-height: 220px;
 								margin: 0 auto;
 							}
 
@@ -213,6 +223,7 @@
 
 		&-wrapper {
 			padding: 0 30px;
+			margin: 0 23px;
 
 			&_title {
 				font-size: 44px;
@@ -239,7 +250,7 @@
 
 				&__cards {
 					width: 920px;
-					justify-content: start;
+					// justify-content: start;
 					gap: 50px;
 
 					.items {
@@ -314,6 +325,7 @@
 		margin: 80px auto;
 
 		&-wrapper {
+			margin: 0 22px;
 
 			&_title {
 				font-size: 36px;
@@ -336,11 +348,14 @@
 				margin-top: 50px;
 
 				&__cards {
-					width: 698px;
-					justify-content: space-evenly;
-					gap: 25px;
+					width: 625px;
+					// justify-content: space-evenly;
+					gap: 65px;
 
 					.items {
+						display: flex;
+						flex:  0 calc(100% / 2);
+						// overflow: hidden;
 
 						.card {
 							flex: 0 0 50%;
@@ -363,12 +378,13 @@
 						}
 					}
 
-					#third {
-						display: none;
-					}
+					// #third {
+					// 	display: none;
+					// }
 				}
 
 				&__button {
+					right: -50px;
 					width: 50px;
 					height: 50px;
 				}
@@ -386,6 +402,7 @@
 
 		&-wrapper {
 			padding: 0 20px;
+			margin: 0 3px;
 
 			&_title {
 				font-size: 32px;
@@ -407,10 +424,12 @@
 
 			&_slider {
 				margin-top: 30px;
+				box-sizing: border-box;
 
 				&__cards {
-					width: 506px;
-					justify-content: space-between;
+					width: 510px;
+					gap: 30px;
+					// justify-content: space-between;
 
 					.items {
 
@@ -482,6 +501,7 @@
 		margin: 40px auto;
 
 		&-wrapper {
+			margin: 0 5px;
 
 			&_title {
 				font-size: 26px;
@@ -506,8 +526,10 @@
 
 				&__cards {
 					width: 240px;
+					gap: 35px;
 
 					.items {
+						flex:  0 100%;
 
 						.card {
 							flex: 0 0 100%;
@@ -543,9 +565,9 @@
 						}
 					}
 
-					#second {
-						display: none;
-					}
+					// #second {
+					// 	display: none;
+					// }
 				}
 			}
 		}
