@@ -1,6 +1,6 @@
-const productsData = {
+const topSellers = {
 
-  topSellers: [
+  topPicks: [
 
     {
 		id: 1,
@@ -9,7 +9,7 @@ const productsData = {
 		discount: "60%",
 		rating: 5,
 		reviews: 70,
-		img: "../img/main/topSellers/first.svg",
+		img: "../img/main/topSellers/TopPicks/first.svg",
 		bgColor: "#ECFEF4",
 		bgColorDiscount: "#10b981"
 	},
@@ -21,7 +21,7 @@ const productsData = {
 		discount: null,
 		rating: 4,
 		reviews: 75,
-		img: "../img/main/topSellers/second.svg",
+		img: "../img/main/topSellers/TopPicks/second.svg",
 		bgColor: "#C9F2FF",
 		bgColorDiscount: null
 	},
@@ -33,7 +33,7 @@ const productsData = {
 		discount: "40%",
 		rating: 5,
 		reviews: 60,
-		img: "../img/main/topSellers/third.svg",
+		img: "../img/main/topSellers/TopPicks/third.svg",
 		bgColor: "#E5D5FF",
 		bgColorDiscount: "#845EC2"
 	},
@@ -45,7 +45,7 @@ const productsData = {
 		discount: "22%",
 		rating: 5,
 		reviews: 35,
-		img: "../img/main/topSellers/fourth.png",
+		img: "../img/main/topSellers/TopPicks/fourth.png",
 		bgColor: "#ffe6e6",
 		bgColorDiscount: "#ff9999"
 	},
@@ -57,10 +57,86 @@ const productsData = {
 		discount: "10%",
 		rating: 4,
 		reviews: 43,
-		img: "../img/main/topSellers/fiveth.png",
+		img: "../img/main/topSellers/TopPicks/fiveth.png",
 		bgColor: "#e7f1da",
 		bgColorDiscount: "#8bbb44"
 	},
+  ],
+
+  watches: [
+
+	{
+		id: 1,
+		title: "AirPods Pro 2",
+		price: 180,
+		discount: "20%",
+		rating: 5,
+		reviews: 43,
+		img: "../img/main/topSellers/Watches/AirPodsPro2.png",
+		bgColor: "#ECFEF4",
+		bgColorDiscount: "#10b981"
+	},
+
+    {
+		id: 2,
+		title: "Apple AirPods 4",
+		price: 150,
+		discount: "23%",
+		rating: 5,
+		reviews: 55,
+		img: "../img/main/topSellers/Watches/AirPods4.png",
+		bgColor: "#ffe6e6",
+		bgColorDiscount: "#ff9999"
+	},
+
+    {
+		id: 3,
+		title: "Apple AirPods Max 2 (Orange)",
+		price: 900,
+		discount: "6%",
+		rating: 5,
+		reviews: 33,
+		img: "../img/main/topSellers/Watches/Max2Orange.png",
+		bgColor: "#E5D5FF",
+		bgColorDiscount: "#845EC2"
+	},
+
+    {
+		id: 4,
+		title: "Apple AirPods Max 2 (Midnight)",
+		price: 950,
+		discount: null,
+		rating: 5,
+		reviews: 35,
+		img: "../img/main/topSellers/Watches/Max2Ultra.png",
+		bgColor: "#C9F2FF",
+		bgColorDiscount: null
+	},
+
+    {
+		id: 5,
+		title: "Apple AirPods Max (Pink)",
+		price: 700,
+		discount: "10%",
+		rating: 4,
+		reviews: 47,
+		img: "../img/main/topSellers/Watches/MaxPink.png",
+		bgColor: "#ebebe0",
+		bgColorDiscount: "#b8b894"
+	},
+
+    {
+		id: 6,
+		title: "Apple AirPods Max 2 (Starlight) (Ultra)",
+		price: 950,
+		discount: "8%",
+		rating: 5,
+		reviews: 80,
+		img: "../img/main/topSellers/Watches/Max2Starlight.png",
+		bgColor: "#e7f1da",
+		bgColorDiscount: "#8bbb44"
+	},
+
   ],
 
   trendingEarphones: [
@@ -160,4 +236,4 @@ const productsData = {
 };
 
 
-export default productsData;
+export default topSellers;

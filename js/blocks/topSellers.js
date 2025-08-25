@@ -1,13 +1,13 @@
 'use strict';
 
-import productsData from "../db.js";
+import topSellers from "../db.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 	const topSellersCards = document.querySelector('.main__sellers-wrapper_slider__cards');
 	const nextBtn = document.querySelector('.main__sellers-wrapper_slider__button');
 
 	// === Рендер товарів ===
-	productsData.topSellers.forEach(product => {
+	topSellers.topPicks.forEach(product => {
 
 		//Рейтинг
 		let stars = "";
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// === СЛАЙДЕР ===
 	let currentIndex = 0;
-	const totalCards = productsData.topSellers.length;
+	const totalCards = topSellers.topPicks.length;
 
 	// визначаю кількість видимих карток по ширині вікна
 	function getVisibleCards() {
