@@ -4,7 +4,7 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background: #f2f2f2;
+  background: #10b981;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
@@ -18,6 +18,18 @@
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0;
   }
   &__input {
     width: 100%;
@@ -35,18 +47,25 @@
   }
 
   &__button {
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0;
+
     width: 100%;
     padding: 10px;
-    background: #10b981;
-    color: white;
-    font-size: 16px;
+    background: #22c48e;
+
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 
     &:hover {
-      background: #059669;
+      background: #04d895;
     }
   }
 }
