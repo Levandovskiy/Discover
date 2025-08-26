@@ -790,6 +790,7 @@ h6 {
   height: 91px;
   border-radius: 100%;
   background-color: #10b981;
+  transition: background-color 0.7s ease;
 }
 .main__sellers-wrapper_slider {
   display: flex;
@@ -2600,4 +2601,4 @@ body {
 
 .main {
   flex: 1 1 auto;
-}
+}/*# sourceMappingURL=main.css.map */

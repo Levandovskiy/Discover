@@ -37,6 +37,8 @@
 
 				&.active {
 					@include active;
+					// transform: ;
+					transition: background-color 0.7s ease;
 				}
 			}
 		}

@@ -85,4 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// перший запуск
 	updateSliderPosition();
+
+	//Робота з категоріями товару і класом активності
+	const topPicks = document.querySelector('.main__sellers-wrapper_category__picks'),
+		  watches = document.querySelector('.main__sellers-wrapper_category__watches');
+
+	topPicks.addEventListener('click', () => {
+		topPicks.classList.add('active');
+		watches.classList.remove('active');
+	});
+
+	watches.addEventListener('click', () => {
+		watches.classList.add('active');
+		topPicks.classList.remove('active');
+	})
+
 });
