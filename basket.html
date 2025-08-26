@@ -43,7 +43,52 @@
       </header>
 
       <main class="main">
-        <div class="main__container"></div>
+        <div class="main__container">
+          <div class="main__cart-all">
+            <div class="main__сontact-information">
+              <form action="/register" method="POST" class="main__information">
+                <label class="information-form__label" for="username"
+                  >Імя Користувача</label
+                >
+                <input
+                  class="information-form__input"
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                />
+
+                <label class="information-form__label" for="phone"
+                  >Номер телефону</label
+                >
+                <input
+                  class="information-form__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="^\+?\d{10,15}$"
+                  required
+                  placeholder=""
+                />
+                <label class="information-form__label" for="password"
+                  >Пароль</label
+                >
+                <input
+                  class="information-form__input"
+                  type="text"
+                  id="password"
+                  name="password"
+                  required
+                />
+
+                <button class="information-form__button" type="submit">
+                  Зареєструватися
+                </button>
+              </form>
+            </div>
+            <div class="main__order"></div>
+          </div>
+        </div>
       </main>
 
       <footer class="footer">
