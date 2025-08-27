@@ -997,7 +997,7 @@ h6 {
   }
   .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 227px;
-    height: 135px;
+    min-height: 135px;
     padding: 14px 20px;
     justify-content: space-between;
   }
@@ -1127,7 +1127,7 @@ h6 {
   }
   .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 210px;
-    height: 120px;
+    min-height: 120px;
   }
   .main__sellers-wrapper_slider__cards .items .card-descr_header {
     font-size: 16px;
