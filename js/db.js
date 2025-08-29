@@ -333,6 +333,65 @@ const trendingEarphones = {
 
 	wired: [
 
+		{
+			id: 1,
+			title: "Marshall Minor IV",
+			price: 160,
+			discount: "19%",
+			rating: 5,
+			reviews: 70,
+			img: "../img/main/trendingEarphones/wired/Marshall-Minor-IV.png",
+			bgColor: "#c2cbd5",
+			bgColorDiscount: "#575e64"
+		},
+
+		{
+			id: 2,
+			title: "Marshall Headphones Motif II ANC",
+			price: 240,
+			discount: "10%",
+			rating: 4,
+			reviews: 75,
+			img: "../img/main/trendingEarphones/wired/Marshall-Headphones-Motif-II-ANC.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 3,
+			title: "Marshall Headphones Major V",
+			price: 150,
+			discount: null,
+			rating: 5,
+			reviews: 51,
+			img: "../img/main/trendingEarphones/wired/Marshall-Headphones-Major-V.png",
+			bgColor: "#f2dff0",
+			bgColorDiscount: null
+		},
+
+		{
+			id: 4,
+			title: "Marshall Mode EQ",
+			price: 60,
+			discount: "10%",
+			rating: 4,
+			reviews: 49,
+			img: "../img/main/trendingEarphones/wired/Marshall-Mode-EQ.png",
+			bgColor: "#b1f2ec",
+			bgColorDiscount: "#57a492"
+		},
+
+		{
+			id: 5,
+			title: "Marshall Monitor II ANC ",
+			price: 220,
+			discount: "8%",
+			rating: 5,
+			reviews: 69,
+			img: "../img/main/trendingEarphones/wired/Marshall-Monitor-II-A.N.C..png",
+			bgColor: "#e0e0cb",
+			bgColorDiscount: "#9e9d87"
+		}
 
 	]
 
