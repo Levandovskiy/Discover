@@ -37,7 +37,6 @@
 
 				&.active {
 					@include active;
-					// transform: ;
 					transition: background-color 0.7s ease;
 				}
 			}
@@ -61,8 +60,6 @@
   				will-change: transform;
 				gap: 93px;
 				width: 1270px;
-
-				// overflow: hidden; // щоб зайві картки ховались
 				transition: transform 0.4s ease; // плавний рух
 
 				.items {
@@ -131,7 +128,7 @@
 
 							&_header {
 								color: #2b2626;
-								font-size: 21px;
+								font-size: 19px;
 								font-style: normal;
 								margin-top: 0;
 								text-align: left;
@@ -229,7 +226,6 @@
 
 			&_title {
 				font-size: 44px;
-
 			}
 
 			&_category {
@@ -237,7 +233,6 @@
 				gap: 50px;
 
 				&__picks, &__watches {
-
 					font-size: 22px;
 
 					&.active {
@@ -286,7 +281,7 @@
 								justify-content: space-between;
 
 								&_header {
-									font-size: 18px;
+									font-size: 16px;
 								}
 
 								&_price {
@@ -351,13 +346,11 @@
 
 				&__cards {
 					width: 625px;
-					// justify-content: space-evenly;
 					gap: 65px;
 
 					.items {
 						display: flex;
 						flex:  0 calc(100% / 2);
-						// overflow: hidden;
 
 						.card {
 							flex: 0 0 50%;
@@ -371,6 +364,22 @@
 
 							&-descr {
 								width: 250px;
+								height: 140px;
+								margin-top: 15px;
+
+								&_header {
+									line-height: 25px;
+								}
+
+								&_rating {
+
+									&__stars {
+
+										img {
+											width: 13px;
+										}
+									}
+								}
 							}
 						}
 
@@ -379,10 +388,6 @@
 							height: 60px;
 						}
 					}
-
-					// #third {
-					// 	display: none;
-					// }
 				}
 
 				&__button {
@@ -431,7 +436,6 @@
 				&__cards {
 					width: 510px;
 					gap: 30px;
-					// justify-content: space-between;
 
 					.items {
 
@@ -456,15 +460,16 @@
 							&-descr {
 								width: 210px;
 								min-height: 120px;
+								margin-top: 10px;
 
 								&_header {
-									font-size: 16px;
+									font-size: 15px;
+									line-height: 25px;
 								}
 
 								&_price {
 									font-size: 18px;
 								}
-
 							}
 						}
 

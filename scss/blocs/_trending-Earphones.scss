@@ -8,6 +8,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin: 0 20px;
 
     &_title {
       @include title;
@@ -21,7 +24,7 @@
       gap: 65px;
       margin-top: 55px;
 
-      &__aerbuds,
+      &__earbuds,
       &__wireless,
       &__wired {
         color: #000;
@@ -36,6 +39,7 @@
 
         &.active {
           @include active;
+		  transition: background-color 0.7s ease;
         }
       }
     }
@@ -50,15 +54,18 @@
 
       &__cards {
         display: flex;
+		flex-wrap: nowrap;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+		will-change: transform;
         gap: 93px;
         width: 1270px;
+		transition: transform 0.4s ease;
 
-        .first,
-        .second,
-        .third {
+        .items {
+			display: flex;
+			flex-direction: column;
+
           .card {
             display: flex;
             flex-direction: column;
@@ -91,6 +98,7 @@
               padding: 20px;
               text-align: center;
               right: 19px;
+			  opacity: 60%;
             }
 
             &-img {
@@ -101,6 +109,8 @@
               height: 250px;
 
               img {
+				max-width: 220px;
+				max-height: 220px;
                 margin: 0 auto;
               }
             }
@@ -117,7 +127,7 @@
 
               &_header {
                 color: #2b2626;
-                font-size: 21px;
+                font-size: 19px;
                 font-style: normal;
                 margin-top: 0;
                 text-align: left;
@@ -138,13 +148,13 @@
                 &__stars {
                   display: flex;
                   flex-direction: row;
-                  justify-content: space-evenly;
+                  justify-content: flex-start;
                   align-items: center;
                   gap: 2px;
                   width: 93px;
 
                   img {
-                    width: 100%;
+                    width: 17px;
                   }
                 }
                 &__review {
@@ -175,30 +185,6 @@
             @include addButton;
           }
         }
-
-        #first {
-          .card {
-            background-color: #e0efff;
-          }
-        }
-        #second {
-          .card {
-            background-color: #e8f9ff;
-
-            &-save {
-              display: none;
-            }
-          }
-        }
-        #third {
-          .card {
-            background-color: #d3fbfb;
-
-            &-save {
-              background-color: #08bdbe;
-            }
-          }
-        }
       }
 
       &__button {
@@ -207,6 +193,7 @@
         bottom: 283px;
         background-color: #fff;
         transition: background-color 0.3s ease;
+		border-radius: 15px 15px 15px 15px;
 
         &:hover {
           background-color: #059669;
@@ -232,6 +219,7 @@
 
     &-wrapper {
       padding: 0 30px;
+	  margin: 0 23px;
 
       &_title {
         font-size: 44px;
@@ -241,7 +229,7 @@
         margin-top: 50px;
         gap: 50px;
 
-        &__aerbuds,
+        &__earbuds,
         &__wireless,
         &__wired {
           font-size: 22px;
@@ -258,12 +246,10 @@
 
         &__cards {
           width: 920px;
-          justify-content: start;
           gap: 50px;
 
-          .first,
-          .second,
-          .third {
+          .items {
+
             .card {
               width: 261px;
               height: 390px;
@@ -288,12 +274,12 @@
 
               &-descr {
                 width: 227px;
-                height: 135px;
+                min-height: 135px;
                 padding: 14px 20px;
                 justify-content: space-between;
 
                 &_header {
-                  font-size: 18px;
+                  font-size: 16px;
                 }
 
                 &_price {
@@ -333,6 +319,8 @@
     margin: 80px auto;
 
     &-wrapper {
+		margin: 0 22px;
+
       &_title {
         font-size: 36px;
       }
@@ -340,7 +328,7 @@
       &_category {
         margin-top: 35px;
 
-        &__aerbuds,
+        &__earbuds,
         &__wireless,
         &__wired {
           font-size: 18px;
@@ -356,15 +344,16 @@
         margin-top: 50px;
 
         &__cards {
-          width: 698px;
-          justify-content: space-evenly;
-          gap: 25px;
+          width: 625px;
+          gap: 65px;
 
-          .first,
-          .second,
-          .third {
+          .items{
+			display: flex;
+			flex:  0 calc(100% / 2);
+
             .card {
-              width: 280px;
+				flex: 0 0 50%;
+                width: 280px;
 
               &-save {
                 width: 60px;
@@ -374,6 +363,22 @@
 
               &-descr {
                 width: 250px;
+				height: 140px;
+				margin-top: 15px;
+
+				&_header {
+					line-height: 25px;
+				}
+
+				&_rating {
+
+					&__stars {
+
+						img {
+							width: 13px;
+						}
+					}
+				}
               }
             }
 
@@ -382,16 +387,12 @@
               height: 60px;
             }
           }
-
-          .third {
-            display: none;
-          }
         }
 
         &__button {
-          width: 50px;
-          height: 50px;
-          bottom: 250px;
+			right: -50px;
+          	width: 50px;
+          	height: 50px;
         }
       }
     }
@@ -406,6 +407,7 @@
 
     &-wrapper {
       padding: 0 20px;
+	  margin: 0 3px;
 
       &_title {
         font-size: 32px;
@@ -414,7 +416,7 @@
       &_category {
         margin-top: 25px;
 
-        &__aerbuds,
+        &__earbuds,
         &__wireless,
         &__wired {
           font-size: 16px;
@@ -429,14 +431,14 @@
 
       &_slider {
         margin-top: 30px;
+		box-sizing: border-box;
 
         &__cards {
-          width: 506px;
-          justify-content: space-between;
+          width: 510px;
+		  gap: 30px;
 
-          .first,
-          .second,
-          .third {
+          .items {
+
             .card {
               width: 240px;
               height: 330px;
@@ -458,9 +460,11 @@
               &-descr {
                 width: 210px;
                 height: 120px;
+				margin-top: 10px;
 
                 &_header {
-                  font-size: 16px;
+                  font-size: 15px;
+				  line-height: 25px;
                 }
 
                 &_price {
@@ -502,6 +506,7 @@
     margin: 40px auto;
 
     &-wrapper {
+		margin: 0 5px;
       &_title {
         font-size: 26px;
         font-weight: 500;
@@ -510,7 +515,7 @@
       &_category {
         gap: 10px;
 
-        &__aerbuds,
+        &__earbuds,
         &__wireless,
         &__wired {
           font-size: 14px;
@@ -524,13 +529,17 @@
       }
 
       &_slider {
+
         &__cards {
           width: 240px;
+		  gap: 35px;
 
-          .first,
-          .second,
-          .third {
+          .items {
+			flex:  0 100%;
+
             .card {
+				flex: 0 0 100%;
+
               &-save {
                 width: 50px;
                 height: 50px;
@@ -539,11 +548,13 @@
               }
 
               &-descr {
+
                 &_header {
                   font-size: 15px;
                 }
 
                 &_rating {
+
                   &__stars {
                     width: 72px;
 
@@ -558,10 +569,6 @@
                 }
               }
             }
-          }
-
-          .second {
-            display: none;
           }
         }
       }
