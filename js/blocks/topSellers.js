@@ -1,6 +1,6 @@
 'use strict';
 
-import topSellers from "../db.js";
+import {topSellers} from "../db.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 	const topSellersCards = document.querySelector('.main__sellers-wrapper_slider__cards');

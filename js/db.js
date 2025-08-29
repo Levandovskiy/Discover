@@ -91,7 +91,7 @@ const topSellers = {
 
     {
 		id: 3,
-		title: "Apple AirPods Max 2 (Orange)",
+		title: "Apple AirPods Max 2",
 		price: 900,
 		discount: "6%",
 		rating: 5,
@@ -103,7 +103,7 @@ const topSellers = {
 
     {
 		id: 4,
-		title: "Apple AirPods Max 2 (Midnight)",
+		title: "Apple AirPods Max 2",
 		price: 950,
 		discount: null,
 		rating: 5,
@@ -115,7 +115,7 @@ const topSellers = {
 
     {
 		id: 5,
-		title: "Apple AirPods Max (Pink)",
+		title: "Apple AirPods Max",
 		price: 700,
 		discount: "10%",
 		rating: 4,
@@ -127,7 +127,7 @@ const topSellers = {
 
     {
 		id: 6,
-		title: "Apple AirPods Max 2 (Starlight) (Ultra)",
+		title: "Apple AirPods Max 2 (Ultra)",
 		price: 950,
 		discount: "8%",
 		rating: 5,
@@ -152,9 +152,9 @@ const trendingEarphones = {
 			discount: "60%",
 			rating: 5,
 			reviews: 70,
-			img: "../main/trendingEarphones/earbuds/BoatRockerz333.svg",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/earbuds/BoatRockerz333.svg",
+			bgColor: "#e0efff",
+			bgColorDiscount: "#80bdff"
 		},
 
 		{
@@ -164,9 +164,9 @@ const trendingEarphones = {
 			discount: null,
 			rating: 4,
 			reviews: 75,
-			img: "../main/trendingEarphones/earbuds/BoatKerz234.svg",
+			img: "../img/main/trendingEarphones/earbuds/BoatKerz234.svg",
 			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColorDiscount: null
 		},
 
 		{
@@ -176,9 +176,9 @@ const trendingEarphones = {
 			discount: "40%",
 			rating: 5,
 			reviews: 51,
-			img: "../main/trendingEarphones/earbuds/BoatRockerz323.svg",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/earbuds/BoatRockerz323.svg",
+			bgColor: "#d3fbfb",
+			bgColorDiscount: "#44eeee"
 		},
 
 		{
@@ -189,8 +189,8 @@ const trendingEarphones = {
 			rating: 4,
 			reviews: 43,
 			img: "../img/main/trendingEarphones/earbuds/BoatRockerz550.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColor: "#e8f9ff",
+			bgColorDiscount: "#80ddff"
 		},
 
 		{
@@ -212,9 +212,9 @@ const trendingEarphones = {
 			discount: "10%",
 			rating: 4,
 			reviews: 19,
-			img: "../main/trendingEarphones/earbuds/JBLTuneFLE.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/earbuds/JBLTuneFLE.png",
+			bgColor: "#E5D5FF",
+			bgColorDiscount: "#845EC2"
 		},
 
 		{
@@ -224,9 +224,9 @@ const trendingEarphones = {
 			discount: "25%",
 			rating: 5,
 			reviews: 82,
-			img: "../main/trendingEarphones/earbuds/ProoveBlitzTWS.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/earbuds/ProoveBlitzTWS.png",
+			bgColor: "#ECFEF4",
+			bgColorDiscount: "#10b981"
 		},
 
 		{
@@ -236,9 +236,9 @@ const trendingEarphones = {
 			discount: "16%",
 			rating: 4,
 			reviews: 53,
-			img: "../main/trendingEarphones/earbuds/1MOREFitSES30.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/earbuds/1MOREFitSES30.png",
+			bgColor: "#ffe6e6",
+			bgColorDiscount: "#ff9999"
 		},
 
 		{
@@ -248,9 +248,9 @@ const trendingEarphones = {
 			discount: null,
 			rating: 4,
 			reviews: 53,
-			img: "../main/trendingEarphones/aerbuds/BorofoneBW67.png",
+			img: "../img/main/trendingEarphones/earbuds/BorofoneBW67.png",
 			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColorDiscount: null
 		},
 
 	],
@@ -264,9 +264,9 @@ const trendingEarphones = {
 			discount: "10%",
 			rating: 5,
 			reviews: 62,
-			img: "../main/trendingEarphones/wireless/GalaxyBudsPro(R190).png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/wireless/GalaxyBudsPro(R190).png",
+			bgColor: "#ffe6e6",
+			bgColorDiscount: "#ff9999"
 		},
 
 		{
@@ -276,9 +276,9 @@ const trendingEarphones = {
 			discount: null,
 			rating: 5,
 			reviews: 77,
-			img: "../main/trendingEarphones/wireless/GalaxyBuds3Pro.png",
+			img: "../img/main/trendingEarphones/wireless/GalaxyBuds3Pro.png",
 			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColorDiscount: null
 		},
 
 		{
@@ -288,9 +288,9 @@ const trendingEarphones = {
 			discount: "12%",
 			rating: 4,
 			reviews: 50,
-			img: "../main/trendingEarphones/wireless/GalaxyBuds3FE.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			img: "../img/main/trendingEarphones/wireless/GalaxyBuds3FE.png",
+			bgColor: "#E5D5FF",
+			bgColorDiscount: "#845EC2"
 		},
 
 		{
@@ -301,8 +301,8 @@ const trendingEarphones = {
 			rating: 4,
 			reviews: 43,
 			img: "../img/main/trendingEarphones/wireless/GalaxyBudsFESM-R400.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColor: "#dfccc9",
+			bgColorDiscount: "#936e6c"
 		},
 
 		{
@@ -313,8 +313,8 @@ const trendingEarphones = {
 			rating: 5,
 			reviews: 39,
 			img: "../img/main/trendingEarphones/wireless/GalaxyBudsSM-R170.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColor: "#c2cbd5",
+			bgColorDiscount: "#575e64"
 		},
 
 		{
@@ -324,78 +324,18 @@ const trendingEarphones = {
 			discount: null,
 			rating: 4,
 			reviews: 19,
-			img: "../main/trendingEarphones/wireless/GalaxyBudsLive.png",
+			img: "../img/main/trendingEarphones/wireless/GalaxyBudsLive.png",
 			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
+			bgColorDiscount: null
 		}
 
 	],
 
 	wired: [
 
-		{
-			id: 1,
-			title: "Boat Rockerz 333",
-			price: 20,
-			discount: "60%",
-			rating: 5,
-			reviews: 70,
-			img: "../main/trendingEarphones/first.svg",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
-		},
-
-		{
-			id: 2,
-			title: "Boat kerz 234",
-			price: 40,
-			discount: null,
-			rating: 4,
-			reviews: 75,
-			img: "../main/trendingEarphones/second.svg",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
-		},
-
-		{
-			id: 3,
-			title: "Boat Rockerz 323",
-			price: 30,
-			discount: "40%",
-			rating: 5,
-			reviews: 51,
-			img: "../main/trendingEarphones/third.svg",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
-		},
-
-		{
-			id: 4,
-			title: "Boat Rockerz 550",
-			price: 70,
-			discount: "10%",
-			rating: 4,
-			reviews: 43,
-			img: "../img/main/trendingEarphones/fiveth.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
-		},
-
-		{
-			id: 5,
-			title: "Boat Rockerz 600",
-			price: 33,
-			discount: "22%",
-			rating: 5,
-			reviews: 35,
-			img: "../img/main/trendingEarphonesff/fourth.png",
-			bgColor: "#e7f1da",
-			bgColorDiscount: "#8bbb44"
-		}
 
 	]
 
 }
 
-
-export default topSellers;
+export {topSellers, trendingEarphones};

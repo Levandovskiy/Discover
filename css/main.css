@@ -772,8 +772,7 @@ h6 {
   gap: 65px;
   margin-top: 55px;
 }
-.main__sellers-wrapper_category__picks,
-.main__sellers-wrapper_category__watches {
+.main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
   color: #000;
   background-color: #fff;
   font-size: 26px;
@@ -784,8 +783,7 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__sellers-wrapper_category__picks.active,
-.main__sellers-wrapper_category__watches.active {
+.main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
   content: "";
   color: #fff;
   width: 177px;
@@ -874,7 +872,7 @@ h6 {
 }
 .main__sellers-wrapper_slider__cards .items .card-descr_header {
   color: #2b2626;
-  font-size: 21px;
+  font-size: 19px;
   font-style: normal;
   margin-top: 0;
   text-align: left;
@@ -979,12 +977,10 @@ h6 {
     margin-top: 50px;
     gap: 50px;
   }
-  .main__sellers-wrapper_category__picks,
-  .main__sellers-wrapper_category__watches {
+  .main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
     font-size: 22px;
   }
-  .main__sellers-wrapper_category__picks.active,
-  .main__sellers-wrapper_category__watches.active {
+  .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
     width: 150px;
     height: 75px;
   }
@@ -1021,7 +1017,7 @@ h6 {
     justify-content: space-between;
   }
   .main__sellers-wrapper_slider__cards .items .card-descr_header {
-    font-size: 18px;
+    font-size: 16px;
   }
   .main__sellers-wrapper_slider__cards .items .card-descr_price {
     font-size: 19px;
@@ -1057,12 +1053,10 @@ h6 {
   .main__sellers-wrapper_category {
     margin-top: 35px;
   }
-  .main__sellers-wrapper_category__picks,
-  .main__sellers-wrapper_category__watches {
+  .main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
     font-size: 18px;
   }
-  .main__sellers-wrapper_category__picks.active,
-  .main__sellers-wrapper_category__watches.active {
+  .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
     width: 110px;
     height: 55px;
   }
@@ -1088,6 +1082,14 @@ h6 {
   }
   .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 250px;
+    height: 140px;
+    margin-top: 15px;
+  }
+  .main__sellers-wrapper_slider__cards .items .card-descr_header {
+    line-height: 25px;
+  }
+  .main__sellers-wrapper_slider__cards .items .card-descr_rating__stars img {
+    width: 13px;
   }
   .main__sellers-wrapper_slider__cards .items button {
     width: 280px;
@@ -1115,13 +1117,11 @@ h6 {
   .main__sellers-wrapper_category {
     margin-top: 25px;
   }
-  .main__sellers-wrapper_category__picks,
-  .main__sellers-wrapper_category__watches {
+  .main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
     font-size: 16px;
     font-weight: 500;
   }
-  .main__sellers-wrapper_category__picks.active,
-  .main__sellers-wrapper_category__watches.active {
+  .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
     width: 100px;
     height: 50px;
   }
@@ -1151,9 +1151,11 @@ h6 {
   .main__sellers-wrapper_slider__cards .items .card-descr {
     width: 210px;
     min-height: 120px;
+    margin-top: 10px;
   }
   .main__sellers-wrapper_slider__cards .items .card-descr_header {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 25px;
   }
   .main__sellers-wrapper_slider__cards .items .card-descr_price {
     font-size: 18px;
@@ -1192,13 +1194,11 @@ h6 {
   .main__sellers-wrapper_category {
     gap: 10px;
   }
-  .main__sellers-wrapper_category__picks,
-  .main__sellers-wrapper_category__watches {
+  .main__sellers-wrapper_category__picks, .main__sellers-wrapper_category__watches {
     font-size: 14px;
     font-weight: 400;
   }
-  .main__sellers-wrapper_category__picks.active,
-  .main__sellers-wrapper_category__watches.active {
+  .main__sellers-wrapper_category__picks.active, .main__sellers-wrapper_category__watches.active {
     width: 75px;
     height: 40px;
   }
@@ -1241,6 +1241,9 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 20px;
 }
 .main__trending-wrapper_title {
   color: #2b2626;
@@ -1261,9 +1264,7 @@ h6 {
   gap: 65px;
   margin-top: 55px;
 }
-.main__trending-wrapper_category__aerbuds,
-.main__trending-wrapper_category__wireless,
-.main__trending-wrapper_category__wired {
+.main__trending-wrapper_category__earbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
   color: #000;
   background-color: #fff;
   font-size: 26px;
@@ -1274,15 +1275,14 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_category__aerbuds.active,
-.main__trending-wrapper_category__wireless.active,
-.main__trending-wrapper_category__wired.active {
+.main__trending-wrapper_category__earbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
   content: "";
   color: #fff;
   width: 177px;
   height: 91px;
   border-radius: 100%;
   background-color: #10b981;
+  transition: background-color 0.7s ease;
 }
 .main__trending-wrapper_slider {
   display: flex;
@@ -1294,15 +1294,19 @@ h6 {
 }
 .main__trending-wrapper_slider__cards {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  will-change: transform;
   gap: 93px;
   width: 1270px;
+  transition: transform 0.4s ease;
 }
-.main__trending-wrapper_slider__cards .first .card,
-.main__trending-wrapper_slider__cards .second .card,
-.main__trending-wrapper_slider__cards .third .card {
+.main__trending-wrapper_slider__cards .items {
+  display: flex;
+  flex-direction: column;
+}
+.main__trending-wrapper_slider__cards .items .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1313,9 +1317,7 @@ h6 {
   border-radius: 15px;
   padding: 18px 21px;
 }
-.main__trending-wrapper_slider__cards .first .card-save,
-.main__trending-wrapper_slider__cards .second .card-save,
-.main__trending-wrapper_slider__cards .third .card-save {
+.main__trending-wrapper_slider__cards .items .card-save {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1336,24 +1338,21 @@ h6 {
   padding: 20px;
   text-align: center;
   right: 19px;
+  opacity: 60%;
 }
-.main__trending-wrapper_slider__cards .first .card-img,
-.main__trending-wrapper_slider__cards .second .card-img,
-.main__trending-wrapper_slider__cards .third .card-img {
+.main__trending-wrapper_slider__cards .items .card-img {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 250px;
   height: 250px;
 }
-.main__trending-wrapper_slider__cards .first .card-img img,
-.main__trending-wrapper_slider__cards .second .card-img img,
-.main__trending-wrapper_slider__cards .third .card-img img {
+.main__trending-wrapper_slider__cards .items .card-img img {
+  max-width: 220px;
+  max-height: 220px;
   margin: 0 auto;
 }
-.main__trending-wrapper_slider__cards .first .card-descr,
-.main__trending-wrapper_slider__cards .second .card-descr,
-.main__trending-wrapper_slider__cards .third .card-descr {
+.main__trending-wrapper_slider__cards .items .card-descr {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1364,11 +1363,9 @@ h6 {
   background-color: #fff;
   padding: 30px 50px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_header,
-.main__trending-wrapper_slider__cards .second .card-descr_header,
-.main__trending-wrapper_slider__cards .third .card-descr_header {
+.main__trending-wrapper_slider__cards .items .card-descr_header {
   color: #2b2626;
-  font-size: 21px;
+  font-size: 19px;
   font-style: normal;
   margin-top: 0;
   text-align: left;
@@ -1379,33 +1376,25 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating,
-.main__trending-wrapper_slider__cards .second .card-descr_rating,
-.main__trending-wrapper_slider__cards .third .card-descr_rating {
+.main__trending-wrapper_slider__cards .items .card-descr_rating {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: start;
   gap: 13px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating__stars,
-.main__trending-wrapper_slider__cards .second .card-descr_rating__stars,
-.main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
+.main__trending-wrapper_slider__cards .items .card-descr_rating__stars {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   gap: 2px;
   width: 93px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating__stars img,
-.main__trending-wrapper_slider__cards .second .card-descr_rating__stars img,
-.main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
-  width: 100%;
+.main__trending-wrapper_slider__cards .items .card-descr_rating__stars img {
+  width: 17px;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_rating__review,
-.main__trending-wrapper_slider__cards .second .card-descr_rating__review,
-.main__trending-wrapper_slider__cards .third .card-descr_rating__review {
+.main__trending-wrapper_slider__cards .items .card-descr_rating__review {
   color: #888;
   font-size: 11px;
   font-style: normal;
@@ -1415,9 +1404,7 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_slider__cards .first .card-descr_price,
-.main__trending-wrapper_slider__cards .second .card-descr_price,
-.main__trending-wrapper_slider__cards .third .card-descr_price {
+.main__trending-wrapper_slider__cards .items .card-descr_price {
   color: #2b2626;
   font-size: 21px;
   font-style: normal;
@@ -1427,9 +1414,7 @@ h6 {
   letter-spacing: 0;
   text-transform: none;
 }
-.main__trending-wrapper_slider__cards .first button,
-.main__trending-wrapper_slider__cards .second button,
-.main__trending-wrapper_slider__cards .third button {
+.main__trending-wrapper_slider__cards .items button {
   width: 361px;
   height: 70px;
   background-color: #10b981;
@@ -1447,25 +1432,8 @@ h6 {
   margin-top: 29px;
   transition: background-color 0.3s ease;
 }
-.main__trending-wrapper_slider__cards .first button:hover,
-.main__trending-wrapper_slider__cards .second button:hover,
-.main__trending-wrapper_slider__cards .third button:hover {
+.main__trending-wrapper_slider__cards .items button:hover {
   background-color: #059669;
-}
-.main__trending-wrapper_slider__cards #first .card {
-  background-color: #e0efff;
-}
-.main__trending-wrapper_slider__cards #second .card {
-  background-color: #e8f9ff;
-}
-.main__trending-wrapper_slider__cards #second .card-save {
-  display: none;
-}
-.main__trending-wrapper_slider__cards #third .card {
-  background-color: #d3fbfb;
-}
-.main__trending-wrapper_slider__cards #third .card-save {
-  background-color: #08bdbe;
 }
 .main__trending-wrapper_slider__button {
   position: absolute;
@@ -1473,6 +1441,7 @@ h6 {
   bottom: 283px;
   background-color: #fff;
   transition: background-color 0.3s ease;
+  border-radius: 15px 15px 15px 15px;
 }
 .main__trending-wrapper_slider__button:hover {
   background-color: #059669;
@@ -1492,6 +1461,7 @@ h6 {
   }
   .main__trending-wrapper {
     padding: 0 30px;
+    margin: 0 23px;
   }
   .main__trending-wrapper_title {
     font-size: 44px;
@@ -1500,14 +1470,10 @@ h6 {
     margin-top: 50px;
     gap: 50px;
   }
-  .main__trending-wrapper_category__aerbuds,
-  .main__trending-wrapper_category__wireless,
-  .main__trending-wrapper_category__wired {
+  .main__trending-wrapper_category__earbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
     font-size: 22px;
   }
-  .main__trending-wrapper_category__aerbuds.active,
-  .main__trending-wrapper_category__wireless.active,
-  .main__trending-wrapper_category__wired.active {
+  .main__trending-wrapper_category__earbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
     width: 150px;
     height: 75px;
   }
@@ -1516,57 +1482,40 @@ h6 {
   }
   .main__trending-wrapper_slider__cards {
     width: 920px;
-    justify-content: start;
     gap: 50px;
   }
-  .main__trending-wrapper_slider__cards .first .card,
-  .main__trending-wrapper_slider__cards .second .card,
-  .main__trending-wrapper_slider__cards .third .card {
+  .main__trending-wrapper_slider__cards .items .card {
     width: 261px;
     height: 390px;
     padding: 15px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save,
-  .main__trending-wrapper_slider__cards .second .card-save,
-  .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .items .card-save {
     width: 70px;
     height: 70px;
     font-size: 16px;
     padding: 15px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img,
-  .main__trending-wrapper_slider__cards .second .card-img,
-  .main__trending-wrapper_slider__cards .third .card-img {
+  .main__trending-wrapper_slider__cards .items .card-img {
     width: 160px;
     height: 160px;
     margin-top: 30px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img img,
-  .main__trending-wrapper_slider__cards .second .card-img img,
-  .main__trending-wrapper_slider__cards .third .card-img img {
+  .main__trending-wrapper_slider__cards .items .card-img img {
     width: 160px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr,
-  .main__trending-wrapper_slider__cards .second .card-descr,
-  .main__trending-wrapper_slider__cards .third .card-descr {
+  .main__trending-wrapper_slider__cards .items .card-descr {
     width: 227px;
-    height: 135px;
+    min-height: 135px;
     padding: 14px 20px;
     justify-content: space-between;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_header,
-  .main__trending-wrapper_slider__cards .second .card-descr_header,
-  .main__trending-wrapper_slider__cards .third .card-descr_header {
-    font-size: 18px;
+  .main__trending-wrapper_slider__cards .items .card-descr_header {
+    font-size: 16px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_price,
-  .main__trending-wrapper_slider__cards .second .card-descr_price,
-  .main__trending-wrapper_slider__cards .third .card-descr_price {
+  .main__trending-wrapper_slider__cards .items .card-descr_price {
     font-size: 19px;
   }
-  .main__trending-wrapper_slider__cards .first button,
-  .main__trending-wrapper_slider__cards .second button,
-  .main__trending-wrapper_slider__cards .third button {
+  .main__trending-wrapper_slider__cards .items button {
     width: 261px;
     height: 50px;
     font-size: 18px;
@@ -1588,20 +1537,19 @@ h6 {
     height: 670px;
     margin: 80px auto;
   }
+  .main__trending-wrapper {
+    margin: 0 22px;
+  }
   .main__trending-wrapper_title {
     font-size: 36px;
   }
   .main__trending-wrapper_category {
     margin-top: 35px;
   }
-  .main__trending-wrapper_category__aerbuds,
-  .main__trending-wrapper_category__wireless,
-  .main__trending-wrapper_category__wired {
+  .main__trending-wrapper_category__earbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
     font-size: 18px;
   }
-  .main__trending-wrapper_category__aerbuds.active,
-  .main__trending-wrapper_category__wireless.active,
-  .main__trending-wrapper_category__wired.active {
+  .main__trending-wrapper_category__earbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
     width: 110px;
     height: 55px;
   }
@@ -1609,40 +1557,41 @@ h6 {
     margin-top: 50px;
   }
   .main__trending-wrapper_slider__cards {
-    width: 698px;
-    justify-content: space-evenly;
-    gap: 25px;
+    width: 625px;
+    gap: 65px;
   }
-  .main__trending-wrapper_slider__cards .first .card,
-  .main__trending-wrapper_slider__cards .second .card,
-  .main__trending-wrapper_slider__cards .third .card {
+  .main__trending-wrapper_slider__cards .items {
+    display: flex;
+    flex: 0 50%;
+  }
+  .main__trending-wrapper_slider__cards .items .card {
+    flex: 0 0 50%;
     width: 280px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save,
-  .main__trending-wrapper_slider__cards .second .card-save,
-  .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .items .card-save {
     width: 60px;
     height: 60px;
     font-size: 14px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr,
-  .main__trending-wrapper_slider__cards .second .card-descr,
-  .main__trending-wrapper_slider__cards .third .card-descr {
+  .main__trending-wrapper_slider__cards .items .card-descr {
     width: 250px;
+    height: 140px;
+    margin-top: 15px;
   }
-  .main__trending-wrapper_slider__cards .first button,
-  .main__trending-wrapper_slider__cards .second button,
-  .main__trending-wrapper_slider__cards .third button {
+  .main__trending-wrapper_slider__cards .items .card-descr_header {
+    line-height: 25px;
+  }
+  .main__trending-wrapper_slider__cards .items .card-descr_rating__stars img {
+    width: 13px;
+  }
+  .main__trending-wrapper_slider__cards .items button {
     width: 280px;
     height: 60px;
   }
-  .main__trending-wrapper_slider__cards .third {
-    display: none;
-  }
   .main__trending-wrapper_slider__button {
+    right: -50px;
     width: 50px;
     height: 50px;
-    bottom: 250px;
   }
 }
 @media (max-width: 767px) {
@@ -1653,6 +1602,7 @@ h6 {
   }
   .main__trending-wrapper {
     padding: 0 20px;
+    margin: 0 3px;
   }
   .main__trending-wrapper_title {
     font-size: 32px;
@@ -1660,67 +1610,50 @@ h6 {
   .main__trending-wrapper_category {
     margin-top: 25px;
   }
-  .main__trending-wrapper_category__aerbuds,
-  .main__trending-wrapper_category__wireless,
-  .main__trending-wrapper_category__wired {
+  .main__trending-wrapper_category__earbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
     font-size: 16px;
     font-weight: 500;
   }
-  .main__trending-wrapper_category__aerbuds.active,
-  .main__trending-wrapper_category__wireless.active,
-  .main__trending-wrapper_category__wired.active {
+  .main__trending-wrapper_category__earbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
     width: 100px;
     height: 50px;
   }
   .main__trending-wrapper_slider {
     margin-top: 30px;
+    box-sizing: border-box;
   }
   .main__trending-wrapper_slider__cards {
-    width: 506px;
-    justify-content: space-between;
+    width: 510px;
+    gap: 30px;
   }
-  .main__trending-wrapper_slider__cards .first .card,
-  .main__trending-wrapper_slider__cards .second .card,
-  .main__trending-wrapper_slider__cards .third .card {
+  .main__trending-wrapper_slider__cards .items .card {
     width: 240px;
     height: 330px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save,
-  .main__trending-wrapper_slider__cards .second .card-save,
-  .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .items .card-save {
     font-size: 12px;
     padding: 10px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img,
-  .main__trending-wrapper_slider__cards .second .card-img,
-  .main__trending-wrapper_slider__cards .third .card-img {
+  .main__trending-wrapper_slider__cards .items .card-img {
     width: 130px;
     height: 130px;
   }
-  .main__trending-wrapper_slider__cards .first .card-img img,
-  .main__trending-wrapper_slider__cards .second .card-img img,
-  .main__trending-wrapper_slider__cards .third .card-img img {
+  .main__trending-wrapper_slider__cards .items .card-img img {
     width: 130px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr,
-  .main__trending-wrapper_slider__cards .second .card-descr,
-  .main__trending-wrapper_slider__cards .third .card-descr {
+  .main__trending-wrapper_slider__cards .items .card-descr {
     width: 210px;
     height: 120px;
+    margin-top: 10px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_header,
-  .main__trending-wrapper_slider__cards .second .card-descr_header,
-  .main__trending-wrapper_slider__cards .third .card-descr_header {
-    font-size: 16px;
+  .main__trending-wrapper_slider__cards .items .card-descr_header {
+    font-size: 15px;
+    line-height: 25px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_price,
-  .main__trending-wrapper_slider__cards .second .card-descr_price,
-  .main__trending-wrapper_slider__cards .third .card-descr_price {
+  .main__trending-wrapper_slider__cards .items .card-descr_price {
     font-size: 18px;
   }
-  .main__trending-wrapper_slider__cards .first button,
-  .main__trending-wrapper_slider__cards .second button,
-  .main__trending-wrapper_slider__cards .third button {
+  .main__trending-wrapper_slider__cards .items button {
     width: 240px;
     height: 50px;
     margin-top: 22px;
@@ -1744,6 +1677,9 @@ h6 {
     height: 534px;
     margin: 40px auto;
   }
+  .main__trending-wrapper {
+    margin: 0 5px;
+  }
   .main__trending-wrapper_title {
     font-size: 26px;
     font-weight: 500;
@@ -1751,51 +1687,41 @@ h6 {
   .main__trending-wrapper_category {
     gap: 10px;
   }
-  .main__trending-wrapper_category__aerbuds,
-  .main__trending-wrapper_category__wireless,
-  .main__trending-wrapper_category__wired {
+  .main__trending-wrapper_category__earbuds, .main__trending-wrapper_category__wireless, .main__trending-wrapper_category__wired {
     font-size: 14px;
     font-weight: 400;
   }
-  .main__trending-wrapper_category__aerbuds.active,
-  .main__trending-wrapper_category__wireless.active,
-  .main__trending-wrapper_category__wired.active {
+  .main__trending-wrapper_category__earbuds.active, .main__trending-wrapper_category__wireless.active, .main__trending-wrapper_category__wired.active {
     width: 75px;
     height: 40px;
   }
   .main__trending-wrapper_slider__cards {
     width: 240px;
+    gap: 35px;
   }
-  .main__trending-wrapper_slider__cards .first .card-save,
-  .main__trending-wrapper_slider__cards .second .card-save,
-  .main__trending-wrapper_slider__cards .third .card-save {
+  .main__trending-wrapper_slider__cards .items {
+    flex: 0 100%;
+  }
+  .main__trending-wrapper_slider__cards .items .card {
+    flex: 0 0 100%;
+  }
+  .main__trending-wrapper_slider__cards .items .card-save {
     width: 50px;
     height: 50px;
     padding: 5px;
     font-size: 11px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_header,
-  .main__trending-wrapper_slider__cards .second .card-descr_header,
-  .main__trending-wrapper_slider__cards .third .card-descr_header {
+  .main__trending-wrapper_slider__cards .items .card-descr_header {
     font-size: 15px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars,
-  .main__trending-wrapper_slider__cards .second .card-descr_rating__stars,
-  .main__trending-wrapper_slider__cards .third .card-descr_rating__stars {
+  .main__trending-wrapper_slider__cards .items .card-descr_rating__stars {
     width: 72px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_rating__stars img,
-  .main__trending-wrapper_slider__cards .second .card-descr_rating__stars img,
-  .main__trending-wrapper_slider__cards .third .card-descr_rating__stars img {
+  .main__trending-wrapper_slider__cards .items .card-descr_rating__stars img {
     width: 13px;
   }
-  .main__trending-wrapper_slider__cards .first .card-descr_price,
-  .main__trending-wrapper_slider__cards .second .card-descr_price,
-  .main__trending-wrapper_slider__cards .third .card-descr_price {
+  .main__trending-wrapper_slider__cards .items .card-descr_price {
     font-size: 16px;
-  }
-  .main__trending-wrapper_slider__cards .second {
-    display: none;
   }
 }
 .main__new-launches_wrapper {
@@ -1824,7 +1750,7 @@ h6 {
   justify-content: center;
   align-items: center;
   margin-top: 120px;
-  background-color: #845ec2;
+  background-color: #845EC2;
   max-width: 1440px;
 }
 .main__new-launches_wrapper__card-slider {
@@ -1835,8 +1761,7 @@ h6 {
   gap: 16px;
   padding: 62px;
 }
-.main__new-launches_wrapper__card-slider_lbtn button,
-.main__new-launches_wrapper__card-slider_rbtn button {
+.main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1845,8 +1770,7 @@ h6 {
   height: 48px;
   background-color: #10b981;
 }
-.main__new-launches_wrapper__card-slider_lbtn button:hover,
-.main__new-launches_wrapper__card-slider_rbtn button:hover {
+.main__new-launches_wrapper__card-slider_lbtn button:hover, .main__new-launches_wrapper__card-slider_rbtn button:hover {
   background-color: #059669;
   transition: 0.3s ease 0.1s;
 }
@@ -1866,13 +1790,11 @@ h6 {
   gap: 45px;
   width: 522px;
 }
-.main__new-launches_wrapper__card-slider_content__img .first,
-.main__new-launches_wrapper__card-slider_content__img .second {
+.main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
   box-sizing: border-box;
   max-width: 238px;
 }
-.main__new-launches_wrapper__card-slider_content__img .first img,
-.main__new-launches_wrapper__card-slider_content__img .second img {
+.main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
   position: relative;
   border-radius: 136px;
 }
@@ -1933,22 +1855,20 @@ h6 {
   gap: 33px;
   margin-bottom: 50px;
 }
-.main__new-launches_wrapper__card-slider_content__descr-color .black,
-.main__new-launches_wrapper__card-slider_content__descr-color .yellow,
-.main__new-launches_wrapper__card-slider_content__descr-color .blue {
+.main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
   height: 44px;
   width: 44px;
   background-color: #000;
   border-radius: 50%;
 }
 .main__new-launches_wrapper__card-slider_content__descr-color .yellow {
-  background-color: #fff500;
+  background-color: #FFF500;
 }
 .main__new-launches_wrapper__card-slider_content__descr-color .blue {
-  background-color: #4484ff;
+  background-color: #4484FF;
 }
 .main__new-launches_wrapper__card-slider_content__descr-color_active {
-  border: 1px solid #ff0000;
+  border: 1px solid #FF0000;
 }
 .main__new-launches_wrapper__card-slider_content__descr-btns {
   display: flex;
@@ -1958,8 +1878,7 @@ h6 {
   gap: 10px;
   height: 70px;
 }
-.main__new-launches_wrapper__card-slider_content__descr-btns .add,
-.main__new-launches_wrapper__card-slider_content__descr-btns .more {
+.main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
   color: #fff;
   font-size: 21px;
   font-weight: 600;
@@ -1972,8 +1891,7 @@ h6 {
   border-radius: 10px;
   transition: 0.3s ease 0.1s;
 }
-.main__new-launches_wrapper__card-slider_content__descr-btns .add:hover,
-.main__new-launches_wrapper__card-slider_content__descr-btns .more:hover {
+.main__new-launches_wrapper__card-slider_content__descr-btns .add:hover, .main__new-launches_wrapper__card-slider_content__descr-btns .more:hover {
   box-shadow: 0 25px 50px 0 rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   background-color: #10b981;
@@ -2002,12 +1920,10 @@ h6 {
     gap: 30px;
     width: 330px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first,
-  .main__new-launches_wrapper__card-slider_content__img .second {
+  .main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
     max-width: 150px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first img,
-  .main__new-launches_wrapper__card-slider_content__img .second img {
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
     width: 150px;
   }
   .main__new-launches_wrapper__card-slider_content__descr-header {
@@ -2026,14 +1942,11 @@ h6 {
     gap: 20px;
     margin-bottom: 30px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color .black,
-  .main__new-launches_wrapper__card-slider_content__descr-color .yellow,
-  .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
     width: 30px;
     height: 30px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-btns .add,
-  .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
     height: 50px;
     width: 210px;
     font-size: 14px;
@@ -2059,14 +1972,12 @@ h6 {
     display: inline-block;
     position: absolute;
   }
-  .main__new-launches_wrapper__card-slider_lbtn,
-  .main__new-launches_wrapper__card-slider_rbtn {
+  .main__new-launches_wrapper__card-slider_lbtn, .main__new-launches_wrapper__card-slider_rbtn {
     position: absolute;
     width: 65px;
     height: 65px;
   }
-  .main__new-launches_wrapper__card-slider_lbtn button,
-  .main__new-launches_wrapper__card-slider_rbtn button {
+  .main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
     width: 65px;
     height: 65px;
   }
@@ -2086,12 +1997,10 @@ h6 {
     gap: 50px;
     width: 450px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first,
-  .main__new-launches_wrapper__card-slider_content__img .second {
+  .main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
     max-width: 238px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first img,
-  .main__new-launches_wrapper__card-slider_content__img .second img {
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
     width: 200px;
     top: 0;
   }
@@ -2102,17 +2011,14 @@ h6 {
   .main__new-launches_wrapper__card-slider_content__descr-header {
     font-size: 28px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color .black,
-  .main__new-launches_wrapper__card-slider_content__descr-color .yellow,
-  .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
     width: 35px;
     height: 35px;
   }
   .main__new-launches_wrapper__card-slider_content__descr-btns {
     gap: 50px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-btns .add,
-  .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
     width: 250px;
     height: 60px;
   }
@@ -2132,14 +2038,12 @@ h6 {
   .main__new-launches_wrapper__card-slider {
     max-width: 767px;
   }
-  .main__new-launches_wrapper__card-slider_lbtn,
-  .main__new-launches_wrapper__card-slider_rbtn {
+  .main__new-launches_wrapper__card-slider_lbtn, .main__new-launches_wrapper__card-slider_rbtn {
     width: 48px;
     height: 48px;
     top: 150px;
   }
-  .main__new-launches_wrapper__card-slider_lbtn button,
-  .main__new-launches_wrapper__card-slider_rbtn button {
+  .main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
     width: 48px;
     height: 48px;
   }
@@ -2151,8 +2055,7 @@ h6 {
     gap: 30px;
     width: 380px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first img,
-  .main__new-launches_wrapper__card-slider_content__img .second img {
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
     max-width: 175px;
   }
   .main__new-launches_wrapper__card-slider_content__descr {
@@ -2177,14 +2080,11 @@ h6 {
   .main__new-launches_wrapper__card-slider_content__descr-color {
     margin-bottom: 20px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color .black,
-  .main__new-launches_wrapper__card-slider_content__descr-color .yellow,
-  .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
     width: 30px;
     height: 30px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-btns .add,
-  .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
     width: 210px;
     height: 50px;
   }
@@ -2212,14 +2112,12 @@ h6 {
     margin-top: 20px;
     padding: 0;
   }
-  .main__new-launches_wrapper__card-slider_lbtn,
-  .main__new-launches_wrapper__card-slider_rbtn {
+  .main__new-launches_wrapper__card-slider_lbtn, .main__new-launches_wrapper__card-slider_rbtn {
     width: 30px;
     height: 30px;
     top: 66px;
   }
-  .main__new-launches_wrapper__card-slider_lbtn button,
-  .main__new-launches_wrapper__card-slider_rbtn button {
+  .main__new-launches_wrapper__card-slider_lbtn button, .main__new-launches_wrapper__card-slider_rbtn button {
     width: 30px;
     height: 30px;
   }
@@ -2235,12 +2133,10 @@ h6 {
     width: 200px;
     gap: 10px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first,
-  .main__new-launches_wrapper__card-slider_content__img .second {
+  .main__new-launches_wrapper__card-slider_content__img .first, .main__new-launches_wrapper__card-slider_content__img .second {
     max-width: 95px;
   }
-  .main__new-launches_wrapper__card-slider_content__img .first img,
-  .main__new-launches_wrapper__card-slider_content__img .second img {
+  .main__new-launches_wrapper__card-slider_content__img .first img, .main__new-launches_wrapper__card-slider_content__img .second img {
     top: -20px;
     max-width: 95px;
   }
@@ -2267,15 +2163,16 @@ h6 {
     height: 40px;
     gap: 20px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-btns .add,
-  .main__new-launches_wrapper__card-slider_content__descr-btns .more {
+  .main__new-launches_wrapper__card-slider_content__descr-btns .add, .main__new-launches_wrapper__card-slider_content__descr-btns .more {
     width: 130px;
     height: 40px;
     font-size: 13px;
     font-weight: 500;
   }
 }
-
+.cart-all {
+  /* Адаптивність */
+}
 .cart-all__recipient {
   max-width: 400px;
   margin: 0 auto;
@@ -2443,17 +2340,13 @@ h6 {
   flex-direction: row;
   gap: 170px;
 }
-.footer__list-links_services span,
-.footer__list-links_about span,
-.footer__list-links_help span {
+.footer__list-links_services span, .footer__list-links_about span, .footer__list-links_help span {
   color: #10b981;
   font-size: 17px;
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
 }
-.footer__list-links_services ul > li,
-.footer__list-links_about ul > li,
-.footer__list-links_help ul > li {
+.footer__list-links_services ul > li, .footer__list-links_about ul > li, .footer__list-links_help ul > li {
   color: #111;
   font-size: 15px;
   margin-top: 20px;
@@ -2461,16 +2354,12 @@ h6 {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
 }
-.footer__list-links_services ul > li a,
-.footer__list-links_about ul > li a,
-.footer__list-links_help ul > li a {
+.footer__list-links_services ul > li a, .footer__list-links_about ul > li a, .footer__list-links_help ul > li a {
   display: inline-block;
   color: #000;
   transition: 0.3s ease 0.1s;
 }
-.footer__list-links_services ul > li a:hover,
-.footer__list-links_about ul > li a:hover,
-.footer__list-links_help ul > li a:hover {
+.footer__list-links_services ul > li a:hover, .footer__list-links_about ul > li a:hover, .footer__list-links_help ul > li a:hover {
   transform: translateX(8px);
   text-decoration: underline;
   color: #10b981;
@@ -2486,23 +2375,20 @@ h6 {
   flex-direction: row;
   gap: 39px;
 }
-.footer__terms-wrapper_conditions,
-.footer__terms-wrapper_privacy {
+.footer__terms-wrapper_conditions, .footer__terms-wrapper_privacy {
   color: #111;
   font-size: 15px;
   text-align: left;
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
 }
-.footer__terms-wrapper_conditions a,
-.footer__terms-wrapper_privacy a {
+.footer__terms-wrapper_conditions a, .footer__terms-wrapper_privacy a {
   cursor: pointer;
   display: inline-block;
   transition: 0.3s ease 0.1s;
   color: #000;
 }
-.footer__terms-wrapper_conditions a:hover,
-.footer__terms-wrapper_privacy a:hover {
+.footer__terms-wrapper_conditions a:hover, .footer__terms-wrapper_privacy a:hover {
   transform: translateY(-8px);
   text-decoration: underline;
   color: #10b981;
@@ -2514,8 +2400,7 @@ h6 {
   align-items: center;
   gap: 40px;
 }
-.footer__terms-social a:hover svg > path,
-.footer__terms-social a:hover svg > circle {
+.footer__terms-social a:hover svg > path, .footer__terms-social a:hover svg > circle {
   transform: rotate(360deg);
   transition: 0.7s ease;
   fill: #10b981;
@@ -2597,14 +2482,10 @@ h6 {
     margin: 40px auto 0;
     gap: 170px;
   }
-  .footer__list-links_services span,
-  .footer__list-links_about span,
-  .footer__list-links_help span {
+  .footer__list-links_services span, .footer__list-links_about span, .footer__list-links_help span {
     font-size: 15px;
   }
-  .footer__list-links_services ul > li,
-  .footer__list-links_about ul > li,
-  .footer__list-links_help ul > li {
+  .footer__list-links_services ul > li, .footer__list-links_about ul > li, .footer__list-links_help ul > li {
     font-size: 14px;
   }
   .footer__terms {
@@ -2666,17 +2547,14 @@ h6 {
   .footer__list-links {
     gap: 50px;
   }
-  .footer__list-links_services ul > li > a,
-  .footer__list-links_about ul > li > a,
-  .footer__list-links_help ul > li > a {
+  .footer__list-links_services ul > li > a, .footer__list-links_about ul > li > a, .footer__list-links_help ul > li > a {
     line-height: 17px;
   }
   .footer__terms {
     margin: 60px 0 100px 0;
     gap: 30px;
   }
-  .footer__terms-wrapper_conditions a,
-  .footer__terms-wrapper_privacy a {
+  .footer__terms-wrapper_conditions a, .footer__terms-wrapper_privacy a {
     line-height: 17px;
   }
 }
@@ -2740,7 +2618,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-[class*="__container"] {
+[class*=__container] {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -2754,4 +2632,4 @@ body {
 
 .main {
   flex: 1 1 auto;
-}
+}/*# sourceMappingURL=main.css.map */
