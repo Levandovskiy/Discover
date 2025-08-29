@@ -45,73 +45,117 @@
       <main class="main">
         <div class="main__container">
           <div class="main__information-wrapper">
-            <div class="information">
-              <form action="/register" method="POST" class="information__form">
-                <p class="information__contact">Контактна інформація:</p>
-                <label class="information__label" for="username">Ім’я</label>
-                <input
-                  class="information__input"
-                  type="text"
-                  id="username"
-                  name="username"
-                  required
-                />
-                <label class="information__label" for="username"
-                  >Прізвище</label
+            <div class="information-cont">
+              <div class="information">
+                <form
+                  action="/register"
+                  method="POST"
+                  class="information__form"
                 >
-                <input
-                  class="information__input"
-                  type="text"
-                  id="username"
-                  name="username"
-                  required
-                />
+                  <p class="information__contact">Контактна інформація:</p>
+                  <label class="information__label" for="username">Ім’я</label>
+                  <input
+                    class="information__input"
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                  />
+                  <label class="information__label" for="username"
+                    >Прізвище</label
+                  >
+                  <input
+                    class="information__input"
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                  />
 
-                <label class="information__label" for="phone"
-                  >Номер телефону</label
+                  <label class="information__label" for="phone"
+                    >Номер телефону</label
+                  >
+                  <input
+                    class="information__input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="^\+?\d{10,15}$"
+                    required
+                  />
+
+                  <label class="information__label" for="password"
+                    >E-mail</label
+                  >
+                  <input
+                    class="information__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </form>
+              </div>
+              <div class="delivery-payment">
+                <h2 class="delivery-payment__title">Доставка і оплата:</h2>
+                <label for="city-select" class="delivery-payment__label"
+                  >Перші 2 букви міста</label
                 >
-                <input
-                  class="information__input"
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  pattern="^\+?\d{10,15}$"
-                  required
-                />
-
-                <label class="information__label" for="password">E-mail</label>
-                <input
-                  class="information__input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                />
-
+                <select id="city-select" class="delivery-payment__select">
+                  <option value="ky">Київ</option>
+                  <option value="lv">Львів</option>
+                  <option value="od">Одеса</option>
+                  <option value="dn">Дніпро</option>
+                  <option value="kh">Харків</option>
+                  <option value="vn">Вінниця</option>
+                  <option value="zh">Житомир</option>
+                  <option value="pl">Полтава</option>
+                  <option value="te">Тернопіль</option>
+                </select>
+              </div>
+              <div class="delivery-payment">
                 <button class="information__button" type="submit">
                   Оформити замовлення
                 </button>
-              </form>
-            </div>
-            <div class="delivery-payment">
-              <h2 class="delivery-payment__title">Доставка і оплата:</h2>
-              <label for="city-select" class="delivery-payment__label"
-                >Перші 2 букви міста</label
-              >
-              <select id="city-select" class="delivery-payment__select">
-                <option value="ky">Київ</option>
-                <option value="lv">Львів</option>
-                <option value="od">Одеса</option>
-                <option value="dn">Дніпро</option>
-                <option value="kh">Харків</option>
-                <option value="vn">Вінниця</option>
-                <option value="zh">Житомир</option>
-                <option value="pl">Полтава</option>
-                <option value="te">Тернопіль</option>
-              </select>
+              </div>
             </div>
 
-            <div class="order"></div>
+            <div class="cart-item">
+              <div class="cart-item__product">
+                <img
+                  src="airpods.png"
+                  alt="Apple AirPods 3"
+                  class="cart-item__image"
+                />
+                <div class="cart-item__info">
+                  <h3 class="cart-item__title">
+                    Навушники Apple AirPods 3 with Lightning Charging Case
+                    (MPNY3)
+                  </h3>
+                  <div class="cart-item__services">
+                    <label class="cart-item__service">
+                      <input type="checkbox" />
+                      <span>Захист від браку</span>
+                      <span class="cart-item__price">1 049 грн</span>
+                    </label>
+                    <label class="cart-item__service">
+                      <input type="checkbox" />
+                      <span>Чистий спокій</span>
+                      <span class="cart-item__price">2 099 грн</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="cart-item__pricing">
+                  <span class="cart-item__current-price">5 099 грн</span>
+                  <span class="cart-item__old-price">5 499 грн</span>
+                  <button class="cart-item__remove">🗑️</button>
+                </div>
+              </div>
+              <div class="cart-item__total">
+                <span>Сума замовлення:</span>
+                <span class="cart-item__total-price">5 099 грн</span>
+              </div>
+            </div>
           </div>
         </div>
       </main>

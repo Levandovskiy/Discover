@@ -1,9 +1,15 @@
 .main {
   &__information-wrapper {
+    display: flex;
+
     background-color: #7622c4;
 
     min-height: 100vh;
   }
+}
+
+.information-cont {
+  min-width: 450px;
 }
 
 .information {
@@ -136,5 +142,104 @@
     &__button {
       font-size: 14px;
     }
+  }
+}
+
+.cart-item {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Segoe UI", sans-serif;
+  max-height: 200px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__product {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+  }
+
+  &__image {
+    width: 80px;
+    height: auto;
+  }
+
+  &__info {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__services {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+
+    input {
+      margin-right: 8px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    color: #ccc;
+  }
+
+  &__pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  &__current-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #777;
+  }
+
+  &__remove {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      color: #ff4d4d;
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  &__total-price {
+    color: #fff;
   }
 }

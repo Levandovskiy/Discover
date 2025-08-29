@@ -2584,8 +2584,13 @@ h6 {
 }
 
 .main__information-wrapper {
+  display: flex;
   background-color: #7622c4;
   min-height: 100vh;
+}
+
+.information-cont {
+  min-width: 450px;
 }
 
 .information {
@@ -2700,6 +2705,90 @@ h6 {
     font-size: 14px;
   }
 }
+.cart-item {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Segoe UI", sans-serif;
+  max-height: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.cart-item__product {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+.cart-item__image {
+  width: 80px;
+  height: auto;
+}
+.cart-item__info {
+  flex-grow: 1;
+}
+.cart-item__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.cart-item__services {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cart-item__service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.cart-item__service input {
+  margin-right: 8px;
+}
+.cart-item__price {
+  font-weight: 500;
+  color: #ccc;
+}
+.cart-item__pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.cart-item__current-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.cart-item__old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #777;
+}
+.cart-item__remove {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.cart-item__remove:hover {
+  color: #ff4d4d;
+}
+.cart-item__total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.cart-item__total-price {
+  color: #fff;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
