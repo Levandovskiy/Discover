@@ -137,103 +137,265 @@ const topSellers = {
 		bgColorDiscount: "#8bbb44"
 	},
 
-  ],
-
-  trendingEarphones: [
-
-    {
-		id: 10,
-		title: "Boat Rockerz 333",
-		price: 20,
-		discount: "60%",
-		rating: 5,
-		reviews: 70,
-		img: "../main/trendingEarphones/first.svg"
-	},
-
-    {
-		id: 11,
-		title: "Boat kerz 234",
-		price: 40,
-		discount: null,
-		rating: 4,
-		reviews: 75,
-		img: "../main/trendingEarphones/second.svg"
-	},
-
-    {
-		id: 12,
-		title: "Boat Rockerz 323",
-		price: 30,
-		discount: "40%",
-		rating: 5,
-		reviews: 51,
-		img: "../main/trendingEarphones/third.svg"
-	},
-
-    {
-		id: 13,
-		title: "Boat Rockerz 550",
-		price: 70,
-		discount: "10%",
-		rating: 4,
-		reviews: 43,
-		img: "../img/main/trendingEarphones/fiveth.png"
-	},
-
-    {
-		id: 14,
-		title: "Boat Rockerz 600",
-		price: 33,
-		discount: "22%",
-		rating: 5,
-		reviews: 35,
-		img: "../img/main/trendingEarphonesff/fourth.png"
-	},
-
-    {
-		id: 15,
-		title: "JBL Tune FLE",
-		price: 52,
-		discount: "10%",
-		rating: 4,
-		reviews: 19,
-		img: "../main/trendingEarphones/sexth.svg"
-	},
-
-    {
-		id: 16,
-		title: "Proove Blitz TWS with ANC",
-		price: 33,
-		discount: "25%",
-		rating: 5,
-		reviews: 82,
-		img: "../main/trendingEarphones/seventh.svg"
-	},
-
-    {
-		id: 17,
-		title: "1MORE Fit SE S30",
-		price: 48,
-		discount: "16%",
-		rating: 4,
-		reviews: 53,
-		img: "../main/trendingEarphones/eigth.svg"
-	},
-
-    {
-		id: 18,
-		title: "Borofone BW67",
-		price: 27,
-		discount: null,
-		rating: 4,
-		reviews: 53,
-		img: "../main/trendingEarphones/nineth.svg"
-	},
-
   ]
 
 };
+
+const trendingEarphones = {
+
+	earbuds: [
+
+		{
+			id: 1,
+			title: "Boat Rockerz 333",
+			price: 20,
+			discount: "60%",
+			rating: 5,
+			reviews: 70,
+			img: "../main/trendingEarphones/earbuds/BoatRockerz333.svg",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 2,
+			title: "Boat kerz 234",
+			price: 40,
+			discount: null,
+			rating: 4,
+			reviews: 75,
+			img: "../main/trendingEarphones/earbuds/BoatKerz234.svg",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 3,
+			title: "Boat Rockerz 323",
+			price: 30,
+			discount: "40%",
+			rating: 5,
+			reviews: 51,
+			img: "../main/trendingEarphones/earbuds/BoatRockerz323.svg",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 4,
+			title: "Boat Rockerz 550",
+			price: 70,
+			discount: "10%",
+			rating: 4,
+			reviews: 43,
+			img: "../img/main/trendingEarphones/earbuds/BoatRockerz550.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 5,
+			title: "Boat Rockerz 600",
+			price: 33,
+			discount: "22%",
+			rating: 5,
+			reviews: 35,
+			img: "../img/main/trendingEarphones/earbuds/BoatRockerz600.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 6,
+			title: "JBL Tune FLE",
+			price: 52,
+			discount: "10%",
+			rating: 4,
+			reviews: 19,
+			img: "../main/trendingEarphones/earbuds/JBLTuneFLE.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 7,
+			title: "Proove Blitz TWS with ANC",
+			price: 33,
+			discount: "25%",
+			rating: 5,
+			reviews: 82,
+			img: "../main/trendingEarphones/earbuds/ProoveBlitzTWS.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 8,
+			title: "1MORE Fit SE S30",
+			price: 48,
+			discount: "16%",
+			rating: 4,
+			reviews: 53,
+			img: "../main/trendingEarphones/earbuds/1MOREFitSES30.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 9,
+			title: "Borofone BW67",
+			price: 27,
+			discount: null,
+			rating: 4,
+			reviews: 53,
+			img: "../main/trendingEarphones/aerbuds/BorofoneBW67.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+	],
+
+	wireless: [
+
+		{
+			id: 1,
+			title: "Samsung Galaxy Buds Pro (R190)",
+			price: 120,
+			discount: "10%",
+			rating: 5,
+			reviews: 62,
+			img: "../main/trendingEarphones/wireless/GalaxyBudsPro(R190).png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 2,
+			title: "Samsung Galaxy Buds3 Pro",
+			price: 200,
+			discount: null,
+			rating: 5,
+			reviews: 77,
+			img: "../main/trendingEarphones/wireless/GalaxyBuds3Pro.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 3,
+			title: "Samsung Galaxy Buds3 FE",
+			price: 110,
+			discount: "12%",
+			rating: 4,
+			reviews: 50,
+			img: "../main/trendingEarphones/wireless/GalaxyBuds3FE.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 4,
+			title: "Samsung Galaxy Buds FE SM-R400",
+			price: 90,
+			discount: "15%",
+			rating: 4,
+			reviews: 43,
+			img: "../img/main/trendingEarphones/wireless/GalaxyBudsFESM-R400.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 5,
+			title: "Samsung Galaxy Buds SM-R170",
+			price: 60,
+			discount: "27%",
+			rating: 5,
+			reviews: 39,
+			img: "../img/main/trendingEarphones/wireless/GalaxyBudsSM-R170.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 6,
+			title: "Samsung Galaxy Buds Live",
+			price: 70,
+			discount: null,
+			rating: 4,
+			reviews: 19,
+			img: "../main/trendingEarphones/wireless/GalaxyBudsLive.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		}
+
+	],
+
+	wired: [
+
+		{
+			id: 1,
+			title: "Boat Rockerz 333",
+			price: 20,
+			discount: "60%",
+			rating: 5,
+			reviews: 70,
+			img: "../main/trendingEarphones/first.svg",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 2,
+			title: "Boat kerz 234",
+			price: 40,
+			discount: null,
+			rating: 4,
+			reviews: 75,
+			img: "../main/trendingEarphones/second.svg",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 3,
+			title: "Boat Rockerz 323",
+			price: 30,
+			discount: "40%",
+			rating: 5,
+			reviews: 51,
+			img: "../main/trendingEarphones/third.svg",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 4,
+			title: "Boat Rockerz 550",
+			price: 70,
+			discount: "10%",
+			rating: 4,
+			reviews: 43,
+			img: "../img/main/trendingEarphones/fiveth.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		},
+
+		{
+			id: 5,
+			title: "Boat Rockerz 600",
+			price: 33,
+			discount: "22%",
+			rating: 5,
+			reviews: 35,
+			img: "../img/main/trendingEarphonesff/fourth.png",
+			bgColor: "#e7f1da",
+			bgColorDiscount: "#8bbb44"
+		}
+
+	]
+
+}
 
 
 export default topSellers;
