@@ -29,14 +29,14 @@
 //TODO Імпортую NEW LAUNCHES
 @import "./blocs/new-Launches";
 
-//TODO Імпортую Basket
-@import "./blocs/basket";
-
 // Імпортую FOTTER
 @import "./blocs/footer";
 
 //? Імпортую 404
 @import "./blocs/404";
+
+//TODO Імпортую Basket
+@import "./blocs/basket";
 
 body {
   font-family: "Montserrat", sans-serif;

@@ -1,85 +1,140 @@
-.cart-all {
-  &__recipient {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #10b981;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.main {
+  &__information-wrapper {
+    background-color: #7622c4;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    min-height: 100vh;
+  }
+}
 
-    &__label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
+.information {
+  max-width: 400px;
 
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
+  padding: 20px;
+  background: #10b981;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-      color: #fff;
-      font-size: 20px;
-      font-style: normal;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      line-height: normal;
-      letter-spacing: 0;
-    }
-    &__input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: border-color 0.3s ease;
+  z-index: 1;
 
-      &:focus {
-        border-color: #10b981;
-        outline: none;
-      }
-    }
+  &__label {
+    display: block;
+    margin-bottom: 5px;
 
-    &__button {
-      color: #fff;
-      font-size: 20px;
-      font-style: normal;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-      line-height: normal;
-      letter-spacing: 0;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+  }
 
-      width: 100%;
-      padding: 10px;
-      background: #22c48e;
+  &__contact {
+    display: block;
+    margin-bottom: 5px;
+    margin: 0 0 50px 0;
 
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+  }
 
-      &:hover {
-        background: #04d895;
-      }
+  &__input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #10b981;
+      outline: none;
     }
   }
 
-  /* Адаптивність */
-  @media (max-width: 480px) {
-    .registration-form {
-      width: 90%; /* Робимо ширину більшою на маленьких екранах */
-      padding: 15px;
-      margin-top: 30px;
-    }
+  &__button {
+    width: 100%;
+    padding: 10px;
 
-    .registration-form__input,
-    .registration-form__button {
-      font-size: 14px; /* Трохи зменшуємо шрифти на вузьких екранах */
+    color: #fff;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    background: #b32626;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #f32929;
+    }
+  }
+}
+
+.delivery-payment {
+  max-width: 400px;
+  margin: 20px 0 0 0;
+  padding: 20px;
+  background-color: #10b981;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    display: block;
+    margin-bottom: 5px;
+
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 5px;
+
+    color: #fff;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #0078d7;
+      outline: none;
+    }
+  }
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+  .information {
+    width: 90%;
+    padding: 15px;
+    margin-top: 30px;
+
+    &__input,
+    &__button {
+      font-size: 14px;
     }
   }
 }
