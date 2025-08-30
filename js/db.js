@@ -395,6 +395,8 @@ const trendingEarphones = {
 
 	]
 
-}
+};
+
+
 
 export {topSellers, trendingEarphones};
