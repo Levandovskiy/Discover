@@ -54,6 +54,17 @@
 				gap: 83px;
 				height: 466px;
 
+				opacity: 0;
+				pointer-events: none;
+				position: absolute;
+
+				&.active {
+					opacity: 1;
+					pointer-events: auto;
+					position: relative;
+					transition: opacity 2s ease;
+				}
+
 				&__img {
 					display: flex;
 					flex-direction: row;
@@ -69,6 +80,8 @@
 						img {
 							position: relative;
 							border-radius: 136px;
+							max-width: 238px;
+							height: 417px;
 						}
 					}
 
