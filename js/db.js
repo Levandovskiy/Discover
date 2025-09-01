@@ -397,6 +397,55 @@ const trendingEarphones = {
 
 };
 
+const newLaunches = [
 
+	{
+		id: 1,
+		title: "Airdrop 500 Anc",
+		price: 45.99,
+		img1: "../img/main/newLaunches/Airdopes500AncBlack1.jpg",
+		img2: "../img/main/newLaunches/Airdopes500AncBlack2.jpg",
+		descr: "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product ...",
+		link: "https://www.amazon.in/Airdopes-Bluetooth-Wireless-Detection-Playback/dp/B09SBKBXHW?th=1",
+		colors: [
+			'black',
+			'blue',
+			'white'
+		]
+	},
 
-export {topSellers, trendingEarphones};
+	{
+		id: 2,
+		title: "Launch Airdopes 219",
+		price: 45.99,
+		img1: "../img/main/newLaunches/LaunchAirdopes219Black1.jpg",
+		img2: "../img/main/newLaunches/LaunchAirdopes219Black2.jpg",
+		descr: "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product ...",
+		link: "https://www.amazon.in/Airdopes-Bluetooth-Wireless-Detection-Playback/dp/B09SBKBXHW?th=1",
+		colors: [
+			'black',
+			'green',
+			'ivory'
+		]
+	},
+
+	{
+		id: 3,
+		title: "Nord Buds 3 Truly",
+		price: 45.99,
+		img1: "../img/main/newLaunches/NordBuds3TrulyBlack1.jpg",
+		img2: "../img/main/newLaunches/NordBuds3TrulyBlack2.jpg",
+		descr: "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product ...",
+		link: "https://www.amazon.in/Airdopes-Bluetooth-Wireless-Detection-Playback/dp/B09SBKBXHW?th=1",
+		colors: [
+			'black',
+			'blue',
+			'gray',
+			'jade',
+			'white'
+		]
+	}
+
+]
+
+export {topSellers, trendingEarphones, newLaunches};
