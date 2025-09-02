@@ -408,9 +408,9 @@ const newLaunches = [
 		descr: "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product ...",
 		link: "https://www.amazon.in/Airdopes-Bluetooth-Wireless-Detection-Playback/dp/B09SBKBXHW?th=1",
 		colors: [
-			'black',
-			'blue',
-			'white'
+			'#141414',
+			'#3650A9',
+			'#fff'
 		]
 	},
 
@@ -423,9 +423,9 @@ const newLaunches = [
 		descr: "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product ...",
 		link: "https://www.amazon.in/Airdopes-Bluetooth-Wireless-Detection-Playback/dp/B09SBKBXHW?th=1",
 		colors: [
-			'black',
-			'green',
-			'ivory'
+			'#141414',
+			'#5D6A5F',
+			'#D2CFCE'
 		]
 	},
 
@@ -438,11 +438,11 @@ const newLaunches = [
 		descr: "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product ...",
 		link: "https://www.amazon.in/Airdopes-Bluetooth-Wireless-Detection-Playback/dp/B09SBKBXHW?th=1",
 		colors: [
-			'black',
-			'blue',
-			'gray',
-			'jade',
-			'white'
+			'#000',
+			'#D7E2EB',
+			'#696A6D',
+			'#B1D0CE',
+			'#fff'
 		]
 	}
 
