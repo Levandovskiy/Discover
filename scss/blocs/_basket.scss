@@ -2,8 +2,6 @@
   &__information-wrapper {
     display: flex;
 
-    background-color: #7622c4;
-
     min-height: 100vh;
   }
 }
@@ -97,9 +95,12 @@
     margin-bottom: 5px;
 
     color: #fff;
+    font-size: 20px;
+    font-style: normal;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     line-height: normal;
+    letter-spacing: 0;
   }
 
   &__label {
@@ -146,7 +147,7 @@
 }
 
 .cart-item {
-  background: #1a1a1a;
+  background: #10b981;
   color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -232,11 +233,20 @@
   }
 
   &__total {
+    padding: 20px 0 0 0;
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
+
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0;
   }
 
   &__total-price {
