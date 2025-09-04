@@ -1808,6 +1808,8 @@ h6 {
   border-radius: 136px;
   max-width: 238px;
   height: 417px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main__new-launches_wrapper__card-slider_content__img .first img {
   top: -20px;
@@ -1874,12 +1876,6 @@ h6 {
 }
 .main__new-launches_wrapper__card-slider_content__descr-colors_item.active {
   border: 1px solid #FF0000;
-}
-.main__new-launches_wrapper__card-slider_content__descr-colors .yellow {
-  background-color: #FFF500;
-}
-.main__new-launches_wrapper__card-slider_content__descr-colors .blue {
-  background-color: #4484FF;
 }
 .main__new-launches_wrapper__card-slider_content__descr-btns {
   display: flex;
