@@ -32,27 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			let colorId = 0;
 
+			let colorBtns = new Array;
+
+			console.log(colorBtns);
+
+			console.log(colorsBlock);
+			console.log(Array.isArray(colorsBlock));
+
 			// //Робота із додаванням класу активності кольору при клікові із використанням делегування подій
 
-			// colorsBlock.addEventListener("click", (e) => {
-			// 	console.log(e);
-			// 	let activeBtn = e.target.classList.contains('active');
-			// 	console.log(activeBtn);//виводить булеве значення. 1 клік - false, 2 і більше кліків -true
+			colorsBlock.addEventListener("click", (e) => {
+				console.log(e);
+				let activeBtn = e.target.classList.contains('active');
+				e.target.classList.add('active');
 
-			// 	activeBtn ? e.target.classList.add('active') : e.target.classList.remove('active');
 
-			// 	// e.target.classList.add('active')
-
-			// 	if (e.target.id == colorId) {
-			// 	// 	// console.log(e.target);
-			// 		e.target.classList.contains('active') ? e.target.classList.remove('active') : e.target.classList.add('active')
-			// 	}
-			// 	else if (e.target.id != colorId ){
-			// 		console.log(e.target.id);//0б 1б 2
-			// 		console.log(colorId);//завжди 3
-			// 		e.target.classList.add('active');
-			// 	}
-			// });
+				// activeBtn ? e.target.classList.add('active') : e.target.classList.remove('active');
+			});
 
 
 			//Відмалювання кольору та його назви при наведенні, присвоєння id
@@ -62,11 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				unit.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
 				unit.id = colorId;
-				// console.log(colorId);
 				unit.setAttribute("title", nameOfColor); // Підказка при наведенні
 				unit.style.backgroundColor = hexOfColor;
 
 				colorId++;
+
+				colorBtns.push(unit);
 
 				colorsBlock.appendChild(unit);
 			});
