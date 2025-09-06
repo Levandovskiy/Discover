@@ -432,7 +432,7 @@ const newLaunches = [
 	{
 		id: 3,
 		title: "Nord Buds 3 Truly",
-		price: 34.00,
+		price: 34.01,
 		img1: "../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack1.jpg",
 		img2: "../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack2.jpg",
 		descr: "OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation, 12.4Mm Dynamic Drivers, 10Mins for 11Hrs Fast Charging with Upto 44Hrs Music Playback...",
