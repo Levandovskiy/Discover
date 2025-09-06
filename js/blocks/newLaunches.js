@@ -28,26 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			let colors = product.colors;
 
+			//Перемінна для "витягування" з неї назви кольору та коду
 			let entr = Object.entries(colors);
 
+			//Перемінна для присвоєння id кожній кнопці кольору
 			let colorId = 0;
 
+			//Створюю масив елементів для відслідковування класу активності
 			let colorBtns = new Array;
 
-			console.log(colorBtns);
-
-			console.log(colorsBlock);
-			console.log(Array.isArray(colorsBlock));
-
 			// //Робота із додаванням класу активності кольору при клікові із використанням делегування подій
-
 			colorsBlock.addEventListener("click", (e) => {
-				console.log(e);
-				let activeBtn = e.target.classList.contains('active');
+
+				//Обнуляю клас активності перед додаванням нового
+				colorBtns.forEach((hasActive) => {
+					hasActive.classList.remove('active');
+				});
+
+				//Додаю для конкретного елементу клас активності
 				e.target.classList.add('active');
-
-
-				// activeBtn ? e.target.classList.add('active') : e.target.classList.remove('active');
 			});
 
 
@@ -63,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				colorId++;
 
+				//Додаю до масиву створений елемент
 				colorBtns.push(unit);
 
 				colorsBlock.appendChild(unit);

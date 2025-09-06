@@ -1730,7 +1730,7 @@ h6 {
   justify-content: center;
   align-items: center;
   margin: 130px auto;
-  height: 765px;
+  min-height: 765px;
   width: 1440px;
 }
 .main__new-launches_wrapper__title {
@@ -1780,7 +1780,7 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 83px;
-  height: 466px;
+  min-height: 466px;
   opacity: 0;
   pointer-events: none;
   position: absolute;
@@ -1875,7 +1875,7 @@ h6 {
   border-radius: 50%;
 }
 .main__new-launches_wrapper__card-slider_content__descr-colors_item.active {
-  border: 1px solid #FF0000;
+  border: 5px double #FF0000;
 }
 .main__new-launches_wrapper__card-slider_content__descr-btns {
   display: flex;
@@ -1906,7 +1906,7 @@ h6 {
 
 @media (max-width: 1200px) {
   .main__new-launches_wrapper {
-    height: 566px;
+    min-height: 566px;
     width: 992px;
     margin: 100px auto;
   }
@@ -1921,7 +1921,7 @@ h6 {
   }
   .main__new-launches_wrapper__card-slider_content {
     gap: 40px;
-    height: 430px;
+    min-height: 430px;
   }
   .main__new-launches_wrapper__card-slider_content__img {
     gap: 30px;
@@ -1945,11 +1945,11 @@ h6 {
     font-size: 24px;
     margin-bottom: 20px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color {
+  .main__new-launches_wrapper__card-slider_content__descr-colors {
     gap: 20px;
     margin-bottom: 30px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+  .main__new-launches_wrapper__card-slider_content__descr-colors_item {
     width: 30px;
     height: 30px;
   }
@@ -1964,7 +1964,7 @@ h6 {
     margin: 80px auto;
     max-width: 768px;
     width: 768px;
-    height: 896px;
+    min-height: 896px;
   }
   .main__new-launches_wrapper__title {
     font-size: 36px;
@@ -1973,7 +1973,7 @@ h6 {
     margin-top: 40px;
     max-width: 991px;
     width: 100%;
-    height: 890px;
+    min-height: 890px;
   }
   .main__new-launches_wrapper__card-slider {
     display: inline-block;
@@ -1998,7 +1998,7 @@ h6 {
   .main__new-launches_wrapper__card-slider_content {
     flex-direction: column;
     justify-content: space-between;
-    height: 740px;
+    min-height: 740px;
   }
   .main__new-launches_wrapper__card-slider_content__img {
     gap: 50px;
@@ -2018,7 +2018,7 @@ h6 {
   .main__new-launches_wrapper__card-slider_content__descr-header {
     font-size: 28px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+  .main__new-launches_wrapper__card-slider_content__descr-colors_item {
     width: 35px;
     height: 35px;
   }
@@ -2040,7 +2040,7 @@ h6 {
   }
   .main__new-launches_wrapper__card {
     max-width: 767px;
-    height: 740px;
+    min-height: 740px;
   }
   .main__new-launches_wrapper__card-slider {
     max-width: 767px;
@@ -2055,7 +2055,7 @@ h6 {
     height: 48px;
   }
   .main__new-launches_wrapper__card-slider_content {
-    height: 685px;
+    min-height: 685px;
     width: 530px;
   }
   .main__new-launches_wrapper__card-slider_content__img {
@@ -2084,10 +2084,10 @@ h6 {
   .main__new-launches_wrapper__card-slider_content__descr-price span {
     font-weight: 500;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color {
+  .main__new-launches_wrapper__card-slider_content__descr-colors {
     margin-bottom: 20px;
   }
-  .main__new-launches_wrapper__card-slider_content__descr-color .black, .main__new-launches_wrapper__card-slider_content__descr-color .yellow, .main__new-launches_wrapper__card-slider_content__descr-color .blue {
+  .main__new-launches_wrapper__card-slider_content__descr-colors_item {
     width: 30px;
     height: 30px;
   }
@@ -2099,7 +2099,7 @@ h6 {
 @media (max-width: 575px) {
   .main__new-launches_wrapper {
     width: 320px;
-    height: 640px;
+    min-height: 640px;
     max-width: 575px;
     margin: 40px auto;
   }
@@ -2110,7 +2110,7 @@ h6 {
   .main__new-launches_wrapper__card {
     margin-top: 20px;
     padding: 20px;
-    height: 590px;
+    min-height: 590px;
   }
   .main__new-launches_wrapper__card-slider {
     width: 280px;
@@ -2134,7 +2134,7 @@ h6 {
   .main__new-launches_wrapper__card-slider_content {
     width: 280px;
     max-width: 575px;
-    height: 530px;
+    min-height: 530px;
   }
   .main__new-launches_wrapper__card-slider_content__img {
     width: 200px;
