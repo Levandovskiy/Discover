@@ -1,22 +1,22 @@
-const cart = [];
+import { topSellers } from "./topSellers.js";
+import { trending } from "./trending.js";
+import { newLaunches } from "./newLaunches.js";
 
-document.querySelectorAll(".add-to-cart").forEach((button) => {
-  button.addEventListener("click", () => {
-    const product = {
-      id: button.dataset.id,
-      name: button.dataset.name,
-      price: parseFloat(button.dataset.price),
-      quantity: 1,
-    };
+// Об'єднуємо всі товари
+const allProducts = [...topSellers, ...trending, ...newLaunches];
 
-    // Перевірка, чи товар вже є в корзині
-    const existing = cart.find((item) => item.id === product.id);
-    if (existing) {
-      existing.quantity += 1;
-    } else {
-      cart.push(product);
-    }
+//  пошук товару по id
+function getProductById(id) {
+  return allProducts.find((product) => product.id === id);
+}
 
-    console.log(cart); // Можна замінити на оновлення UI
-  });
-});
+// Додавання до корзини
+function addToBasket(id) {
+  const product = getProductById(id);
+  if (product) {
+    console.log(`Додано до корзини: ${product.name} — $${product.price}`);
+    // Тут логіка додавання до корзини
+  } else {
+    console.warn("Товар не знайдено");
+  }
+}
