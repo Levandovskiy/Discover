@@ -417,10 +417,10 @@ const newLaunches = [
 	{
 		id: 2,
 		title: "Launch Airdopes 219",
-		price: 45.99,
+		price: 12.49,
 		img1: "../img/main/newLaunches/Launch Airdopes 219/Carbon Black/LaunchAirdopes219Black1.jpg",
 		img2: "../img/main/newLaunches/Launch Airdopes 219/Carbon Black/LaunchAirdopes219Black2.jpg",
-		descr: "boAt 2025 Launch Airdopes 219, 4Mics ENx Tech, 40 Hrs Battery, Best in Segment for Calling,Free Music Streaming,13mm Drivers, Bluetooth Earbuds, TWS Ear Buds Wireless Earphones with mic...",
+		descr: "boAt 2025 Launch Airdopes 219, 4Mics ENx Tech, 40 Hrs Battery, Best in Segment for Calling, Free Music Streaming, 13mm Drivers, Bluetooth Earbuds, TWS Ear Buds Wireless Earphones with mic...",
 		link: "https://www.amazon.in/boAt-Airdopes-Streaming-Bluetooth-Earphones/dp/B0FC2Y3XGV/ref=sr_1_22?brr=1&dib=eyJ2IjoiMSJ9.I1ihp3TAA5UXTinIRpc59yZLFpNF9kDpAVAQWZI5BPSmxS75j5Yfte_UYKsk0Arl3bVFJZeZTnHimeHlTZ00LEaYejXPznS9BCxUO4Yk7bZlQcHNCZzplIZgKhRTUmuJ2tp6TYMvOtKB8FEOtn8cgg80n8VCykO_vBnrcHfxBl6COZAJHKgN3PZwTYnGvKY7SnhcCWECJ2MZNm3vLMKZ_jHBOGqXA6Ytsc8IPcOE-HI-3u7BHEukpN7HqXYx3eRDRlYlumG-_YfhHFwmZB3-ZxxLWsNUlh5_YwRfulk3WpA.aVNk_74EbADZHPWvU0qI1BeSPdu1IubtEG9ojLgmftw&dib_tag=se&qid=1756896270&rd=1&s=electronics&sr=1-22&th=1",
 		colors: {
 			'Carbon Black': '#141414',
@@ -432,10 +432,10 @@ const newLaunches = [
 	{
 		id: 3,
 		title: "Nord Buds 3 Truly",
-		price: 45.99,
+		price: 34.01,
 		img1: "../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack1.jpg",
 		img2: "../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack2.jpg",
-		descr: "OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation, 12.4Mm Dynamic Drivers,10Mins for 11Hrs Fast Charging with Upto 44Hrs Music Playback...",
+		descr: "OnePlus Nord Buds 3 Pro Truly Wireless Bluetooth in Ear Earbuds with Upto 49Db Active Noise Cancellation, 12.4Mm Dynamic Drivers, 10Mins for 11Hrs Fast Charging with Upto 44Hrs Music Playback...",
 		link: "https://www.amazon.in/OnePlus-Wireless-Bluetooth-Cancellation-Charging/dp/B0D7HZ3KK9/ref=sr_1_11?brr=1&dib=eyJ2IjoiMSJ9.I1ihp3TAA5UXTinIRpc59yZLFpNF9kDpAVAQWZI5BPSmxS75j5Yfte_UYKsk0Arl3bVFJZeZTnHimeHlTZ00LEaYejXPznS9BCxUO4Yk7bZlQcHNCZzplIZgKhRTUmuJ2tp6TYMvOtKB8FEOtn8cgg80n8VCykO_vBnrcHfxBl6COZAJHKgN3PZwTYnGvKY7HG84hC9OivNB_kgPE7jM3EaeeQcYchn9_J-R8kAa5OaWxeoPgwoLy-lUShefYCpvvXkkOHqqUo2sP91bYIZYwhxLWsNUlh5_YwRfulk3WpA.BFnGS6ljp0T_gHCwz5uZKC8srGbU2qFJedkp1iAwuq8&dib_tag=se&qid=1756896316&rd=1&s=electronics&sr=1-11&th=1",
 		colors: {
 			'Starry Black': '#000',

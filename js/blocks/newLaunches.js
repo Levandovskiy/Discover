@@ -1,7 +1,6 @@
 'use strict';
 
 import {newLaunches} from "../db.js";
-// console.log(newLaunches);
 
 document.addEventListener('DOMContentLoaded', () => {
 	const newLaunchesSlider = document.querySelector('.main__new-launches_wrapper__card-slider_item'),
@@ -9,84 +8,109 @@ document.addEventListener('DOMContentLoaded', () => {
 		  prevBtn = document.querySelector('.main__new-launches_wrapper__card-slider_lbtn');
 
 	// Активна картка
-	let active = newLaunches;
+	let activeCard = newLaunches;
 	let currentIndex = 0;
-	let totalCards = active.length;
+	let totalCards = activeCard.length;
 
 
 	function card() {
-	newLaunchesSlider.innerHTML = "";
+		newLaunchesSlider.innerHTML = "";
 
-	newLaunches.forEach((product, index) => {
+		newLaunches.forEach((product, index) => {
 
-		const item = document.createElement("div");
-		item.classList.add("main__new-launches_wrapper__card-slider_content");
-		if (index === currentIndex) item.classList.add("active");
+			const item = document.createElement("div");
+			item.classList.add("main__new-launches_wrapper__card-slider_content");
+			if (index === currentIndex) item.classList.add("active");
 
-		// Створюємо блок кольорів
-		const colorsBlock = document.createElement("div");
-		colorsBlock.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors");
+			// Створюю блок кольорів
+			const colorsBlock = document.createElement("div");
+			colorsBlock.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors");
 
-		// console.log(product.colors);
-		let colors = product.colors;
-		let nameOfColor = Object.keys(colors);
-		let hexOfColor = Object.values(colors);
-		for (let color of nameOfColor) {
-			console.log(color);
-		}
-		console.log(Object.keys(colors));
-		console.log(Object.values(colors));
-		for (let key in product) {
-			// console.log(key);
-			// console.log(value);
-			const unit = document.createElement("button");
-			unit.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
-			unit.style.backgroundColor = key;
-			unit.setAttribute("title", key); // Підказка при наведенні
-			colorsBlock.appendChild(unit);
-		};
+			let colors = product.colors;
 
-		// Створюємо HTML-контент картки
-		const cardContent = `
-			<div class="main__new-launches_wrapper__card-slider_content__img">
-				<div class="first">
-					<img src="${product.img1}" alt="${product.title}" />
+			//Перемінна для "витягування" з неї назви кольору та коду
+			let entr = Object.entries(colors);
+
+			//Перемінна для присвоєння id кожній кнопці кольору
+			let colorId = 0;
+
+			//Створюю масив елементів для відслідковування класу активності
+			let colorBtns = new Array;
+
+			// //Робота із додаванням класу активності кольору при клікові із використанням делегування подій
+			colorsBlock.addEventListener("click", (e) => {
+
+				//Обнуляю клас активності перед додаванням нового
+				colorBtns.forEach((hasActive) => {
+					hasActive.classList.remove('active');
+				});
+
+				//Додаю для конкретного елементу клас активності
+				e.target.classList.add('active');
+			});
+
+
+			//Відмалювання кольору та його назви при наведенні, присвоєння id
+			entr.forEach( ( [nameOfColor, hexOfColor] ) => {
+
+				const unit = document.createElement("button");
+
+				unit.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
+				unit.id = colorId;
+				unit.setAttribute("title", nameOfColor); // Підказка при наведенні
+				unit.style.backgroundColor = hexOfColor;
+
+				colorId++;
+
+				//Додаю до масиву створений елемент
+				colorBtns.push(unit);
+
+				colorsBlock.appendChild(unit);
+			});
+
+
+			// Створюю HTML-контент картки
+			const cardContent = `
+				<div class="main__new-launches_wrapper__card-slider_content__img">
+					<div class="first">
+						<img src="${product.img1}" alt="${product.title}" />
+					</div>
+					<div class="second">
+						<img src="${product.img2}" alt="${product.title}" />
+					</div>
 				</div>
-				<div class="second">
-					<img src="${product.img2}" alt="${product.title}" />
+				<div class="main__new-launches_wrapper__card-slider_content__descr">
+					<div class="main__new-launches_wrapper__card-slider_content__descr-header">
+						${product.title}
+					</div>
+					<div class="main__new-launches_wrapper__card-slider_content__descr-text">
+						${product.descr}
+						<a href="${product.link}"> Read More </a>
+					</div>
+					<div class="main__new-launches_wrapper__card-slider_content__descr-price">
+						Price : <span> $${product.price} </span>
+					</div>
+					<!-- Тут буде вставлено colorsBlock -->
+					<div class="main__new-launches_wrapper__card-slider_content__descr-btns">
+						<button class="add">Add to cart</button>
+						<button class="more">Explore More</button>
+					</div>
 				</div>
-			</div>
-			<div class="main__new-launches_wrapper__card-slider_content__descr">
-				<div class="main__new-launches_wrapper__card-slider_content__descr-header">
-					${product.title}
-				</div>
-				<div class="main__new-launches_wrapper__card-slider_content__descr-text">
-					${product.descr}
-					<a href="${product.link}"> Read More </a>
-				</div>
-				<div class="main__new-launches_wrapper__card-slider_content__descr-price">
-					Price : <span> $${product.price} </span>
-				</div>
-				<!-- Тут буде вставлено colorsBlock -->
-				<div class="main__new-launches_wrapper__card-slider_content__descr-btns">
-					<button class="add">Add to cart</button>
-					<button class="more">Explore More</button>
-				</div>
-			</div>
-		`;
+			`;
 
-		// Вставляємо HTML у item
-		item.innerHTML = cardContent;
+			// Вставляю HTML у item
+			item.innerHTML = cardContent;
 
-		// Вставляємо блок кольорів у відповідне місце
-		const descrBlock = item.querySelector(".main__new-launches_wrapper__card-slider_content__descr");
-		descrBlock.insertBefore(colorsBlock, descrBlock.querySelector(".main__new-launches_wrapper__card-slider_content__descr-btns"));
+			// Вставляю блок кольорів у відповідне місце
+			const descrBlock = item.querySelector(".main__new-launches_wrapper__card-slider_content__descr");
+			descrBlock.insertBefore(colorsBlock, descrBlock.querySelector(".main__new-launches_wrapper__card-slider_content__descr-btns"));
 
-		// Додаємо картку до слайдера
-		newLaunchesSlider.appendChild(item);
-	});
-}
+			// Додаю картку до слайдера
+			newLaunchesSlider.appendChild(item);
+		});
+	};
 
+	//Встановлюю клас активності для картки
 	function updateSliderPosition() {
 		const allCards = newLaunchesSlider.querySelectorAll(".main__new-launches_wrapper__card-slider_content");
 
@@ -100,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	// Слухачі на кнопки
-
 	nextBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex + 1) % totalCards;
 		updateSliderPosition();
