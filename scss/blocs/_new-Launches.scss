@@ -83,7 +83,7 @@
 							border-radius: 136px;
 							max-width: 238px;
 							height: 417px;
-							object-fit: cover;
+							object-fit: contain;
 						}
 					}
 
@@ -164,7 +164,7 @@
 							border-radius: 50%;
 
 							&.active {
-								border: 5px double #FF0000;
+								border: 3px dashed #FF0000;
 							}
 						}
 					}
