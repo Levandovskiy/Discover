@@ -29,9 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			colorsBlock.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors");
 
 			let colors = product.colors;
+			console.log(colors);
 
 			//Перемінна для "витягування" з неї назви кольору та коду
 			let entr = Object.entries(colors);
+			console.log(entr);
 
 			//Перемінна для присвоєння id кожній кнопці кольору
 			let colorId = 0;
