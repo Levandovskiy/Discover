@@ -1,6 +1,9 @@
 'use strict';
 
-import {newLaunches} from "../db.js";
+import { newLaunches } from "../db.js";
+
+//Масив із доданими до корзини товарами
+export const addedItems = new Array;
 
 document.addEventListener('DOMContentLoaded', () => {
 	const newLaunchesSlider = document.querySelector('.main__new-launches_wrapper__card-slider_item'),
@@ -8,15 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		  prevBtn = document.querySelector('.main__new-launches_wrapper__card-slider_lbtn');
 
 	// Активна картка
-	let activeCard = newLaunches;
+	let cards = newLaunches;
 	let currentIndex = 0;
-	let totalCards = activeCard.length;
-
+	let totalCards = cards.length;
 
 	function card() {
 		newLaunchesSlider.innerHTML = "";
 
-		newLaunches.forEach((product, index) => {
+		cards.forEach((product, index) => {
 
 			const item = document.createElement("div");
 			item.classList.add("main__new-launches_wrapper__card-slider_content");
@@ -37,8 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			//Створюю масив елементів для відслідковування класу активності
 			let colorBtns = new Array;
 
+
 			// //Робота із додаванням класу активності кольору при клікові із використанням делегування подій
 			colorsBlock.addEventListener("click", (e) => {
+
+				// console.log(addedItem);
 
 				//Обнуляю клас активності перед додаванням нового
 				colorBtns.forEach((hasActive) => {
@@ -47,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				//Додаю для конкретного елементу клас активності
 				e.target.classList.add('active');
+
 			});
 
 
@@ -92,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					</div>
 					<!-- Тут буде вставлено colorsBlock -->
 					<div class="main__new-launches_wrapper__card-slider_content__descr-btns">
-						<button class="add">Add to cart</button>
+						<button class="add" id="newLaunchesAdd">Add to cart</button>
 						<button class="more">Explore More</button>
 					</div>
 				</div>
@@ -107,8 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Додаю картку до слайдера
 			newLaunchesSlider.appendChild(item);
+
 		});
 	};
+
 
 	//Встановлюю клас активності для картки
 	function updateSliderPosition() {
@@ -120,7 +128,32 @@ document.addEventListener('DOMContentLoaded', () => {
 				card.classList.add("active");
 			}
 		});
-	}
+
+		// Знаходжу активну картку
+		const activeCard = newLaunchesSlider.querySelector('.main__new-launches_wrapper__card-slider_content.active');
+		if (!activeCard) return;
+
+		const addBtn = activeCard.querySelector('.add');
+		if (!addBtn) return;
+
+		// Щоб уникнути дублювання слухачів — спочатку знімаю старий
+		addBtn.replaceWith(addBtn.cloneNode(true));
+		const newAddBtn = activeCard.querySelector('.add');
+
+		newAddBtn.addEventListener('click', () => {
+			const selectedColorBtn = activeCard.querySelector('.main__new-launches_wrapper__card-slider_content__descr-colors_item.active');
+			if (!selectedColorBtn) return;
+
+			addedItems.push({
+				title: cards[currentIndex].title,
+				price: cards[currentIndex].price,
+				color: selectedColorBtn.getAttribute('title'),
+				img: "../../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack1.jpg"
+			});
+
+			console.log(addedItems);
+		});
+	};
 
 
 	// Слухачі на кнопки
@@ -136,4 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 	card();
+	updateSliderPosition();
+
 });
