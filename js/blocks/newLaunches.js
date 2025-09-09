@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const newLaunchesSlider = document.querySelector('.main__new-launches_wrapper__card-slider_item'),
 		  nextBtn = document.querySelector('.main__new-launches_wrapper__card-slider_rbtn'),
 		  prevBtn = document.querySelector('.main__new-launches_wrapper__card-slider_lbtn');
+	const allCards = newLaunchesSlider.querySelectorAll(".main__new-launches_wrapper__card-slider_content");
 
 	// Активна картка
 	let cards = newLaunches;
@@ -29,11 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			colorsBlock.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors");
 
 			let colors = product.colors;
-			console.log(colors);
 
-			//Перемінна для "витягування" з неї назви кольору та коду
-			let entr = Object.entries(colors);
-			console.log(entr);
+			//Створюю блок фото
+			const imgBlock = document.createElement("div");
+			imgBlock.classList.add("main__new-launches_wrapper__card-slider_content__img");
+
+			// imgBlock.forEach(({}))
 
 			//Перемінна для присвоєння id кожній кнопці кольору
 			let colorId = 0;
@@ -41,11 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			//Створюю масив елементів для відслідковування класу активності
 			let colorBtns = new Array;
 
-
 			// //Робота із додаванням класу активності кольору при клікові із використанням делегування подій
 			colorsBlock.addEventListener("click", (e) => {
-
-				// console.log(addedItem);
 
 				//Обнуляю клас активності перед додаванням нового
 				colorBtns.forEach((hasActive) => {
@@ -58,35 +57,45 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 
-			//Відмалювання кольору та його назви при наведенні, присвоєння id
-			entr.forEach( ( [nameOfColor, hexOfColor] ) => {
+			//Відмалювання кольору та його назви при наведенні, присвоєння id, зміна фото товару
 
-				const unit = document.createElement("button");
+			colors.forEach( ( { name, hex, images } ) => {
 
-				unit.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
-				unit.id = colorId;
-				unit.setAttribute("title", nameOfColor); // Підказка при наведенні
-				unit.style.backgroundColor = hexOfColor;
+				const btn = document.createElement("button");
+				const img1Block = document.createElement("div");
+				const img2Block = document.createElement("div");
+				let img1 = document.createElement("img");
+				let img2 = document.createElement("img");
+
+
+				btn.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
+				btn.id = colorId;
+				btn.setAttribute("title", name); // Підказка при наведенні
+				btn.style.backgroundColor = hex;
 
 				colorId++;
 
 				//Додаю до масиву створений елемент
-				colorBtns.push(unit);
+				colorBtns.push(btn);
 
-				colorsBlock.appendChild(unit);
+				colorsBlock.appendChild(btn);
+
+				img1.setAttribute("src", images[0]);
+				img2.setAttribute("src", images[1]);
+
+				img1Block.classList.add("first");
+				img2Block.classList.add("second");
+
+				img1Block.appendChild(img1);
+				img2Block.appendChild(img2);
+
+				imgBlock.appendChild(img1Block, img2Block);
 			});
 
 
 			// Створюю HTML-контент картки
 			const cardContent = `
-				<div class="main__new-launches_wrapper__card-slider_content__img">
-					<div class="first">
-						<img src="${product.img1}" alt="${product.title}" />
-					</div>
-					<div class="second">
-						<img src="${product.img2}" alt="${product.title}" />
-					</div>
-				</div>
+				<!-- Тут буде вставлено imgBlock -->
 				<div class="main__new-launches_wrapper__card-slider_content__descr">
 					<div class="main__new-launches_wrapper__card-slider_content__descr-header">
 						${product.title}
@@ -113,6 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			const descrBlock = item.querySelector(".main__new-launches_wrapper__card-slider_content__descr");
 			descrBlock.insertBefore(colorsBlock, descrBlock.querySelector(".main__new-launches_wrapper__card-slider_content__descr-btns"));
 
+			//вставляю блок фото
+			item.insertBefore(imgBlock, descrBlock);
+
 			// Додаю картку до слайдера
 			newLaunchesSlider.appendChild(item);
 
@@ -122,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//Встановлюю клас активності для картки
 	function updateSliderPosition() {
-		const allCards = newLaunchesSlider.querySelectorAll(".main__new-launches_wrapper__card-slider_content");
+		// const allCards = newLaunchesSlider.querySelectorAll(".main__new-launches_wrapper__card-slider_content");
 
 		allCards.forEach((card, index) => {
 			card.classList.remove("active");
@@ -140,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Щоб уникнути дублювання слухачів — спочатку знімаю старий
 		addBtn.replaceWith(addBtn.cloneNode(true));
+
 		const newAddBtn = activeCard.querySelector('.add');
 
 		newAddBtn.addEventListener('click', () => {

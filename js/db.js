@@ -422,8 +422,8 @@ const newLaunches = [
 				name: 'Elite Blue',
 				hex: '#3650A9',
 				images: [
-					"../img/main/newLaunches/Launch Airdopes 219/Elite Blue/Airdopes500AncBlue1.jpg",
-					"../img/main/newLaunches/Launch Airdopes 219/Elite Blue/Airdopes500AncBlue2.jpg",
+					"../img/main/newLaunches/Airdrop 500 Anc/Elite Blue/Airdopes500AncBlue1.jpg",
+					"../img/main/newLaunches/Airdrop 500 Anc/Elite Blue/Airdopes500AncBlue2.jpg",
 				]
 			},
 
@@ -431,8 +431,8 @@ const newLaunches = [
 				name: 'Tranquil White',
 				hex: '#fff',
 				images: [
-					"../img/main/newLaunches/Launch Airdopes 219/Tranquil White/Airdopes500AncWhite1.jpg",
-					"../img/main/newLaunches/Launch Airdopes 219/Tranquil White/Airdopes500AncWhite2.jpg",
+					"../img/main/newLaunches/Airdrop 500 Anc/Tranquil White/Airdopes500AncWhite1.jpg",
+					"../img/main/newLaunches/Airdrop 500 Anc/Tranquil White/Airdopes500AncWhite2.jpg",
 				]
 			}
 
@@ -469,8 +469,8 @@ const newLaunches = [
 				name: 'Ivory Mist',
 				hex: '#D2CFCE',
 				images: [
-					"../img/main/newLaunches/Launch Airdopes 219/Carbon Black/LaunchAirdopes219Ivory1.jpg",
-					"../img/main/newLaunches/Launch Airdopes 219/Carbon Black/LaunchAirdopes219Ivory2.jpg",
+					"../img/main/newLaunches/Launch Airdopes 219/Ivory Mist/LaunchAirdopes219Ivory1.jpg",
+					"../img/main/newLaunches/Launch Airdopes 219/Ivory Mist/LaunchAirdopes219Ivory2.jpg",
 				]
 			}
 		]
