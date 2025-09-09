@@ -132,9 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Додаю картку до слайдера
 			newLaunchesSlider.appendChild(item);
-
-			console.log(imgBlock);
-			// console.log(typeof(imgBlock));
 		});
 	};
 
@@ -166,14 +163,26 @@ document.addEventListener('DOMContentLoaded', () => {
 			const selectedColorBtn = activeCard.querySelector('.main__new-launches_wrapper__card-slider_content__descr-colors_item.active');
 			if (!selectedColorBtn) return;
 
+			//Посилання на фото товару
+			const activeImg = document.querySelector('.main__new-launches_wrapper__card-slider_content__img img');
+			// console.log(activeImg.src);
+
+
+
+
+			//Бодя, глянь, що в тебе тут виводиться, коли обробляєю в корзині. Бо шлях http://127.0.0.1:5501/img/main/... Якщо такий же, то мабуть треба попрацювати із методами рядків. Наприклад, activeImg.slice()
+
+
+
+
 			addedItems.push({
 				title: cards[currentIndex].title,
 				price: cards[currentIndex].price,
 				color: selectedColorBtn.getAttribute('title'),
-				img: cards[currentIndex].img1
+				img: activeImg.src
 			});
 
-			console.log(addedItems);
+			// console.log(addedItems);
 		});
 	};
 
@@ -181,12 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Слухачі на кнопки
 	nextBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex + 1) % totalCards;
+		card();
 		updateSliderPosition();
-		console.log("click");
 	});
 
 	prevBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+		card();
 		updateSliderPosition();
 		console.log("click")
 	});
