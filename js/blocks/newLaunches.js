@@ -31,12 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			let colors = product.colors;
 
-			//Створюю блок фото
-			const imgBlock = document.createElement("div");
-			imgBlock.classList.add("main__new-launches_wrapper__card-slider_content__img");
-
-			// imgBlock.forEach(({}))
-
 			//Перемінна для присвоєння id кожній кнопці кольору
 			let colorId = 0;
 
@@ -57,16 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 
-			//Відмалювання кольору та його назви при наведенні, присвоєння id, зміна фото товару
+			//Створюю блок фото
+			const imgBlock = document.createElement("div");
+			imgBlock.classList.add("main__new-launches_wrapper__card-slider_content__img");
+			const img1Block = document.createElement("div");
+			const img2Block = document.createElement("div");
+			const img1 = document.createElement("img");
+			const img2 = document.createElement("img");
 
+			//Відмалювання кольору та його назви при наведенні, присвоєння id, зміна фото товару
 			colors.forEach( ( { name, hex, images } ) => {
 
 				const btn = document.createElement("button");
-				const img1Block = document.createElement("div");
-				const img2Block = document.createElement("div");
-				let img1 = document.createElement("img");
-				let img2 = document.createElement("img");
-
 
 				btn.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
 				btn.id = colorId;
@@ -89,7 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
 				img1Block.appendChild(img1);
 				img2Block.appendChild(img2);
 
-				imgBlock.appendChild(img1Block, img2Block);
+				imgBlock.appendChild(img1Block);
+				imgBlock.appendChild(img2Block);
+
+				img1.src = colors[0].images[0];
+				img2.src = colors[0].images[1];
+
+				btn.addEventListener('click', () => {
+					img1.src = images[0];
+					img2.src = images[1];
+				})
 			});
 
 
@@ -128,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Додаю картку до слайдера
 			newLaunchesSlider.appendChild(item);
 
+			console.log(imgBlock);
+			// console.log(typeof(imgBlock));
 		});
 	};
 
@@ -163,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				title: cards[currentIndex].title,
 				price: cards[currentIndex].price,
 				color: selectedColorBtn.getAttribute('title'),
-				img: "../../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack1.jpg"
+				img: cards[currentIndex].img1
 			});
 
 			console.log(addedItems);
@@ -175,11 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	nextBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex + 1) % totalCards;
 		updateSliderPosition();
+		console.log("click");
 	});
 
 	prevBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex - 1 + totalCards) % totalCards;
 		updateSliderPosition();
+		console.log("click")
 	});
 
 
