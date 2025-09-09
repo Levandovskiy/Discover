@@ -1808,8 +1808,8 @@ h6 {
   border-radius: 136px;
   max-width: 238px;
   height: 417px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .main__new-launches_wrapper__card-slider_content__img .first img {
   top: -20px;
@@ -1875,7 +1875,7 @@ h6 {
   border-radius: 50%;
 }
 .main__new-launches_wrapper__card-slider_content__descr-colors_item.active {
-  border: 5px double #FF0000;
+  border: 3px dashed #FF0000;
 }
 .main__new-launches_wrapper__card-slider_content__descr-btns {
   display: flex;
