@@ -115,7 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					<!-- Тут буде вставлено colorsBlock -->
 					<div class="main__new-launches_wrapper__card-slider_content__descr-btns">
 						<button class="add" id="newLaunchesAdd">Add to cart</button>
-						<button class="more">Explore More</button>
+						<button class="more">
+							<a href="${product.link}">Explore More</a>
+						</button>
 					</div>
 				</div>
 			`;
@@ -138,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//Встановлюю клас активності для картки
 	function updateSliderPosition() {
-		// const allCards = newLaunchesSlider.querySelectorAll(".main__new-launches_wrapper__card-slider_content");
 
 		allCards.forEach((card, index) => {
 			card.classList.remove("active");
