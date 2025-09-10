@@ -114,6 +114,7 @@
 						line-height: normal;
 						margin-bottom: 29px;
 						text-transform: none;
+						white-space: nowrap;
 					}
 
 					&-text {
@@ -163,8 +164,10 @@
 							background-color: #000;
 							border-radius: 50%;
 
+
 							&.active {
 								border: 3px dashed #FF0000;
+								transition: 0.3s ease .1s;
 							}
 						}
 					}
@@ -195,6 +198,12 @@
 								box-shadow: 0 25px 50px 0 rgba(255,255,255,.1);
 								border-radius: 10px;
 								background-color: $mainColor;
+								// transition: 0.3s ease .1s;
+							}
+
+							a {
+								color: #fff;
+								text-decoration: none;
 							}
 						}
 					}
@@ -232,6 +241,7 @@
 
 							img {
 								width: 150px;
+								height: 263px;
 							}
 						}
 					}
@@ -335,6 +345,7 @@
 							img {
 								width: 200px;
 								top: 0;
+								height: 349px;
 							}
 						}
 					}
@@ -409,6 +420,7 @@
 
 							img {
 								max-width: 175px;
+								height: 306px;
 							}
 						}
 					}
@@ -514,6 +526,7 @@
 							img {
 								top: -20px;
 								max-width: 95px;
+								height: 166px;
 							}
 						}
 
