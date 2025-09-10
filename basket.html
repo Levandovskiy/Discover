@@ -44,6 +44,45 @@
 
       <main class="main">
         <div class="main__container">
+          <form action="/register" method="POST" class="registration-form">
+            <label class="registration-form__label" for="username"
+              >Імя Користувача</label
+            >
+            <input
+              class="registration-form__input"
+              type="text"
+              id="username"
+              name="username"
+              required
+            />
+
+            <label class="registration-form__label" for="phone"
+              >Номер телефону</label
+            >
+            <input
+              class="registration-form__input"
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="^\+?\d{10,15}$"
+              required
+              placeholder=""
+            />
+            <label class="registration-form__label" for="password"
+              >Пароль</label
+            >
+            <input
+              class="registration-form__input"
+              type="text"
+              id="password"
+              name="password"
+              required
+            />
+
+            <button class="registration-form__button" type="submit">
+              Зареєструватися
+            </button>
+          </form>
           <div class="main__information-wrapper">
             <div class="information-cont">
               <div class="information">
@@ -52,8 +91,8 @@
                   method="POST"
                   class="information__form"
                 >
-                  <p class="information__contact">Контактна інформація:</p>
-                  <label class="information__label" for="username">Ім’я</label>
+                  <p class="information__contact">Contact information:</p>
+                  <label class="information__label" for="username">Name</label>
                   <input
                     class="information__input"
                     type="text"
@@ -62,7 +101,7 @@
                     required
                   />
                   <label class="information__label" for="username"
-                    >Прізвище</label
+                    >Last name</label
                   >
                   <input
                     class="information__input"
@@ -73,7 +112,7 @@
                   />
 
                   <label class="information__label" for="phone"
-                    >Номер телефону</label
+                    >Phone number</label
                   >
                   <input
                     class="information__input"
@@ -97,30 +136,34 @@
                 </form>
               </div>
               <div class="delivery-payment">
-                <h2 class="delivery-payment__title">Доставка і оплата:</h2>
+                <h2 class="delivery-payment__title">Delivery and payment:</h2>
                 <label for="city-select" class="delivery-payment__label"
-                  >Перші 2 букви міста</label
+                  >First 2 letters of the city</label
                 >
                 <select id="city-select" class="delivery-payment__select">
-                  <option value="ky">Київ</option>
-                  <option value="lv">Львів</option>
+                  <option value="ky">Kyiv</option>
+                  <option value="lv">Lviv</option>
                   <option value="od">Одеса</option>
-                  <option value="dn">Дніпро</option>
-                  <option value="kh">Харків</option>
-                  <option value="vn">Вінниця</option>
-                  <option value="zh">Житомир</option>
-                  <option value="pl">Полтава</option>
-                  <option value="te">Тернопіль</option>
+                  <option value="dn">Odesa</option>
+                  <option value="kh">Kharkiv</option>
+                  <option value="vn">Vinnytsia</option>
+                  <option value="zh">Zhytomyr</option>
+                  <option value="pl">Poltava</option>
+                  <option value="te">Ternopil</option>
                 </select>
               </div>
               <div class="delivery-payment">
                 <button class="information__button" type="submit">
-                  Оформити замовлення
+                  Make an order
                 </button>
               </div>
             </div>
 
-            <div class="cart-item">
+            <div class="cart-items-container" id="cart-items-container">
+              <!-- JS вставить товари сюди -->
+            </div>
+
+            <!--    <div class="cart-item">
               <div class="cart-item__product">
                 <img
                   src="./img/basket/123.png"
@@ -130,16 +173,8 @@
                 <div class="cart-item__info">
                   <h3 class="cart-item__title">Навушники Boat Rockerz 600</h3>
                   <div class="cart-item__services">
-                    <label class="cart-item__service">
-                      <input type="checkbox" />
-                      <span>Захист від браку</span>
-                      <span class="cart-item__price">10$</span>
-                    </label>
-                    <label class="cart-item__service">
-                      <input type="checkbox" />
-                      <span>Чистий спокій</span>
-                      <span class="cart-item__price">10$</span>
-                    </label>
+                    <label class="cart-item__service"> </label>
+                    <label class="cart-item__service"> </label>
                   </div>
                 </div>
                 <div class="cart-item__pricing">
@@ -152,7 +187,7 @@
                 <span>Сума замовлення:</span>
                 <span class="cart-item__total-price">33$</span>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </main>
