@@ -31,12 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			let colors = product.colors;
 
-			//Створюю блок фото
-			const imgBlock = document.createElement("div");
-			imgBlock.classList.add("main__new-launches_wrapper__card-slider_content__img");
-
-			// imgBlock.forEach(({}))
-
 			//Перемінна для присвоєння id кожній кнопці кольору
 			let colorId = 0;
 
@@ -57,16 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 
-			//Відмалювання кольору та його назви при наведенні, присвоєння id, зміна фото товару
+			//Створюю блок фото
+			const imgBlock = document.createElement("div");
+			imgBlock.classList.add("main__new-launches_wrapper__card-slider_content__img");
+			const img1Block = document.createElement("div");
+			const img2Block = document.createElement("div");
+			const img1 = document.createElement("img");
+			const img2 = document.createElement("img");
 
+			//Відмалювання кольору та його назви при наведенні, присвоєння id, зміна фото товару
 			colors.forEach( ( { name, hex, images } ) => {
 
 				const btn = document.createElement("button");
-				const img1Block = document.createElement("div");
-				const img2Block = document.createElement("div");
-				let img1 = document.createElement("img");
-				let img2 = document.createElement("img");
-
 
 				btn.classList.add("main__new-launches_wrapper__card-slider_content__descr-colors_item");
 				btn.id = colorId;
@@ -89,7 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
 				img1Block.appendChild(img1);
 				img2Block.appendChild(img2);
 
-				imgBlock.appendChild(img1Block, img2Block);
+				imgBlock.appendChild(img1Block);
+				imgBlock.appendChild(img2Block);
+
+				img1.src = colors[0].images[0];
+				img2.src = colors[0].images[1];
+
+				btn.addEventListener('click', () => {
+					img1.src = images[0];
+					img2.src = images[1];
+				})
 			});
 
 
@@ -127,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// Додаю картку до слайдера
 			newLaunchesSlider.appendChild(item);
-
 		});
 	};
 
@@ -159,14 +163,26 @@ document.addEventListener('DOMContentLoaded', () => {
 			const selectedColorBtn = activeCard.querySelector('.main__new-launches_wrapper__card-slider_content__descr-colors_item.active');
 			if (!selectedColorBtn) return;
 
+			//Посилання на фото товару
+			const activeImg = document.querySelector('.main__new-launches_wrapper__card-slider_content__img img');
+			// console.log(activeImg.src);
+
+
+
+
+			//Бодя, глянь, що в тебе тут виводиться, коли обробляєю в корзині. Бо шлях http://127.0.0.1:5501/img/main/... Якщо такий же, то мабуть треба попрацювати із методами рядків. Наприклад, activeImg.slice()
+
+
+
+
 			addedItems.push({
 				title: cards[currentIndex].title,
 				price: cards[currentIndex].price,
 				color: selectedColorBtn.getAttribute('title'),
-				img: "../../img/main/newLaunches/Nord Buds/Starry Black/NordBuds3TrulyBlack1.jpg"
+				img: activeImg.src
 			});
 
-			console.log(addedItems);
+			// console.log(addedItems);
 		});
 	};
 
@@ -174,12 +190,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Слухачі на кнопки
 	nextBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex + 1) % totalCards;
+		card();
 		updateSliderPosition();
 	});
 
 	prevBtn.addEventListener('click', () => {
 		currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+		card();
 		updateSliderPosition();
+		console.log("click")
 	});
 
 
