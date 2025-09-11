@@ -1877,7 +1877,6 @@ h6 {
 }
 .main__new-launches_wrapper__card-slider_content__descr-colors_item.active {
   border: 3px dashed #FF0000;
-  transition: 0.3s ease 0.1s;
 }
 .main__new-launches_wrapper__card-slider_content__descr-btns {
   display: flex;
