@@ -2,16 +2,7 @@ import { topSellers, trendingEarphones, newLaunches } from "../db.js";
 
 const item = [...topSellers, ...trendingEarphones, ...newLaunches];
 
-// Тепер можеш працювати з даними
-console.log("Корзина:");
-console.log("Топ продажі:", topSellers);
-console.log("Трендові навушники:", trendingEarphones);
-console.log("Новинки:", newLaunches);
-
-// Приклад використання
-console.log("Корзина:", basket);
-console.log("Новинки:", newLaunches);
-
+let cart = [];
 // Додавання товару в корзину
 const container = document.getElementById("cart-items-container");
 
