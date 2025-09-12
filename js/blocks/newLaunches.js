@@ -182,8 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				color: selectedColorBtn.getAttribute('title'),
 				img: activeImg.src
 			});
-
-			// console.log(addedItems);
 		});
 	};
 
