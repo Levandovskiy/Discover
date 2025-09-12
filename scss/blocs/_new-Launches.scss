@@ -167,7 +167,6 @@
 
 							&.active {
 								border: 3px dashed #FF0000;
-								transition: 0.3s ease .1s;
 							}
 						}
 					}
@@ -198,7 +197,6 @@
 								box-shadow: 0 25px 50px 0 rgba(255,255,255,.1);
 								border-radius: 10px;
 								background-color: $mainColor;
-								// transition: 0.3s ease .1s;
 							}
 
 							a {
