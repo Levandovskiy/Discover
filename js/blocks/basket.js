@@ -1,10 +1,10 @@
 import { topSellers, trendingEarphones, newLaunches } from "../db.js";
 
+import { addedItems } from "./newLaunches.js";
+
 const item = [...topSellers, ...trendingEarphones, ...newLaunches];
 
 let cart = [];
-// Додавання товару в корзину
-const container = document.getElementById("cart-items-container");
 
 function renderItems() {
   container.innerHTML = ""; // очищаємо контейнер перед рендером
@@ -42,3 +42,16 @@ function renderItems() {
     container.insertAdjacentHTML("beforeend", html);
   });
 }
+
+// Додавання товарів із newLaunches до корзини
+function addNewLaunchesToCart() {
+  addedItems.forEach((item) => {
+    cart.push(item);
+  });
+  saveCart();
+  renderItems();
+  console.log("Товари з newLaunches додано до корзини:", addedItems);
+}
+
+// Виклик функції для додавання товарів
+addNewLaunchesToCart();
