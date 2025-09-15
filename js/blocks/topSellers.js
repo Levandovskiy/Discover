@@ -2,6 +2,9 @@
 
 import {topSellers} from "../db.js";
 
+//Масив із доданими до корзини товарами
+export const addedItems = new Array;
+
 document.addEventListener('DOMContentLoaded', () => {
 	const topSellersCards = document.querySelector('.main__sellers-wrapper_slider__cards');
 	const nextBtn = document.querySelector('.main__sellers-wrapper_slider__button');
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						<div class="card-descr_price">$${product.price}</div>
 					</div>
 				</div>
-				<button>Add to cart</button>
+				<button class="topSellerAdd">Add to cart</button>
 			`;
 			topSellersCards.appendChild(items);
 		});
@@ -86,7 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		const offset = -(currentIndex * (cardWidth + gap));//визначаю, на яку ширину потрібно зсунути слайдер вліво (знак "-"). Кількість відображених карток * (ширина картки + відступ)
 		topSellersCards.style.transform = `translateX(${offset}px)`;
 		topSellersCards.style.transition = "transform 0.5s ease";
-	}
+	};
+
 
 	// Слухачі на кнопки
 	nextBtn.addEventListener('click', () => {
@@ -114,4 +118,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	// За замовчуванням topPicks
 	topPicks.classList.add('active');
 	category(active);
+
+
+	//Додавання катрок в корзину
+	const topSellersAdd = document.querySelectorAll('.topSellerAdd');
+
+	topSellersCards.addEventListener('click', (e) => {
+
+		// const cardContent = e.target.parentElement.querySelector('.card');
+		// const productId = cardContent?.id;
+
+		if (e.target.matches('.topSellerAdd')) {
+
+			const wrapper = e.target.closest('.items');
+			const cardContent = wrapper.querySelector('.card');
+			const productId = cardContent?.id;
+
+			//Тут товари не мають різних кольорів, то без них
+			addedItems.push({
+				title: cardContent.childNodes[5].childNodes[1].innerText,
+				price: cardContent.childNodes[5].childNodes[5].innerText,
+				img: cardContent.childNodes[3].childNodes[1].attributes[0].value
+			});
+
+			console.log(addedItems);
+		};
+	});
 });

@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		currentIndex = (currentIndex - 1 + totalCards) % totalCards;
 		card();
 		updateSliderPosition();
-		console.log("click")
+		// console.log("click")
 	});
 
 
