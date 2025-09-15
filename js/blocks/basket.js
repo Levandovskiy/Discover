@@ -1,41 +1,50 @@
 import { topSellers, trendingEarphones, newLaunches } from "../db.js";
-
 import { addedItems } from "./newLaunches.js";
 
-const item = [...topSellers, ...trendingEarphones, ...newLaunches];
+// Контейнер для рендерингу товарів у корзині
+const container = document.querySelector("#cart-items-container");
 
+if (!container) {
+  console.error("Контейнер #cart-items-container не знайдено!");
+}
+
+// Масив для зберігання товарів у корзині
 let cart = [];
 
-function renderItems() {
-  container.innerHTML = ""; // очищаємо контейнер перед рендером
+// Функція для збереження корзини в localStorage
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
-  item.forEach((product) => {
+// Функція для завантаження корзини з localStorage
+function loadCart() {
+  const savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+  }
+}
+
+// Функція для рендерингу товарів у корзині
+function renderItems() {
+  container.innerHTML = ""; // Очищаємо контейнер перед рендером
+
+  if (cart.length === 0) {
+    container.innerHTML = "<p>Корзина порожня</p>";
+    return;
+  }
+
+  cart.forEach((product) => {
     const html = `
       <div class="cart-item">
         <div class="cart-item__product">
-          <img src="${product.image}" alt="${
-      product.name
-    }" class="cart-item__image" />
+          <img src="${product.image}" alt="${product.name}" class="cart-item__image" />
           <div class="cart-item__info">
             <h3 class="cart-item__title">${product.name}</h3>
-            <div class="cart-item__services">
-              <label class="cart-item__service"> </label>
-              <label class="cart-item__service"> </label>
-            </div>
           </div>
           <div class="cart-item__pricing">
             <span class="cart-item__current-price">${product.price}$</span>
-            <span class="cart-item__old-price">${
-              product.oldPrice || product.price
-            }$</span>
-            <button class="cart-item__remove" data-id="${
-              product.id
-            }">🗑️</button>
+            <button class="cart-item__remove" data-id="${product.id}">🗑️</button>
           </div>
-        </div>
-        <div class="cart-item__total">
-          <span>Сума замовлення:</span>
-          <span class="cart-item__total-price">${product.price}$</span>
         </div>
       </div>
     `;
@@ -46,12 +55,69 @@ function renderItems() {
 // Додавання товарів із newLaunches до корзини
 function addNewLaunchesToCart() {
   addedItems.forEach((item) => {
-    cart.push(item);
+    if (!cart.some((cartItem) => cartItem.id === item.id)) {
+      cart.push(item);
+    }
   });
   saveCart();
   renderItems();
   console.log("Товари з newLaunches додано до корзини:", addedItems);
 }
 
-// Виклик функції для додавання товарів
+// Видалення товару з корзини
+function removeFromCart(productId) {
+  cart = cart.filter((product) => product.id !== productId);
+  saveCart();
+  renderItems();
+}
+
+// Делегування подій для видалення товарів
+if (container) {
+  container.addEventListener("click", (e) => {
+    if (e.target.classList.contains("cart-item__remove")) {
+      const productId = e.target.getAttribute("data-id");
+      removeFromCart(productId);
+    }
+  });
+}
+
+// Делегування подій для кнопок "Додати в корзину"
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart-btn")) {
+    const productId = e.target.getAttribute("data-id");
+    addToCart(productId);
+  }
+});
+
+// Функція для додавання товару в корзину
+function addToCart(productId) {
+  const allItems = [
+    ...(topSellers || []),
+    ...(trendingEarphones || []),
+    ...(newLaunches || []),
+  ];
+
+  console.log("All Items:", allItems);
+
+  const product = allItems.find(
+    (item) => String(item.id) === String(productId)
+  );
+
+  if (cart.some((item) => item.id === productId)) {
+    console.log("Товар уже в корзині");
+    return;
+  }
+  if (product) {
+    cart.push(product);
+    saveCart();
+    renderItems();
+    console.log("Товар додано до корзини:", product);
+  } else {
+    console.warn("Товар із таким ID не знайдено:", productId);
+  }
+}
+
+// Ініціалізація
+loadCart();
 addNewLaunchesToCart();
+renderItems();
