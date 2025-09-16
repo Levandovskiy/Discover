@@ -2,6 +2,9 @@
 
 import {trendingEarphones} from "../db.js";
 
+//Масив із доданими до корзини товарами
+export const addedItems = new Array;
+
 document.addEventListener('DOMContentLoaded', () => {
 	const trendingEarphonesCards = document.querySelector('.main__trending-wrapper_slider__cards');
 	const nextBtn = document.querySelector('.main__trending-wrapper_slider__button');
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						<div class="card-descr_price">$${product.price}</div>
 					</div>
 				</div>
-				<button>Add to cart</button>
+				<button class="trendingAdd">Add to cart</button>
 			`;
 			trendingEarphonesCards.appendChild(items);
 		});
@@ -125,4 +128,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	// За замовчуванням earbuds
 	earbuds.classList.add('active');
 	category(active);
+
+	//Додавання катрок в корзину
+	const trendingAdd = document.querySelectorAll('.trendingAdd');
+
+	trendingEarphonesCards.addEventListener('click', (e) => {
+
+		// const cardContent = e.target.parentElement.querySelector('.card');
+		// const productId = cardContent?.id;
+
+		if (e.target.matches('.trendingAdd')) {
+
+			const wrapper = e.target.closest('.items');
+			const cardContent = wrapper.querySelector('.card');
+			const productId = cardContent?.id;
+
+			//Тут товари не мають різних кольорів, то без них
+			addedItems.push({
+				title: cardContent.childNodes[5].childNodes[1].innerText,
+				price: cardContent.childNodes[5].childNodes[5].innerText,
+				img: cardContent.childNodes[3].childNodes[1].attributes[0].value
+			});
+
+			console.log(addedItems);
+		};
+	});
 });
