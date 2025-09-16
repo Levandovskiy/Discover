@@ -64,6 +64,19 @@ function addNewLaunchesToCart() {
   console.log("Товари з newLaunches додано до корзини:", addedItems);
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const newLaunchesAddButton = document.getElementById("newLaunchesAdd");
+
+  if (newLaunchesAddButton) {
+    newLaunchesAddButton.addEventListener("click", () => {
+      addNewLaunchesToCart();
+      console.log("Товари з New Launches додано до корзини");
+    });
+  } else {
+    console.warn("Кнопка #newLaunchesAdd не знайдена!");
+  }
+});
+
 // Видалення товару з корзини
 function removeFromCart(productId) {
   cart = cart.filter((product) => product.id !== productId);
