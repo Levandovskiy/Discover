@@ -54,7 +54,7 @@ function renderItems() {
 
 // Додавання товарів із newLaunches до корзини
 function addNewLaunchesToCart() {
-  addedItems.forEach((item) => {
+  newLaunches.forEach((item) => {
     if (!cart.some((cartItem) => cartItem.id === item.id)) {
       cart.push(item);
     }
