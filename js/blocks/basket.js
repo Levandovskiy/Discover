@@ -130,6 +130,24 @@ function addToCart(productId) {
   }
 }
 
+// Слухач для кнопок "Додати в корзину"
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart-btn")) {
+    const productId = e.target.getAttribute("data-id");
+    addToCart(productId);
+  }
+});
+
+// Слухач для кнопок "Видалити з корзини"
+if (container) {
+  container.addEventListener("click", (e) => {
+    if (e.target.classList.contains("cart-item__remove")) {
+      const productId = e.target.getAttribute("data-id");
+      removeFromCart(productId);
+    }
+  });
+}
+
 // Ініціалізація
 loadCart();
 addNewLaunchesToCart();
