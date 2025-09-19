@@ -148,6 +148,14 @@ if (container) {
   });
 }
 
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("add-to-cart-btn")) {
+    const productId = e.target.getAttribute("data-id");
+    addToCart(productId);
+    console.log(`Товар із ID ${productId} додано до корзини`);
+  }
+});
+
 // Ініціалізація
 loadCart();
 addNewLaunchesToCart();
