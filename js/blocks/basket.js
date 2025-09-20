@@ -156,6 +156,11 @@ document.addEventListener("click", (e) => {
   }
 });
 
+function handleNewLaunchesAddClick() {
+  addNewLaunchesToCart();
+  console.log("Товари з New Launches додано до корзини");
+}
+
 // Ініціалізація
 loadCart();
 addNewLaunchesToCart();
