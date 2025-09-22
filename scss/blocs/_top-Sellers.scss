@@ -54,18 +54,15 @@
 				display: flex;
 				flex-wrap: nowrap;
 				flex-direction: row;
-				// justify-content: space-between;
 				align-items: center;
-				// transition: transform 0.5s ease;
   				will-change: transform;
 				gap: 93px;
 				width: 1270px;
-				transition: transform 0.4s ease; // плавний рух
+				transition: transform 0.4s ease;
 
 				.items {
 					display: flex;
 					flex-direction: column;
-					// flex:  0 calc(100% / 3);
 
 					.card {
 						display: flex;
@@ -247,7 +244,6 @@
 
 				&__cards {
 					width: 920px;
-					// justify-content: start;
 					gap: 50px;
 
 					.items {
@@ -571,10 +567,6 @@
 							}
 						}
 					}
-
-					// #second {
-					// 	display: none;
-					// }
 				}
 			}
 		}

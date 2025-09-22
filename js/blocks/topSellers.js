@@ -125,9 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	topSellersCards.addEventListener('click', (e) => {
 
-		// const cardContent = e.target.parentElement.querySelector('.card');
-		// const productId = cardContent?.id;
-
 		if (e.target.matches('.topSellerAdd')) {
 
 			const wrapper = e.target.closest('.items');
@@ -140,8 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				price: cardContent.childNodes[5].childNodes[5].innerText,
 				img: cardContent.childNodes[3].childNodes[1].attributes[0].value
 			});
-
-			console.log(addedItems);
 		};
 	});
 });
