@@ -161,6 +161,12 @@ function handleNewLaunchesAddClick() {
   console.log("Товари з New Launches додано до корзини");
 }
 
+function calculateTotal() {
+  const total = cart.reduce((sum, product) => sum + product.price, 0);
+  console.log(`Загальна сума: ${total}$`);
+  return total;
+}
+
 // Ініціалізація
 loadCart();
 addNewLaunchesToCart();
