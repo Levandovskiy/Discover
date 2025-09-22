@@ -166,15 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			//Посилання на фото товару
 			const activeImg = document.querySelector('.main__new-launches_wrapper__card-slider_content__img img');
-			// console.log(activeImg.src);
-
-
-
-
-			//Бодя, глянь, що в тебе тут виводиться, коли обробляєю в корзині. Бо шлях http://127.0.0.1:5501/img/main/... Якщо такий же, то мабуть треба попрацювати із методами рядків. Наприклад, activeImg.slice()
-
-
-
 
 			addedItems.push({
 				title: cards[currentIndex].title,
@@ -197,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		currentIndex = (currentIndex - 1 + totalCards) % totalCards;
 		card();
 		updateSliderPosition();
-		// console.log("click")
 	});
 
 
