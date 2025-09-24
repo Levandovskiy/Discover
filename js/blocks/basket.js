@@ -1,6 +1,3 @@
-import { products as newLaunches } from "./newLaunches.js";
-import { products as topSellers } from "./topSellers.js";
-import { products as trending } from "./trending.js";
 // Контейнер для рендерингу товарів у корзині
 const container = document.querySelector("#cart-items-container");
 

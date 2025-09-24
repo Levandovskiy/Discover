@@ -2,8 +2,6 @@
 
 import { trendingEarphones } from "../db.js";
 
-export const addedItems = new Array();
-
 document.addEventListener("DOMContentLoaded", () => {
   const trendingEarphonesCards = document.querySelector(
     ".main__trending-wrapper_slider__cards"
