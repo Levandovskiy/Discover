@@ -2,6 +2,9 @@
 
 import { trendingEarphones } from "../db.js";
 
+//Масив із доданими до корзини товарами
+export const addedTrendingItems = new Array();
+
 document.addEventListener("DOMContentLoaded", () => {
   const trendingEarphonesCards = document.querySelector(
     ".main__trending-wrapper_slider__cards"
@@ -133,4 +136,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // За замовчуванням earbuds
   earbuds.classList.add("active");
   category(active);
+
+  //Додавання катрок в корзину
+  const trendingAdd = document.querySelectorAll(".trendingAdd");
+
+  trendingEarphonesCards.addEventListener("click", (e) => {
+    if (e.target.matches(".trendingAdd")) {
+      const wrapper = e.target.closest(".items");
+      const cardContent = wrapper.querySelector(".card");
+      const productId = cardContent?.id;
+
+      //Тут товари не мають різних кольорів, то без них
+      addedTrendingItems.push({
+        title: cardContent.childNodes[5].childNodes[1].innerText,
+        price: cardContent.childNodes[5].childNodes[5].innerText,
+        img: cardContent.childNodes[3].childNodes[1].attributes[0].value,
+      });
+
+      console.log(addedTrendingItems);
+    }
+  });
 });
