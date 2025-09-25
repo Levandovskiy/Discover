@@ -1,6 +1,6 @@
 import { topSellers, trendingEarphones, newLaunches } from "../db.js";
 
-import { addedItems } from "./newLaunches.js";
+// import { addedItems } from "./newLaunches.js";
 
 const item = [...topSellers, ...trendingEarphones, ...newLaunches];
 

@@ -3,7 +3,7 @@
 import { newLaunches } from "../db.js";
 
 //Масив із доданими до корзини товарами
-export const addedItems = new Array;
+export const addedNewLaunchesItems = new Array;
 
 document.addEventListener('DOMContentLoaded', () => {
 	const newLaunchesSlider = document.querySelector('.main__new-launches_wrapper__card-slider_item'),
@@ -166,22 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			//Посилання на фото товару
 			const activeImg = document.querySelector('.main__new-launches_wrapper__card-slider_content__img img');
-			// console.log(activeImg.src);
 
-
-
-
-			//Бодя, глянь, що в тебе тут виводиться, коли обробляєю в корзині. Бо шлях http://127.0.0.1:5501/img/main/... Якщо такий же, то мабуть треба попрацювати із методами рядків. Наприклад, activeImg.slice()
-
-
-
-
-			addedItems.push({
+			addedNewLaunchesItems.push({
 				title: cards[currentIndex].title,
 				price: cards[currentIndex].price,
 				color: selectedColorBtn.getAttribute('title'),
 				img: activeImg.src
 			});
+			console.log(addedNewLaunchesItems);
 		});
 	};
 
@@ -197,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		currentIndex = (currentIndex - 1 + totalCards) % totalCards;
 		card();
 		updateSliderPosition();
-		// console.log("click")
 	});
 
 

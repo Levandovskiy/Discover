@@ -3,7 +3,7 @@
 import {trendingEarphones} from "../db.js";
 
 //Масив із доданими до корзини товарами
-export const addedItems = new Array;
+export const addedTrendingItems = new Array;
 
 document.addEventListener('DOMContentLoaded', () => {
 	const trendingEarphonesCards = document.querySelector('.main__trending-wrapper_slider__cards');
@@ -134,9 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	trendingEarphonesCards.addEventListener('click', (e) => {
 
-		// const cardContent = e.target.parentElement.querySelector('.card');
-		// const productId = cardContent?.id;
-
 		if (e.target.matches('.trendingAdd')) {
 
 			const wrapper = e.target.closest('.items');
@@ -144,13 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			const productId = cardContent?.id;
 
 			//Тут товари не мають різних кольорів, то без них
-			addedItems.push({
+			addedTrendingItems.push({
 				title: cardContent.childNodes[5].childNodes[1].innerText,
 				price: cardContent.childNodes[5].childNodes[5].innerText,
 				img: cardContent.childNodes[3].childNodes[1].attributes[0].value
 			});
 
-			console.log(addedItems);
+			console.log(addedTrendingItems);
 		};
 	});
 });
