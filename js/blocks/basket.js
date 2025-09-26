@@ -1,8 +1,9 @@
 // Контейнер для рендерингу товарів у корзині
 const container = document.querySelector("#cart-items-container");
 
-// import { addedItems } from "./newLaunches.js";
-
+import { addedNewLaunchesItems } from "./newLaunches.js";
+import { addedTopSellersItems } from "./topSellers.js";
+import { addedTrendingItems } from "./trending.js";
 // Масив для зберігання товарів у корзині
 let cart = [];
 
