@@ -4,6 +4,10 @@ const container = document.querySelector("#cart-items-container");
 import { addedNewLaunchesItems } from "./newLaunches.js";
 import { addedTopSellersItems } from "./topSellers.js";
 import { addedTrendingItems } from "./trending.js";
+
+const topSellers = addedTopSellersItems;
+const newLaunches = addedNewLaunchesItems;
+const trending = addedTrendingItems;
 // Масив для зберігання товарів у корзині
 let cart = [];
 
@@ -164,6 +168,8 @@ function calculateTotal() {
 }
 
 // Ініціалізація
+handleNewLaunchesAddClick();
+calculateTotal();
 loadCart();
 addNewLaunchesToCart();
 renderItems();
