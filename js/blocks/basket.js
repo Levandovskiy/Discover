@@ -8,8 +8,15 @@ import { addedTrendingItems } from "./trending.js";
 const topSellers = addedTopSellersItems;
 const newLaunches = addedNewLaunchesItems;
 const trending = addedTrendingItems;
+
+console.log("Top Sellers:", topSellers);
+console.log("New Launches:", newLaunches);
+console.log("Trending:", trending);
 // Масив для зберігання товарів у корзині
 let cart = [];
+
+// Зєднуємо масив товарів із усіх блоків
+const allItems = [...topSellers, ...newLaunches, ...trending];
 
 // Функція для збереження корзини в localStorage
 function saveCart() {
@@ -22,46 +29,6 @@ function loadCart() {
   if (savedCart) {
     cart = JSON.parse(savedCart);
   }
-}
-
-// Функція для рендерингу товарів у корзині
-function renderItems() {
-  container.innerHTML = ""; // Очищаємо контейнер перед рендером
-
-  if (cart.length === 0) {
-    container.innerHTML = "<p>Корзина порожня</p>";
-    return;
-  }
-
-  cart.forEach((product) => {
-    const html = `
-      <div class="cart-item">
-        <div class="cart-item__product">
-          <img src="${product.image}" alt="${product.name}" class="cart-item__image" />
-          <div class="cart-item__info">
-            <h3 class="cart-item__title">${product.name}</h3>
-          </div>
-          <div class="cart-item__pricing">
-            <span class="cart-item__current-price">${product.price}$</span>
-            <button class="cart-item__remove" data-id="${product.id}">🗑️</button>
-          </div>
-        </div>
-      </div>
-    `;
-    container.insertAdjacentHTML("beforeend", html);
-  });
-}
-
-// Додавання товарів із newLaunches до корзини
-function addNewLaunchesToCart() {
-  newLaunches.forEach((item) => {
-    if (!cart.some((cartItem) => cartItem.id === item.id)) {
-      cart.push(item);
-    }
-  });
-  saveCart();
-  renderItems();
-  console.log("Товари з newLaunches додано до корзини:", addedItems);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -156,11 +123,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-function handleNewLaunchesAddClick() {
-  addNewLaunchesToCart();
-  console.log("Товари з New Launches додано до корзини");
-}
-
 function calculateTotal() {
   const total = cart.reduce((sum, product) => sum + product.price, 0);
   console.log(`Загальна сума: ${total}$`);
@@ -168,8 +130,6 @@ function calculateTotal() {
 }
 
 // Ініціалізація
-handleNewLaunchesAddClick();
+
 calculateTotal();
 loadCart();
-addNewLaunchesToCart();
-renderItems();
