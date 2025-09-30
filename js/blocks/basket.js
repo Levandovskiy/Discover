@@ -1,21 +1,20 @@
 // Контейнер для рендерингу товарів у корзині
 const container = document.querySelector("#cart-items-container");
 
+// Імпорт масивів із інших файлів
 import { addedNewLaunchesItems } from "./newLaunches.js";
 import { addedTopSellersItems } from "./topSellers.js";
 import { addedTrendingItems } from "./trending.js";
 
+// Масиви товарів із усіх блоків
 const topSellers = addedTopSellersItems;
 const newLaunches = addedNewLaunchesItems;
 const trending = addedTrendingItems;
 
-console.log("Top Sellers:", topSellers);
-console.log("New Launches:", newLaunches);
-console.log("Trending:", trending);
 // Масив для зберігання товарів у корзині
 let cart = [];
 
-// Зєднуємо масив товарів із усіх блоків
+// З'єднуємо масиви товарів із усіх блоків
 const allItems = [...topSellers, ...newLaunches, ...trending];
 
 // Функція для збереження корзини в localStorage
@@ -31,54 +30,38 @@ function loadCart() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const newLaunchesAddButton = document.getElementById("newLaunchesAdd");
-
-  if (newLaunchesAddButton) {
-    newLaunchesAddButton.addEventListener("click", () => {
-      addNewLaunchesToCart();
-      console.log("Товари з New Launches додано до корзини");
-    });
-  } else {
-    console.warn("Кнопка #newLaunchesAdd не знайдена!");
+// Функція для рендерингу товарів у корзині
+function renderItems() {
+  if (!container) {
+    console.error("Елемент #cart-items-container не знайдено!");
+    return;
   }
-});
+  container.innerHTML = ""; // Очищаємо контейнер перед рендером
 
-// Видалення товару з корзини
-function removeFromCart(productId) {
-  cart = cart.filter((product) => product.id !== productId);
-  saveCart();
-  renderItems();
-}
+  if (cart.length === 0) {
+    container.innerHTML = "<p>Корзина порожня</p>";
+    return;
+  }
 
-// Делегування подій для видалення товарів
-if (container) {
-  container.addEventListener("click", (e) => {
-    if (e.target.classList.contains("cart-item__remove")) {
-      const productId = e.target.getAttribute("data-id");
-      removeFromCart(productId);
-    }
+  cart.forEach((product) => {
+    const html = `
+      <div class="cart-item">
+        <div class="cart-item__product">
+          <img src="${product.img}" alt="${product.title}" class="cart-item__image" />
+          <div class="cart-item__info">
+            <h3 class="cart-item__title">${product.title}</h3>
+            <p class="cart-item__price">${product.price}</p>
+          </div>
+          <button class="cart-item__remove" data-id="${product.id}">🗑️ Видалити</button>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML("beforeend", html);
   });
 }
 
-// Делегування подій для кнопок "Додати в корзину"
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("add-to-cart-btn")) {
-    const productId = e.target.getAttribute("data-id");
-    addToCart(productId);
-  }
-});
-
 // Функція для додавання товару в корзину
 function addToCart(productId) {
-  const allItems = [
-    ...(topSellers || []),
-    ...(trendingEarphones || []),
-    ...(newLaunches || []),
-  ];
-
-  console.log("All Items:", allItems);
-
   const product = allItems.find(
     (item) => String(item.id) === String(productId)
   );
@@ -87,6 +70,7 @@ function addToCart(productId) {
     console.log("Товар уже в корзині");
     return;
   }
+
   if (product) {
     cart.push(product);
     saveCart();
@@ -97,7 +81,21 @@ function addToCart(productId) {
   }
 }
 
-// Слухач для кнопок "Додати в корзину"
+// Функція для видалення товару з корзини
+function removeFromCart(productId) {
+  cart = cart.filter((product) => product.id !== productId);
+  saveCart();
+  renderItems();
+}
+
+// Функція для підрахунку загальної суми товарів у корзині
+function calculateTotal() {
+  const total = cart.reduce((sum, product) => sum + product.price, 0);
+  console.log(`Загальна сума: ${total}$`);
+  return total;
+}
+
+// Делегування подій для кнопок "Додати в корзину"
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("add-to-cart-btn")) {
     const productId = e.target.getAttribute("data-id");
@@ -105,7 +103,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Слухач для кнопок "Видалити з корзини"
+// Делегування подій для кнопок "Видалити з корзини"
 if (container) {
   container.addEventListener("click", (e) => {
     if (e.target.classList.contains("cart-item__remove")) {
@@ -115,21 +113,9 @@ if (container) {
   });
 }
 
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("add-to-cart-btn")) {
-    const productId = e.target.getAttribute("data-id");
-    addToCart(productId);
-    console.log(`Товар із ID ${productId} додано до корзини`);
-  }
-});
-
-function calculateTotal() {
-  const total = cart.reduce((sum, product) => sum + product.price, 0);
-  console.log(`Загальна сума: ${total}$`);
-  return total;
-}
-
 // Ініціалізація
-
-calculateTotal();
-loadCart();
+document.addEventListener("DOMContentLoaded", () => {
+  loadCart();
+  renderItems();
+  calculateTotal();
+});
