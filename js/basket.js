@@ -1,10 +1,12 @@
 // Контейнер для рендерингу товарів у корзині
 const container = document.querySelector("#cart-items-container");
 
+console.log(container);
+
 // Імпорт масивів із інших файлів
-import { addedNewLaunchesItems } from "./newLaunches.js";
-import { addedTopSellersItems } from "./topSellers.js";
-import { addedTrendingItems } from "./trending.js";
+import { addedNewLaunchesItems } from "./blocks/newLaunches.js";
+import { addedTopSellersItems } from "./blocks/topSellers.js";
+import { addedTrendingItems } from "./blocks/trending.js";
 
 // Масиви товарів із усіх блоків
 const topSellers = addedTopSellersItems;
