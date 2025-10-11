@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   trendingEarphonesCards.addEventListener("click", (e) => {
     if (e.target.matches(".trendingAdd")) {
-	  console.log('click');
+      console.log("click");
       const wrapper = e.target.closest(".items");
       const cardContent = wrapper.querySelector(".card");
       const productId = cardContent?.id;
@@ -154,12 +154,11 @@ document.addEventListener("DOMContentLoaded", () => {
         img: cardContent.childNodes[3].childNodes[1].attributes[0].value,
       });
 
-    //   console.log(addedTrendingItems);
+      //   console.log(addedTrendingItems);
 
-	//Збереження товарів в localStorage
-	localStorage.setItem("addedTrendingItems", JSON.stringify(addedTrendingItems));
-	console.log(localStorage.getItem('addedTrendingItems'));
-
+      //Збереження товарів в localStorage
+      localStorage.setItem("cart", JSON.stringify(addedTrendingItems));
+      console.log(localStorage.getItem("addedTrendingItems"));
     }
   });
 });

@@ -190,13 +190,13 @@ document.addEventListener("DOMContentLoaded", () => {
         title: cards[currentIndex].title,
         price: cards[currentIndex].price,
         color: selectedColorBtn.getAttribute("title"),
-        img: cards[currentIndex].img1
+        img: cards[currentIndex].img1,
       });
 
-		//Збереження товарів в localStorage
-		localStorage.setItem("addedNewLaunchesItems", JSON.stringify(addedNewLaunchesItems));
-		console.log(localStorage.getItem('addedNewLaunchesItems'));
-    //   console.log(addedNewLaunchesItems);
+      //Збереження товарів в localStorage
+      localStorage.setItem("cart", JSON.stringify(addedNewLaunchesItems));
+      console.log(localStorage.getItem("addedNewLaunchesItems"));
+      //   console.log(addedNewLaunchesItems);
     });
   }
 

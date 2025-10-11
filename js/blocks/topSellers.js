@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   topSellersCards.addEventListener("click", (e) => {
     if (e.target.matches(".topSellerAdd")) {
-		console.log('click');
+      console.log("click");
       const wrapper = e.target.closest(".items");
       const cardContent = wrapper.querySelector(".card");
       const productId = cardContent?.id;
@@ -143,11 +143,11 @@ document.addEventListener("DOMContentLoaded", () => {
         img: cardContent.childNodes[3].childNodes[1].attributes[0].value,
       });
 
-	  	  //Збереження товарів в localStorage
-		localStorage.setItem("addedTopSellersItems", JSON.stringify(addedTopSellersItems));
-		console.log(localStorage.getItem('addedTopSellersItems'));
+      //Збереження товарів в localStorage
+      localStorage.setItem("cart", JSON.stringify(addedTopSellersItems));
+      console.log(localStorage.getItem("addedTopSellersItems"));
 
-    //   console.log(addedTopSellersItems);
+      //   console.log(addedTopSellersItems);
     }
   });
 });
