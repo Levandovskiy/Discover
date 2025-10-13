@@ -76,6 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function updateCartButton() {
+    if (cartButton) {
+      cartButton.textContent = `👜 ${cart.length} Items Added`;
+    }
+  }
+
   // Делегування подій для видалення
   container.addEventListener("click", (e) => {
     if (e.target.classList.contains("cart-item__remove")) {
@@ -96,4 +102,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Перший рендер
   renderItems();
+  updateCartButton();
 });
