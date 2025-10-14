@@ -4,6 +4,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector("#cart-items-container");
   const totalEl = document.querySelector("#cart-total"); // опціонально, якщо додаси елемент для суми
+  const cartButton = document.querySelector(".header__cart"); // Кнопка для оновлення кількості товарів
 
   if (!container) {
     console.error("Елемент #cart-items-container не знайдено!");
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     updateTotal();
+    updateCartButton();
   }
 
   // Видалити
@@ -59,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cart = cart.filter((product) => String(product.id) !== String(productId));
     saveCart();
     renderItems();
+    updateCartButton();
   }
 
   // Підрахунок загальної суми
