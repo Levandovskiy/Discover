@@ -137,17 +137,18 @@ document.addEventListener("DOMContentLoaded", () => {
       const productId = cardContent?.id;
 
       //Тут товари не мають різних кольорів, то без них
-      addedTopSellersItems.push({
+      // Зчитуємо поточний cart з localStorage
+      let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      // Додаємо новий товар
+      existingCart.push({
         title: cardContent.childNodes[5].childNodes[1].innerText,
         price: cardContent.childNodes[5].childNodes[5].innerText,
         img: cardContent.childNodes[3].childNodes[1].attributes[0].value,
       });
 
-      //Збереження товарів в localStorage
-      localStorage.setItem("cart", JSON.stringify(addedTopSellersItems));
-      console.log(localStorage.getItem("addedTopSellersItems"));
-
-      //   console.log(addedTopSellersItems);
+      // Зберігаємо оновлений масив
+      localStorage.setItem("cart", JSON.stringify(existingCart));
     }
   });
 });
