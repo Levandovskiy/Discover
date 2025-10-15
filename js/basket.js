@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateTotal() {
     const total = calculateTotal();
     if (totalEl) {
-      totalEl.textContent = `Total: $${total}`;
+      totalEl.textContent = `Total: ${total}`;
     } else {
-      console.log(`Загальна сума: $${total}`);
+      console.log(`Загальна сума: ${total}`);
     }
   }
 
