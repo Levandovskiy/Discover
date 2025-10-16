@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Видалити
-  function removeFromCart(productId) {
-    cart = cart.filter((product) => String(product.id) !== String(productId));
+  function removeFromCart(index) {
+    cart.splice(index, 1);
     saveCart();
     renderItems();
     updateCartButton();
