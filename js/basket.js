@@ -52,13 +52,21 @@ document.addEventListener("DOMContentLoaded", () => {
       container.insertAdjacentHTML("beforeend", html);
     });
 
+    // Додаємо блок із загальною сумою
+    const totalHtml = `
+    <div class="cart-total">
+      <h3>Total amount: <span id="cart-total-value">$${calculateTotal()}</span></h3>
+    </div>
+  `;
+    container.insertAdjacentHTML("beforeend", totalHtml);
+
     updateTotal();
     updateCartButton();
   }
 
   // Видалити
-  function removeFromCart(productId) {
-    cart = cart.filter((product) => String(product.id) !== String(productId));
+  function removeFromCart(index) {
+    cart.splice(index, 1);
     saveCart();
     renderItems();
     updateCartButton();
@@ -66,16 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Підрахунок загальної суми
   function calculateTotal() {
-    // Переконаємось, що price — число
-    return cart.reduce((sum, p) => sum + Number(p.price || 0), 0);
+    return cart.reduce((sum, product) => {
+      const price =
+        parseFloat(String(product.price).replace(/[^\d.]/g, "")) || 0;
+
+      return sum + price;
+    }, 0);
   }
 
   function updateTotal() {
     const total = calculateTotal();
     if (totalEl) {
-      totalEl.textContent = `Total: $${total}`;
+      totalEl.textContent = `Total: ${total}`;
     } else {
-      console.log(`Загальна сума: $${total}`);
+      console.log(`Загальна сума: ${total}`);
     }
   }
 
