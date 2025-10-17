@@ -193,10 +193,15 @@ document.addEventListener("DOMContentLoaded", () => {
         img: cards[currentIndex].img1,
       });
 
-      //Збереження товарів в localStorage
-      localStorage.setItem("cart", JSON.stringify(addedNewLaunchesItems));
-      console.log(localStorage.getItem("addedNewLaunchesItems"));
-      //   console.log(addedNewLaunchesItems);
+      // Додаємо новий товар
+      existingCart.push({
+        title: cardContent.childNodes[5].childNodes[1].innerText,
+        price: cardContent.childNodes[5].childNodes[5].innerText,
+        img: cardContent.childNodes[3].childNodes[1].attributes[0].value,
+      });
+
+      // Зберігаємо оновлений масив
+      localStorage.setItem("cart", JSON.stringify(existingCart));
     });
   }
 
