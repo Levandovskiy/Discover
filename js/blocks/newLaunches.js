@@ -2,222 +2,172 @@
 
 import { newLaunches } from "../db.js";
 
-//Масив із доданими до корзини товарами
-export const addedNewLaunchesItems = new Array();
+// Масив для збереження доданих товарів
+export const addedNewLaunchesItems = [];
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Отримую DOM-елементи слайдера та кнопок навігації
   const newLaunchesSlider = document.querySelector(
-      ".main__new-launches_wrapper__card-slider_item"
-    ),
-    nextBtn = document.querySelector(
-      ".main__new-launches_wrapper__card-slider_rbtn"
-    ),
-    prevBtn = document.querySelector(
-      ".main__new-launches_wrapper__card-slider_lbtn"
-    );
-  const allCards = newLaunchesSlider.querySelectorAll(
-    ".main__new-launches_wrapper__card-slider_content"
+    ".main__new-launches_wrapper__card-slider_item"
+  );
+  const nextBtn = document.querySelector(
+    ".main__new-launches_wrapper__card-slider_rbtn"
+  );
+  const prevBtn = document.querySelector(
+    ".main__new-launches_wrapper__card-slider_lbtn"
   );
 
-  // Активна картка
+  // Ініціалізую масив товарів та індекс активної картки
   let cards = newLaunches;
   let currentIndex = 0;
   let totalCards = cards.length;
 
-  function card() {
+  // Основна функція рендеру картки
+  function renderCard() {
+    // Очищую контейнер перед рендером нової картки
     newLaunchesSlider.innerHTML = "";
 
-    cards.forEach((product, index) => {
-      const item = document.createElement("div");
-      item.classList.add("main__new-launches_wrapper__card-slider_content");
-      if (index === currentIndex) item.classList.add("active");
+    // Отримую поточний товар
+    const product = cards[currentIndex];
 
-      // Створюю блок кольорів
-      const colorsBlock = document.createElement("div");
-      colorsBlock.classList.add(
-        "main__new-launches_wrapper__card-slider_content__descr-colors"
-      );
+    // Створюю контейнер картки
+    const item = document.createElement("div");
+    item.classList.add("main__new-launches_wrapper__card-slider_content", "active");
 
-      let colors = product.colors;
-
-      //Перемінна для присвоєння id кожній кнопці кольору
-      let colorId = 0;
-
-      //Створюю масив елементів для відслідковування класу активності
-      let colorBtns = new Array();
-
-      // //Робота із додаванням класу активності кольору при клікові із використанням делегування подій
-      colorsBlock.addEventListener("click", (e) => {
-        //Обнуляю клас активності перед додаванням нового
-        colorBtns.forEach((hasActive) => {
-          hasActive.classList.remove("active");
-        });
-
-        //Додаю для конкретного елементу клас активності
-        e.target.classList.add("active");
-      });
-
-      //Створюю блок фото
-      const imgBlock = document.createElement("div");
-      imgBlock.classList.add(
-        "main__new-launches_wrapper__card-slider_content__img"
-      );
-      const img1Block = document.createElement("div");
-      const img2Block = document.createElement("div");
-      const img1 = document.createElement("img");
-      const img2 = document.createElement("img");
-
-      //Відмалювання кольору та його назви при наведенні, присвоєння id, зміна фото товару
-      colors.forEach(({ name, hex, images }) => {
-        const btn = document.createElement("button");
-
-        btn.classList.add(
-          "main__new-launches_wrapper__card-slider_content__descr-colors_item"
-        );
-        btn.id = colorId;
-        btn.setAttribute("title", name); // Підказка при наведенні
-        btn.style.backgroundColor = hex;
-
-        colorId++;
-
-        //Додаю до масиву створений елемент
-        colorBtns.push(btn);
-
-        colorsBlock.appendChild(btn);
-
-        img1.setAttribute("src", images[0]);
-        img2.setAttribute("src", images[1]);
-
-        img1Block.classList.add("first");
-        img2Block.classList.add("second");
-
-        img1Block.appendChild(img1);
-        img2Block.appendChild(img2);
-
-        imgBlock.appendChild(img1Block);
-        imgBlock.appendChild(img2Block);
-
-        img1.src = colors[0].images[0];
-        img2.src = colors[0].images[1];
-
-        btn.addEventListener("click", () => {
-          img1.src = images[0];
-          img2.src = images[1];
-        });
-      });
-
-      // Створюю HTML-контент картки
-      const cardContent = `
-				<!-- Тут буде вставлено imgBlock -->
-				<div class="main__new-launches_wrapper__card-slider_content__descr">
-					<div class="main__new-launches_wrapper__card-slider_content__descr-header">
-						${product.title}
-					</div>
-					<div class="main__new-launches_wrapper__card-slider_content__descr-text">
-						${product.descr}
-						<a href="${product.link}"> Read More </a>
-					</div>
-					<div class="main__new-launches_wrapper__card-slider_content__descr-price">
-						Price : <span> $${product.price} </span>
-					</div>
-					<!-- Тут буде вставлено colorsBlock -->
-					<div class="main__new-launches_wrapper__card-slider_content__descr-btns">
-						<button class="add" id="newLaunchesAdd">Add to cart</button>
-						<button class="more">
-							<a href="${product.link}">Explore More</a>
-						</button>
-					</div>
-				</div>
-			`;
-
-      // Вставляю HTML у item
-      item.innerHTML = cardContent;
-
-      // Вставляю блок кольорів у відповідне місце
-      const descrBlock = item.querySelector(
-        ".main__new-launches_wrapper__card-slider_content__descr"
-      );
-      descrBlock.insertBefore(
-        colorsBlock,
-        descrBlock.querySelector(
-          ".main__new-launches_wrapper__card-slider_content__descr-btns"
-        )
-      );
-
-      //вставляю блок фото
-      item.insertBefore(imgBlock, descrBlock);
-
-      // Додаю картку до слайдера
-      newLaunchesSlider.appendChild(item);
-    });
-  }
-
-  //Встановлюю клас активності для картки
-  function updateSliderPosition() {
-    allCards.forEach((card, index) => {
-      card.classList.remove("active");
-      if (index === currentIndex) {
-        card.classList.add("active");
-      }
-    });
-
-    // Знаходжу активну картку
-    const activeCard = newLaunchesSlider.querySelector(
-      ".main__new-launches_wrapper__card-slider_content.active"
+    // Створюю блок кольорів
+    const colorsBlock = document.createElement("div");
+    colorsBlock.classList.add(
+      "main__new-launches_wrapper__card-slider_content__descr-colors"
     );
-    if (!activeCard) return;
 
-    const addBtn = activeCard.querySelector(".add");
-    if (!addBtn) return;
+    let colorId = 0;
+    let colorBtns = [];
 
-    // Щоб уникнути дублювання слухачів — спочатку знімаю старий
-    addBtn.replaceWith(addBtn.cloneNode(true));
+    // Створюю блок зображень товару
+    const imgBlock = document.createElement("div");
+    imgBlock.classList.add(
+      "main__new-launches_wrapper__card-slider_content__img"
+    );
+    const img1Block = document.createElement("div");
+    const img2Block = document.createElement("div");
+    const img1 = document.createElement("img");
+    const img2 = document.createElement("img");
 
-    const newAddBtn = activeCard.querySelector(".add");
+    img1Block.classList.add("first");
+    img2Block.classList.add("second");
 
-    newAddBtn.addEventListener("click", () => {
-      const selectedColorBtn = activeCard.querySelector(
+    img1Block.appendChild(img1);
+    img2Block.appendChild(img2);
+    imgBlock.appendChild(img1Block);
+    imgBlock.appendChild(img2Block);
+
+    // Встановлюю початкові фото (перший колір)
+    img1.src = product.colors[0].images[0];
+    img2.src = product.colors[0].images[1];
+
+    // Створюю кнопки кольорів
+    product.colors.forEach(({ name, hex, images }) => {
+      const btn = document.createElement("button");
+      btn.classList.add(
+        "main__new-launches_wrapper__card-slider_content__descr-colors_item"
+      );
+      btn.id = colorId++;
+      btn.setAttribute("title", name);
+      btn.style.backgroundColor = hex;
+
+      colorBtns.push(btn);
+      colorsBlock.appendChild(btn);
+
+      // При кліку змінюю фото та активний колір
+      btn.addEventListener("click", () => {
+        colorBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        img1.src = images[0];
+        img2.src = images[1];
+      });
+    });
+
+    // HTML-контент опису товару
+    const cardContent = `
+      <div class="main__new-launches_wrapper__card-slider_content__descr">
+        <div class="main__new-launches_wrapper__card-slider_content__descr-header">
+          ${product.title}
+        </div>
+        <div class="main__new-launches_wrapper__card-slider_content__descr-text">
+          ${product.descr}
+          <a href="${product.link}"> Read More </a>
+        </div>
+        <div class="main__new-launches_wrapper__card-slider_content__descr-price">
+          Price : <span> $${product.price} </span>
+        </div>
+        <div class="main__new-launches_wrapper__card-slider_content__descr-btns">
+          <button class="add" id="newLaunchesAdd">Add to cart</button>
+          <button class="more">
+            <a href="${product.link}">Explore More</a>
+          </button>
+        </div>
+      </div>
+    `;
+
+    // Вставляю HTML у картку
+    item.innerHTML = cardContent;
+
+    // Вставляю блок кольорів перед кнопками
+    const descrBlock = item.querySelector(
+      ".main__new-launches_wrapper__card-slider_content__descr"
+    );
+    descrBlock.insertBefore(
+      colorsBlock,
+      descrBlock.querySelector(
+        ".main__new-launches_wrapper__card-slider_content__descr-btns"
+      )
+    );
+
+    // Вставляю блок зображень перед описом
+    item.insertBefore(imgBlock, descrBlock);
+
+    // Додаю картку до слайдера
+    newLaunchesSlider.appendChild(item);
+
+    // Додаю логіку кнопки "Add to cart"
+    const addBtn = item.querySelector(".add");
+    addBtn.addEventListener("click", () => {
+      const selectedColorBtn = item.querySelector(
         ".main__new-launches_wrapper__card-slider_content__descr-colors_item.active"
       );
       if (!selectedColorBtn) return;
 
-      //Посилання на фото товару
-      const activeImg = document.querySelector(
+      const activeImg = item.querySelector(
         ".main__new-launches_wrapper__card-slider_content__img img"
       );
 
-      addedNewLaunchesItems.push({
-        title: cards[currentIndex].title,
-        price: cards[currentIndex].price,
+      const cartItem = {
+        title: product.title,
+        price: product.price,
         color: selectedColorBtn.getAttribute("title"),
-        img: cards[currentIndex].img1,
-      });
+        img: activeImg.attributes[0].value,
+      };
 
-      // Додаємо новий товар
-      existingCart.push({
-        title: cardContent.childNodes[5].childNodes[1].innerText,
-        price: cardContent.childNodes[5].childNodes[5].innerText,
-        img: cardContent.childNodes[3].childNodes[1].attributes[0].value,
-      });
-
-      // Зберігаємо оновлений масив
+      // Зчитую корзину з localStorage, додаю товар і зберігаю назад
+      let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+      existingCart.push(cartItem);
       localStorage.setItem("cart", JSON.stringify(existingCart));
     });
   }
 
-  // Слухачі на кнопки
+  // Обробка кнопки "вперед"
   nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % totalCards;
-    card();
-    updateSliderPosition();
+    renderCard();
   });
 
+  // Обробка кнопки "назад"
   prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + totalCards) % totalCards;
-    card();
-    updateSliderPosition();
+    renderCard();
   });
 
-  card();
-  updateSliderPosition();
+  // 🔰 Початковий рендер
+  renderCard();
 });
