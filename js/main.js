@@ -5,7 +5,27 @@ import "../js/blocks/newLaunches.js";
 import "./form.js";
 
 const cartButton = document.querySelector(".header__cart");
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-if (cartButton) {
-  cartButton.textContent = `👜 ${cart.length} Items Added`;
+
+// --- Функція оновлення лічильника ---
+function updateCartButton() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (cartButton) {
+    cartButton.textContent = `👜 ${cart.length} Items Added`;
+  }
 }
+
+// --- Початкове оновлення ---
+updateCartButton();
+
+// --- Слухач події (оновлення після додавання товару) ---
+window.addEventListener("cartUpdated", updateCartButton);
+
+// --- Слухач зміни localStorage (якщо сторінка інша) ---
+window.addEventListener("storage", (e) => {
+  if (e.key === "cart") {
+    updateCartButton();
+  }
+});
+
+// --- Доступ глобально, щоб інші скрипти могли викликати напряму ---
+window.updateCartButton = updateCartButton;

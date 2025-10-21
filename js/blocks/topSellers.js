@@ -149,6 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Зберігаємо оновлений масив
       localStorage.setItem("cart", JSON.stringify(existingCart));
+      // для миттєвого оновлення лічильника в корзині
+      window.dispatchEvent(new Event("cartUpdated")); // для поточної вкладки
+      if (typeof window.updateCartButton === "function") {
+        window.updateCartButton(); // миттєве оновлення
+      }
     }
   });
 });

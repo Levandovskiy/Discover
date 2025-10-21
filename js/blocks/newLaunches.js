@@ -6,7 +6,6 @@ import { newLaunches } from "../db.js";
 export const addedNewLaunchesItems = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-
   // Отримую DOM-елементи слайдера та кнопок навігації
   const newLaunchesSlider = document.querySelector(
     ".main__new-launches_wrapper__card-slider_item"
@@ -33,7 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Створюю контейнер картки
     const item = document.createElement("div");
-    item.classList.add("main__new-launches_wrapper__card-slider_content", "active");
+    item.classList.add(
+      "main__new-launches_wrapper__card-slider_content",
+      "active"
+    );
 
     // Створюю блок кольорів
     const colorsBlock = document.createElement("div");
@@ -153,6 +155,11 @@ document.addEventListener("DOMContentLoaded", () => {
       let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
       existingCart.push(cartItem);
       localStorage.setItem("cart", JSON.stringify(existingCart));
+      // для миттєвого оновлення лічильника в корзині
+      window.dispatchEvent(new Event("cartUpdated")); // для поточної вкладки
+      if (typeof window.updateCartButton === "function") {
+        window.updateCartButton(); // миттєве оновлення
+      }
     });
   }
 
