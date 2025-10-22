@@ -2,9 +2,6 @@
 
 import { newLaunches } from "../db.js";
 
-// Масив для збереження доданих товарів
-export const addedNewLaunchesItems = [];
-
 document.addEventListener("DOMContentLoaded", () => {
   // Отримую DOM-елементи слайдера та кнопок навігації
   const newLaunchesSlider = document.querySelector(
