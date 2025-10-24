@@ -2,9 +2,6 @@
 
 import { trendingEarphones } from "../db.js";
 
-//Масив із доданими до корзини товарами
-export const addedTrendingItems = new Array();
-
 document.addEventListener("DOMContentLoaded", () => {
   const trendingEarphonesCards = document.querySelector(
     ".main__trending-wrapper_slider__cards"

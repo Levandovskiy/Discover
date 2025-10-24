@@ -2,9 +2,6 @@
 
 import { topSellers } from "../db.js";
 
-//Масив із доданими до корзини товарами
-export const addedTopSellersItems = new Array();
-
 document.addEventListener("DOMContentLoaded", () => {
   const topSellersCards = document.querySelector(
     ".main__sellers-wrapper_slider__cards"
