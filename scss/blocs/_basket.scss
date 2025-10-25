@@ -3,11 +3,16 @@
     display: flex;
 
     min-height: 100vh;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 }
 
 .information-cont {
-  min-width: 450px;
+  min-width: 405px;
 }
 
 .information {
@@ -20,6 +25,11 @@
 
   z-index: 1;
 
+  &__form {
+    @media (max-width: 480px) {
+      padding: 10px;
+    }
+  }
   &__label {
     display: block;
     margin-bottom: 5px;
@@ -135,7 +145,7 @@
 /* Адаптив */
 @media (max-width: 480px) {
   .information {
-    width: 90%;
+    max-width: 100%;
     padding: 15px;
     margin-top: 30px;
 

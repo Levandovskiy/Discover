@@ -2561,9 +2561,15 @@ h6 {
   display: flex;
   min-height: 100vh;
 }
+@media (max-width: 768px) {
+  .main__information-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
 
 .information-cont {
-  min-width: 450px;
+  min-width: 405px;
 }
 
 .information {
@@ -2573,6 +2579,11 @@ h6 {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
+}
+@media (max-width: 480px) {
+  .information__form {
+    padding: 10px;
+  }
 }
 .information__label {
   display: block;
@@ -2673,7 +2684,7 @@ h6 {
 /* Адаптив */
 @media (max-width: 480px) {
   .information {
-    width: 90%;
+    max-width: 100%;
     padding: 15px;
     margin-top: 30px;
   }
