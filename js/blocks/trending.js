@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   trendingEarphonesCards.addEventListener("click", (e) => {
     if (e.target.matches(".trendingAdd")) {
-      console.log("click");
       const wrapper = e.target.closest(".items");
       const cardContent = wrapper.querySelector(".card");
       const productId = cardContent?.id;

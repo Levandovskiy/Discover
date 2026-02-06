@@ -128,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   topSellersCards.addEventListener("click", (e) => {
     if (e.target.matches(".topSellerAdd")) {
-      console.log("click");
       const wrapper = e.target.closest(".items");
       const cardContent = wrapper.querySelector(".card");
       const productId = cardContent?.id;
